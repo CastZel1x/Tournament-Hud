@@ -1,6 +1,6 @@
 {
-    "name":"tournament_hud",
-    "version":"1.0.2",
+    "name":"Tournament_Hud",
+    "version":"1.0.3",
     "author":"Zel1x",
     "legacy": false,
     "radar": true,
