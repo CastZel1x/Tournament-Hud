@@ -63,11 +63,11 @@ Fullfledged example of the React HUD made for HUD Manager. It has:
 
 # Download
 
-To download it just click here: [DOWNLOAD HUD](https://github.com/lexogrine/csgo-react-hud/releases/latest)
+To download it just click here: [DOWNLOAD HUD](https://github.com/CastZel1x/Tournament-Hud/releases/latest)
 
 # Instruction
 ## Setting up
-Fork this repo, clone it, and then run `npm install` and `npm start`. HUD should start on the 3500 port. For this to work have HUD Manager opened so it will pass CS:GO data to the HUD.
+Fork this repo, clone it, and then run `npm install` and `npm start`. HUD should start on the 1349 port. For this to work have HUD Manager opened so it will pass CS:GO data to the HUD.
 
 ## Identifying HUD
 In `/public` directory edit hud.json so it fits you - fill HUD's name, author, version, specify the radar and killfeed functionalities. At the end replace the thumb.png with your icon :)

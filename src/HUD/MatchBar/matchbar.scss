@@ -23,7 +23,7 @@
 	justify-content: center;
 	width: 420px;
 	height: 80px;
-	top: 32px;
+	top: 40px;
 	left: 50%;
 	background: var(--sub-panel-color);
 	transform: translateX(-50%);
@@ -235,10 +235,9 @@
 			left: 30px;
 		}
 	}
-	.ucLogo {
+	.esl1 {
 		position: absolute;
 		top: 0px;
-		right: -30px;
 		img {
 			height: 160px;
 		}
@@ -331,7 +330,7 @@
 	flex-direction: row;
 	position: fixed;
 	justify-content: center;
-	top: 42px;
+	top: 50px;
 	width: 270px;
 	height: 10px;
 	left: 50%;
@@ -390,13 +389,31 @@
 }
 
 
-.tournament {
+.tournamentname {
 	position: relative;
-	left: 710px;
-	background-color: black;
+	left: 860px;
+	background-color: rgba(0, 0, 0, 0.8);
 	color: white;
 	width: 390px;
-	top: 7px;
+	top: 10px;
 	border-radius: 10px;
 	text-align: center;
 }
+
+
+.tournamentstats {
+	position: relative;
+	left: 1280px;
+	background-color: rgba(0, 0, 0, 0.8);
+	color: white;
+	bottom: 9px;
+	width: 390px;
+	border-radius: 10px;
+	text-align: center;
+}
+
+.esl {
+	position: relative;
+	left: 1245px;
+	bottom: 40px;
+	}
