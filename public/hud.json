@@ -1,8 +1,8 @@
 {
     "name":"Tournament_HUD",
-    "version":"1.0.1",
+    "version":"1.0.2",
     "author":"Zel1x",
-    "legacy": false,
+    "legacy": true,
     "radar": true,
     "killfeed": true,
     "boltobserv":{

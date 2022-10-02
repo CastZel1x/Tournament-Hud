@@ -10,9 +10,6 @@ import { ArmorHelmet, ArmorFull, HealthFull, Bullets } from './../../assets/Icon
 import { Veto } from "../../api/interfaces";
 import { actions } from "../../App";
 
-import dead from "./../KdaIMG/dead.svg";
-import kill from "./../KdaIMG/kill.svg";
-
 class Statistic extends React.PureComponent<{ label: string; value: string | number, }> {
 	render() {
 		return (
@@ -75,13 +72,9 @@ export default class Observed extends React.Component<{ player: Player | null, v
 						<div className="health text">{player.state.armor}</div>
 					</div>
 					<div className="statistics">
-					<img className="kill" src= {kill}
-             				 width="25px" height="22px" alt="filter applied" />  
-						<Statistic label={""} value={stats.kills} />
+						<Statistic label={"K"} value={stats.kills} />
 						<Statistic label={"A"} value={stats.assists} />
-						<img className="dead" src= {dead} 
-            			  width="24px" height="21px" alt="filter applied" />  
-						<Statistic label={""} value={stats.deaths} />
+						<Statistic label={"D"} value={stats.deaths} />
 					</div>
 					<div className="grenade_container">
 						{grenades.map(grenade => <React.Fragment key={`${player.steamid}_${grenade.name}_${grenade.ammo_reserve || 1}`} >

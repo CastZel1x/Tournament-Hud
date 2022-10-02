@@ -44,9 +44,10 @@
                 font-weight: 700;
                 align-items: center;
                 position: absolute;
-                left: 60px;
+                left: 50px;
                 top: 20px;
-                letter-spacing: 12px;
+                flex-direction: row;
+                letter-spacing: 1px;
                 }
                 .username .roundkills-container {
                     right: 115px;
@@ -108,9 +109,9 @@
                         font-weight: 700;
                         align-items: center;
                         position: absolute;
-                        right: 40px;
+                        right: 30px;
                         top: 20px;
-                        letter-spacing: 15px;
+                        letter-spacing: 1px;
                     }
                 }
                 }
@@ -364,7 +365,7 @@
 .players_alive {
     display: flex;
     flex-direction: column;
-    width: 190px;
+    width: 170px;
     background-color: rgba(0,0,0,0.5);
     position: fixed;
     right: 10px;
@@ -374,13 +375,13 @@
     top: 18px;
     .counter_container {
         display: flex;
-        height: 55px;
+        height: 45px;
         > div {
             flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size:42px;
+            font-size:34px;
             color: white;
             background-color: rgba(0,0,0,0.75);
         }
