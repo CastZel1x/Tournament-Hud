@@ -24,9 +24,8 @@
             .row {
                 flex-direction: row;
                 .grenades {
-                    padding-right: 5px;
                     position: absolute;
-                    right: 95px;
+                    right: 75px;
                     top: 20px;
                 }
                 
@@ -53,7 +52,7 @@
                     right: 115px;
                 }
                 .secondary_weapon {
-                    padding-right: 155px;
+                    padding-right: 160px;
                     position: relative;
                     top: 5px;
                 }
@@ -81,7 +80,7 @@
                     .grenades {
                         padding-left: 5px;
                         position: absolute;
-                        left: 100px;
+                        left: 75px;
                         top: 20px;
                     }
                     .username {
