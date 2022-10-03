@@ -10,11 +10,11 @@ export default class Bomb extends React.Component<IProps> {
     if(!player) return null;
     if(type === "defusing"){
       return <>
-        <div className={'W'}>{player.name} <br/>zneškodnuje bombu</div>
+        <div className={'W'}>{player.name} <br/>DEFUSING THE BOMB</div>
       </>;
     }
     return <>
-      <div className={'W'}>{player.name} <br/>pokladá bombu</div>
+      <div className={'W'}>{player.name} <br/>PLANTING THE BOMB</div>
     </>;
   }
   render() {
