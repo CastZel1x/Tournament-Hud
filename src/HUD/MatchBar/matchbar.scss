@@ -127,10 +127,10 @@
 			height: 80px;
 			align-items: center;
 			img {
-				width: 70px;
-				height: 70px;
-				min-width: 100%;
-				min-height: 100%;
+				width: 60px;
+				height: 55px;
+				min-width: 90%;
+				min-height: 90%;
 			}
         }
         &.left {
@@ -148,7 +148,7 @@
             .logo {
 				position: relative;
                 justify-content: flex-start;
-				right: -5px;
+				right: -3px;
             }
         }
 	}
@@ -230,7 +230,7 @@
 		top: 0px;
 		left: -30px;
 		img {
-			height: 160px;
+			height: 150px;
 			position: absolute;
 			left: 30px;
 		}
