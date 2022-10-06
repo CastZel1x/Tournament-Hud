@@ -15,12 +15,20 @@
         align-items: center;
         flex-direction: row;
         position: relative;
-        height: 43px;
+        height: 33px;
     }
 
     .stats_row {
-        height: 28px;
+        height: 32px;
         background-color: black;
+        width: 700px;
+        position: relative;
+        right: 34px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
 
         .stats_cell {
             height: 100%;
@@ -117,11 +125,11 @@
             align-items: center;
             justify-content: flex-end;
             position: relative;
-            right: 20px;
+            right: 8px;
             .stat {
                 display: flex;
                 font-weight: 600;
-                font-size: 18px;
+                font-size: 24px;
                 margin-right: 24px;
             }
         }
@@ -132,6 +140,8 @@
         width: 400px;
         margin-left: 120px;
         background-color: black;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
         .logo {
             height: 43px;
             display: flex;
@@ -180,8 +190,9 @@
         position: relative;
         width: 140px;
         height: 140px;
-        right: 140px;
-    }
+        right: 175px;
+        bottom: 50px;
+        }
     
     &.T {
         .main_row .username_container .username, .stats_row .ammo .ammo_counter .ammo_reserve {
@@ -242,10 +253,10 @@
     height: 100%;
     display: flex;
     align-items: center;
-    width: 70px;
+    width: 100px;
     justify-content: center;
     position: relative;
-    left: 20px;
+    left: 10px;
     .img {
         max-height:20px;
         max-width:22px;

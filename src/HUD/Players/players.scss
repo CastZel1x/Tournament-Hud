@@ -282,7 +282,7 @@
                             font-size: 13px;
                         }
                         div span {
-                            opacity: 0.95;
+                            opacity: 0.6;
                             font-size:15px;
                         }
                         svg.weapon {
@@ -364,7 +364,7 @@
 .players_alive {
     display: flex;
     flex-direction: column;
-    width: 170px;
+    width: 160px;
     background-color: rgba(0,0,0,0.5);
     position: fixed;
     right: 10px;
@@ -374,13 +374,13 @@
     top: 18px;
     .counter_container {
         display: flex;
-        height: 45px;
+        height: 48px;
         > div {
             flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size:34px;
+            font-size: 38px;
             color: white;
             background-color: rgba(0,0,0,0.75);
         }
@@ -399,7 +399,7 @@
         text-transform: uppercase;
         text-align: center;
         height:20px;
-        font-size:14px;
+        font-size:16px;
         display: flex;
         align-items: center;
         justify-content: center;
