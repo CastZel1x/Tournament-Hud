@@ -168,6 +168,10 @@
                 }
             }
         }
+        &:last-child .player_data {
+            border-radius: 0 0 10px 10px;
+        }
+
         .player_side_bar {
             width: 10px;
             height: 70px;
@@ -364,8 +368,8 @@
 .players_alive {
     display: flex;
     flex-direction: column;
-    width: 160px;
-    background-color: rgba(0,0,0,0.5);
+    width: 170px;
+    background-color: var(--sub-panel-color);
     position: fixed;
     right: 10px;
     top: 10px;
@@ -374,13 +378,13 @@
     top: 18px;
     .counter_container {
         display: flex;
-        height: 48px;
+        height: 56px;
         > div {
             flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 38px;
+            font-size: 42px;
             color: white;
             background-color: rgba(0,0,0,0.75);
         }

@@ -190,9 +190,13 @@
         position: relative;
         width: 140px;
         height: 140px;
-        right: 175px;
-        bottom: 50px;
+        left: 95px;
+        bottom: 130px;
+        img {
+            height: 225px;
+            width: 225px;
         }
+     }
     
     &.T {
         .main_row .username_container .username, .stats_row .ammo .ammo_counter .ammo_reserve {

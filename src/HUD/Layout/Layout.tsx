@@ -67,7 +67,7 @@ export default class Layout extends React.Component<Props, State> {
     return veto;
   }
 
-  render() {
+  render() { 
     const { game, match } = this.props;
     const left = game.map.team_ct.orientation === "left" ? game.map.team_ct : game.map.team_t;
     const right = game.map.team_ct.orientation === "left" ? game.map.team_t : game.map.team_ct;
@@ -80,7 +80,6 @@ export default class Layout extends React.Component<Props, State> {
     return (
       <div className="layout">
         <div className={`players_alive`}>
-          <div className="title_container">Players alive</div>
           <div className="counter_container">
             <div className={`team_counter ${left.side}`}>{leftPlayers.filter(player => player.state.health > 0).length}</div>
             <div className={`vs_counter`}>VS</div>

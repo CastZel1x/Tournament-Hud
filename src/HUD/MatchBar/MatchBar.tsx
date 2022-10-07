@@ -193,7 +193,6 @@ export default class TeamBox extends React.Component<IProps, IState> {
 
     return (
    <>
-   <div className="tournament">IEM Road to Rio 2022 Europe RMR B Day 4ㅤㅤㅤㅤㅤㅤ Qualification Match | Best Of 3</div>
         <div id={`matchbar`}>
           <TeamScore team={left} orientation={"left"} timer={leftTimer} showWin={winState.show && winState.side === "left"} />
           <div className={`score left ${left.side}`}>{left.score}</div>
