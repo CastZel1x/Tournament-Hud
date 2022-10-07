@@ -2,7 +2,6 @@ import React from 'react';
 import './sideboxes.scss'
 import {configs, hudIdentity} from './../../App';
 import { apiUrl } from '../../api/api';
-import baner from "./../KdaIMG/baner.jpg";
 
 export default class SideBox extends React.Component<{ side: 'left' | 'right', hide: boolean}, { title: string, subtitle: string, image?: string }> {
 	constructor(props: any) {

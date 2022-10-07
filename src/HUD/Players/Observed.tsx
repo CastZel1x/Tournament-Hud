@@ -28,6 +28,7 @@ export default class Observed extends React.Component<{ player: Player | null, v
 		  showCam: true
 		}
 	  }
+
 	componentDidMount() {
 		actions.on('toggleCams', () => {
 			console.log(this.state.showCam)
