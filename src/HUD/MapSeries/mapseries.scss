@@ -2,7 +2,7 @@
 	position: fixed;
 	top: 120px;
 	right: 10px;
-	width: 320px;
+	width: 340px;
 	display: flex;
 	opacity: 0;
 	transition: opacity 0.5s;
@@ -13,7 +13,7 @@
 		background-color: rgba(0,0,0,0.8);
 		color: white;
 		align-items: center;
-        height: 40px;
+        height: 41px;
         &.active {
             .veto_winner {
                 display: none;
@@ -84,7 +84,7 @@
 	}
 	.title_bar {
 		display: flex;
-		background-color: rgba(0,0,0,0.64);
+		background-color: rgba(0,0,0,0.57);
 		height: 25px;
 		color: white;
 		border-radius: 6px 6px 0 0;
@@ -150,15 +150,17 @@
 	color: var(--color-new-ct);
 }
 
+
+
 .klik {
 	filter: invert(100%);
 	position: relative;
-	left: 127px;
+	left: 137px;
 }
 .winmap12 {
 	filter: invert(100%);
 	position: relative;
-	left: 87px;
+	left: 83px;
 }
 .score1 {
 	filter: invert(100%);

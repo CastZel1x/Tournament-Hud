@@ -6,7 +6,6 @@ import Bomb from "./../Timers/BombTimer";
 import Countdown from "./../Timers/Countdown";
 import { GSI } from "../../App";
 import { Match } from "../../api/interfaces";
-import esl from '../../assets/esl.png';
 
 
 function stringToClock(time: string | number, pad = true) {
@@ -194,9 +193,7 @@ export default class TeamBox extends React.Component<IProps, IState> {
 
     return (
    <>
-   <div className="tournamentname">IEM Road to Rio 2022 Europe RMR B</div>      <div className="tournamentstats">Day 1| Group Stage | Best Of 1</div> 
-   <img className="esl" src= {esl}
-        width="30px" height="30px" alt="filter applied" /> 
+   <div className="tournament">IEM Road to Rio 2022 Europe RMR B Day 4ㅤㅤㅤㅤㅤㅤ Qualification Match | Best Of 3</div>
         <div id={`matchbar`}>
           <TeamScore team={left} orientation={"left"} timer={leftTimer} showWin={winState.show && winState.side === "left"} />
           <div className={`score left ${left.side}`}>{left.score}</div>
