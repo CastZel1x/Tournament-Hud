@@ -65,8 +65,11 @@
 			align-items: center;
 			justify-content: center;
 			.active {
-				background: rgba(255,255,255,0.75);
-				color: black;
+				background: rgba(0,0,0,0.65);
+				border: solid 2px white;
+				border-radius: 10px;
+				position: absolute;
+				color: white;
 				width: 117px;
 				height: 25px;
 				display: flex;
