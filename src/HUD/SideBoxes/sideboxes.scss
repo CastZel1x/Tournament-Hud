@@ -41,10 +41,11 @@
 	flex-direction: row;
 	opacity: 1;
 	transition: all 0.75s;
-	background-color: rgba(149,192,246, 0.4);
-	margin-bottom: 4px;
-	margin-top: 4px;
 	align-items: center;
+	background-color: rgba(5,7,46, 0.7);
+	border: solid 3px white;
+	position: relative;
+	border-radius: 8px;
 	.title_container {
 		color: var(--white-full);
 		height: 60px;
@@ -78,11 +79,11 @@
 	flex-direction: row;
 	opacity: 1;
 	transition: all 0.75s;
-	background-color: rgba(149,192,246, 0.4);
-	margin-bottom: 4px;
-	margin-top: 4px;
 	flex-direction: column;
-	margin-bottom: 4px;
+	background-color: rgba(5,7,46,0.7);
+	border: solid 3px white;
+	position: relative;
+	border-radius: 8px;
 	.title_container {
 		display: flex;
 		flex-direction: row;
@@ -128,9 +129,10 @@
 	flex-direction: row;
 	opacity: 1;
 	transition: all 0.75s;
-	background-color: rgba(149,192,246, 0.4);
-	margin-bottom: 4px;
-	margin-top: 4px;
+	background-color: rgba(5,7,46, 0.7);
+	border: solid 3px white;
+	position: relative;
+	border-radius: 8px;
 	font-weight: 600;
 	.money_container {
 		display: flex;

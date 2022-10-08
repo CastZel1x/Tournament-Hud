@@ -10,9 +10,11 @@
 	font-size: 13px;
 	.veto_container {
 		display: flex;
-		background-color: rgba(0,0,0, 0.8);
+		background-color: rgba(5,7,46, 0.7);
+		border: solid 1px white;
+		position: relative;
+		border-radius: 4px;
 		color: white;
-		border-radius: 2px;
 		align-items: center;
 		bottom: 2px;
 		position: relative;
@@ -35,7 +37,11 @@
 			font-weight: 700;
 			align-items: center;
 			justify-content: center;
-			background-color: rgba(0,0,0,0.8);
+			background-color: rgba(5,7,46, 0.5);
+			border: solid 1px white;
+			font-size: 16px;
+			position: relative;
+			border-radius: 8px;
 			text-shadow: 1px 21px 42px black, 0 0 1em whitesmoke, 0 0 0.2em black;
 		}
 		div {
@@ -89,7 +95,9 @@
 	}
 	.title_bar {
 		display: flex;
-		background-color: rgba(0,0,0,0.97);
+		background-color: rgba(5,7,46, );
+		border: solid 1px white;
+		position: relative;
 		height: 25px;
 		color: white;
 		border-radius: 8px 8px 0 0;

@@ -36,11 +36,10 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
-	background-color: rgba(149,192,246, 0.7);
-	border: 2px solid black;
-	opacity: 80%;
+	background-color: rgba(5,7,46, 0.7);
+	border: solid 3px white;
 	position: relative;
-	border-radius: 10px;
+	border-radius: 12px;
 	bottom: 330px;
 }
 .veto_entry {
@@ -52,7 +51,7 @@
 		align-items: center;
 		color: white;
 		text-transform: uppercase;
-		font-size: 12pt;
+		font-size: 10pt;
 	}
 	.team_logo {
 		img {

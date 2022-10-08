@@ -95,6 +95,7 @@
                     .username {
                         flex-direction: row-reverse;
                         .roundkills-container {
+                            position: absolute;
                             left: 115px;
                         }
                     }
@@ -138,8 +139,8 @@
         }
     }  
     .player {
-        width: 370px;
-        height: 70px;
+        width: 645px;
+        height: 90px;
         margin-bottom: 4px;
         display: flex;
         flex-direction: row;
@@ -150,17 +151,14 @@
             }
         }
         &.dead {
-            opacity: 0.50;
+            opacity: 0.55;
             .player_side_bar {
                 background-color: var(--main-panel-color) !important;
             }
             .player_data {
-                width: 65%;
+                width: 47%;
                 .avatar {
                     filter: grayscale(100%);
-                }
-                .dead-stats {
-                    display: flex;
                 }
                 .row {
                     .hp_background_2 {
@@ -169,6 +167,7 @@
                     .health {
                         color: #b2b2b2;
                         overflow: hidden;
+                        position: absolute;
                     }
                     .username {
                         color: #b2b2b2;
@@ -179,51 +178,19 @@
                     }
                     .money {
                         color: #466722;
+                        position: absolute;
                     }
                 }
             }
         }
-        &:last-child .player_data {
-            border-radius: 0 0 6px 6px;
-        }
-        .player_side_bar {
-            width: 10px;
-            height: 70px;
-            &.CT {
-                background-color: var(--color-new-ct);
-            }
-            &.T {
-                background-color: var(--color-new-t);
-            }
-        }
-        .dead-stats {
-            position: absolute;
-            height: 85%;
-            width: 60px;
-            display: none;
-            flex-direction: column;
-            font-weight: 600;
-            color: white;
-            opacity: 0.75;
-            top: 10%;
-            .labels, .values {
-                display: flex;
-                flex-direction: row;
-                flex: 1;
-                .stat-label, .stat-value {
-                    display: flex;
-                    flex: 1;
-                    align-items: center;
-                    justify-content: center;
-                }
-            }
-        }
         .player_data {
-            background-color: var(--sub-panel-color);
-            width: 415px;
+            background-color: rgba(5,7,46, 0.7);
+            border: solid 3px white;
+            position: relative;
+            border-radius: 8px;
+            width: 370px;
             display: flex;
             flex-direction: row;
-            position: relative;
             height: 100%;
             .player_stats {
                 display: flex;
@@ -284,7 +251,7 @@
                         max-width: calc(100% - 49px);
                         justify-content: space-between;
                         overflow: hidden;
-                        font-size: 22px;
+                        font-size: 18px;
                         text-overflow: ellipsis;
                         white-space: nowrap;
                         position: relative;

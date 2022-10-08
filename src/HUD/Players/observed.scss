@@ -25,6 +25,10 @@
         position: relative;
         right: 34px;
         border-radius: 10px;
+        background-color: rgba(5,7,46, 0.7);
+        border: solid 3px white;
+        position: relative;
+        border-radius: 8px;
         .stats_cell {
             height: 100%;
             width: 56px;
@@ -134,7 +138,9 @@
         font-weight: 600;
         width: 400px;
         margin-left: 120px;
-        background-color: black;
+        background-color: rgba(5,7,46, 0.7);
+        border: solid 1px white;
+        position: relative;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         .logo {
@@ -186,7 +192,7 @@
         width: 140px;
         height: 140px;
         left: 95px;
-        bottom: 132px;
+        bottom: 130px;
         img {
             height: 225px;
             width: 225px;
