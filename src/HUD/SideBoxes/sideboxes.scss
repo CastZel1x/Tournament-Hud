@@ -129,9 +129,8 @@
 	flex-direction: row;
 	opacity: 1;
 	transition: all 0.75s;
-	background-color: rgba(5,7,46, 0.7);
+	background-color: rgba(5,7,46, 0.5);
 	border: solid 3px white;
-	position: relative;
 	border-radius: 8px;
 	font-weight: 600;
 	.money_container {
@@ -208,6 +207,9 @@
 	flex-direction: row-reverse;
 }
 .moneybox.CT {
+	position: absolute;
+	bottom: 429px;
+	right: 570px;
 	.money_container {
 		.title {
 			color: var(--color-new-ct);
@@ -215,6 +217,9 @@
 	}
 }
 .moneybox.T {
+	position: absolute;
+	bottom: 429px;
+	left: 570px;
 	.money_container {
 		.title {
 			color: var(--color-new-t);
