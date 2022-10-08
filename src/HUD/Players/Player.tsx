@@ -5,8 +5,8 @@ import Avatar from "./Avatar";
 import Armor from "./../Indicators/Armor";
 import Bomb from "./../Indicators/Bomb";
 import Defuse from "./../Indicators/Defuse";
-import dead from "./../KdaIMG/dead.svg";
-import kill from "./../KdaIMG/kill.svg";
+import dead from "../.././assets/kd/dead.svg";
+import kill from "../.././assets/kd/kill.svg";
 
 class Statistic extends React.PureComponent<{ label: string; value: string | number, }> {
 	render() {
