@@ -9,6 +9,9 @@ import { getCountry } from "./../countries";
 import { ArmorHelmet, ArmorFull, HealthFull, Bullets } from './../../assets/Icons';
 import { Veto } from "../../api/interfaces";
 import { actions } from "../../App";
+import baner from "../.././assets/baner/baner.png";
+import esea from "../.././assets/baner/esea.png";
+import faceit from "../.././assets/baner/faceit.png";
 
 class Statistic extends React.PureComponent<{ label: string; value: string | number, }> {
 	render() {
@@ -92,6 +95,14 @@ export default class Observed extends React.Component<{ player: Player | null, v
 							<div className="ammo_clip">{(currentWeapon && currentWeapon.ammo_clip) || "-"}</div>
 							<div className="ammo_reserve">/{(currentWeapon && currentWeapon.ammo_reserve) || "-"}</div>
 						</div>
+						<div className="baner">
+							<img className="banerlogo" src= {baner} 
+             					 width="200px" height="100px" alt="filter applied" />  
+							<img className="banerlogo1" src= {esea} 
+             					 width="100px" height="100px" alt="filter applied" />  
+							<img className="banerlogo2" src= {faceit} 
+             					 width="200px" height="90px" alt="filter applied" />  
+							</div>
 					</div>
 				</div>
 			</div>

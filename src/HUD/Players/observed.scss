@@ -280,3 +280,23 @@
         margin-right: 5px;
     }
 }
+
+
+.baner {
+    display: none;
+    .banerlogo {
+        position: absolute;
+        top: 55px;
+        right: 230px;
+    }
+    .banerlogo1 {
+        position: absolute;
+        top: 50px;
+        right: 40px;
+    }
+    .banerlogo2 {
+        position: absolute;
+        top: 55px;
+        right: 480px;
+    }
+}
