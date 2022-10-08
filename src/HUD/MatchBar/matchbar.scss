@@ -25,10 +25,9 @@
 	height: 80px;
 	top: 10px;
 	left: 50%;
-	background: var(--sub-panel-color);
+	background-color: rgba(149,192,246, 0.15);
 	transform: translateX(-50%);
-	border-bottom-right-radius: 15px;
-	border-bottom-left-radius: 15px;
+	border-radius: 10px;
 	.CT {
 		color: var(--color-new-ct);
 	}
@@ -238,14 +237,6 @@
 			height: 150px;
 			position: absolute;
 			left: 30px;
-		}
-	}
-	.LogoU {
-		position: absolute;
-		top: 0px;
-		right: 0px;
-		img {
-			height: 160px;
 		}
 	}
 	.teamName {

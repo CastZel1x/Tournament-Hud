@@ -24,12 +24,7 @@
         width: 700px;
         position: relative;
         right: 34px;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
-
-        border-top-left-radius: 5px;
-        border-top-right-radius: 5px;
-
+        border-radius: 10px;
         .stats_cell {
             height: 100%;
             width: 56px;
@@ -191,7 +186,7 @@
         width: 140px;
         height: 140px;
         left: 95px;
-        bottom: 130px;
+        bottom: 132px;
         img {
             height: 225px;
             width: 225px;

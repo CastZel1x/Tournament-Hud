@@ -31,7 +31,7 @@ export default class Avatar extends React.Component<IProps> {
           showCam ? ( sidePlayer ? <div className="videofeed"><PlayerCamera steamid={steamid} visible={true} /></div> : <CameraContainer observedSteamid={steamid} />) : null
         }
         {
-          showSkull ? <Skull height={height} width={width} /> : <img src={avatarData.url} height={190} width={180} alt={'Avatar'} />
+          showSkull ? <Skull height={height} width={width} /> : <img src={avatarData.url} height={height} width={width} alt={'Avatar'} />
         }
 
       </div>

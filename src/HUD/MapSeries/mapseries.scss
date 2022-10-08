@@ -1,6 +1,6 @@
 .map_series_container {
 	position: fixed;
-	top: 100px;
+	top: 10px;
 	right: 10px;
 	width: 340px;
 	display: flex;
@@ -10,10 +10,12 @@
 	font-size: 13px;
 	.veto_container {
 		display: flex;
-		background-color: rgba(0,0,0,0.8);
+		background-color: rgba(0,0,0, 0.8);
 		color: white;
-		border-radius: 6px;
+		border-radius: 2px;
 		align-items: center;
+		bottom: 2px;
+		position: relative;
         height: 41px;
         &.active {
             .veto_winner {
@@ -33,7 +35,7 @@
 			font-weight: 700;
 			align-items: center;
 			justify-content: center;
-			background-color: rgba(255,255,255,0.15);
+			background-color: rgba(0,0,0,0.8);
 			text-shadow: 1px 21px 42px black, 0 0 1em whitesmoke, 0 0 0.2em black;
 		}
 		div {
@@ -87,7 +89,7 @@
 	}
 	.title_bar {
 		display: flex;
-		background-color: rgba(0,0,0,0.57);
+		background-color: rgba(0,0,0,0.97);
 		height: 25px;
 		color: white;
 		border-radius: 8px 8px 0 0;
@@ -160,17 +162,14 @@
 
 
 .klik {
-	filter: invert(100%);
 	position: relative;
 	left: 137px;
 }
 .winmap12 {
-	filter: invert(100%);
 	position: relative;
 	left: 83px;
 }
 .score1 {
-	filter: invert(100%);
 	position: relative;
 	left: 55px;
 }

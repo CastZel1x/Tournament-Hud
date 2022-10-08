@@ -19,7 +19,6 @@ class Statistic extends React.PureComponent<{ label: string; value: string | num
 	}
 }
 
-
 interface IProps {
   player: I.Player,
   isObserved: boolean,
@@ -86,12 +85,13 @@ const Player = ({ player, isObserved }: IProps) => {
   const primary = weapons.filter(weapon => !['C4', 'Pistol', 'Knife', 'Grenade', undefined].includes(weapon.type))[0] || null;
   const secondary = weapons.filter(weapon => weapon.type === "Pistol")[0] || null;
   const grenades = weapons.filter(weapon => weapon.type === "Grenade");
-  const { stats } = player;
+  const { stats} = player;
   const ratio = stats.deaths === 0 ? stats.kills : stats.kills / stats.deaths ;
   const isLeft = player.team.orientation === "left";
   return (
     <div className={`player ${player.state.health === 0 ? "dead" : ""} ${isObserved ? 'active' : ''}`}>
       <div className="player_data">
+      <Avatar steamid={player.steamid} height={57} width={57} showSkull={false} showCam={false} sidePlayer={true} />
         <div className="player_stats">
           <div className="row">
             <div className="health">
@@ -102,7 +102,7 @@ const Player = ({ player, isObserved }: IProps) => {
               {primary || secondary ? <Weapon weapon={primary ? primary.name : secondary.name} active={primary ? primary.state === "active" : secondary.state === "active"} /> : ""}
               {player.state.round_kills ? <div className="roundkills-container">{player.state.round_kills}</div> : null}
             </div>
-          </div>
+          </div>         
           { player.state.health > 0 ? <div className={`hp_bar hp_bar_background`} style={{ width: `${player.state.health}%` }}></div> : null }
           <div className={`hp_bar ${player.state.health <= 20 ? 'low' : ''}`} style={{ width: `${player.state.health}%` }}></div>
           <div className="row">
