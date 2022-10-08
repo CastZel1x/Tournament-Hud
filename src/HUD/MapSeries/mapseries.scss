@@ -125,7 +125,8 @@
 	left: 50%;
 	transform: translateX(-50%);
 	top: 95px;
-	background-color: var(--sub-panel-color);
+	background-color: rgba(5,7,46, 0.7);
+	border: solid 2px white;
 	color: white;
 	width: 420px;
 	border-radius: 8px;
@@ -144,7 +145,8 @@
 	left: 50%;
 	transform: translateX(-50%);
 	top: 95px;
-	background-color: var(--sub-panel-color);
+	background-color: rgba(5,7,46, 0.7);
+	border: solid 2px white;
 	width: 420px;
 	border-radius: 8px;
 	display: flex;
