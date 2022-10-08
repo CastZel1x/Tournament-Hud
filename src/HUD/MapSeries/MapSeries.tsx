@@ -3,9 +3,9 @@ import * as I from "csgogsi-socket";
 import { Match, Veto } from '../../api/interfaces';
 import TeamLogo from "../MatchBar/TeamLogo";
 import "./mapseries.scss";
-import klik from "./../KdaIMG/klik.png";
-import score1 from "./../KdaIMG/score.png";
-import winmap12 from "./../KdaIMG/win.png";
+import touch from "../.././assets/mapseries/touch.png";
+import score1 from "../.././assets/mapseries/score.png";
+import winmap1 from "../.././assets/mapseries/win.png";
 
 interface IProps {
     match: Match | null;
@@ -52,11 +52,11 @@ export default class MapSeries extends React.Component<IProps> {
             <div className={`map_series_container ${isFreezetime ? 'show': 'hide'}`}>
                 <div className="title_bar">
 
-                <img className="klik" src= {klik}
+                <img className="touch" src= {touch}
                      width="25px" height="22px" alt="filter applied" />  
                     <div className="picked"></div>
 
-                    <img className="winmap12" src= {winmap12}
+                    <img className="winmap1" src= {winmap1}
                      width="25px" height="22px" alt="filter applied" /> 
                     <div className="winner"></div>
 
