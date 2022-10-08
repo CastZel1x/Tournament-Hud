@@ -57,7 +57,7 @@ export default class Observed extends React.Component<{ player: Player | null, v
 		return (
 			<div className={`observed ${player.team.side}`}>
 				<div className="main_row">
-					{<Avatar steamid={player.steamid} height={200} width={200} showCam={this.state.showCam} slot={player.observer_slot} />}
+					{<Avatar steamid={player.steamid} height={170} width={180} showCam={this.state.showCam} slot={player.observer_slot} />}
 					<TeamLogo team={player.team} height={40} width={40} />
 					<div className="username_container">
 						<div className="username">{player.name}</div>
