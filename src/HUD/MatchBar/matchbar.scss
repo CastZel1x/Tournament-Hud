@@ -127,14 +127,14 @@
 		.logo {
 			display: flex;
 			flex-direction: row;
-			width: 105px;
+			width: 95px;
 			height: 80px;
 			align-items: center;
 			img {
 				width: 65px;
-				height: 55px;
-				min-width: 90%;
-				min-height: 90%;
+				height: 50px;
+				min-width: 80%;
+				min-height: 80%;
 			}
         }
         &.left {
@@ -152,13 +152,13 @@
             .logo {
 				position: relative;
                 justify-content: flex-start;
-				right: -3px;
+				right: 5px;
             }
         }
 	}
 	.team-name {
 		display: flex;
-		position: absolute;
+		position: relative;
 		width: 360px;
 		height: 70px;
 		align-items: center;
