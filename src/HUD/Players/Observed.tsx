@@ -96,12 +96,15 @@ export default class Observed extends React.Component<{ player: Player | null, v
 							<div className="ammo_reserve">/{(currentWeapon && currentWeapon.ammo_reserve) || "-"}</div>
 						</div>
 						<div className="baner">
+
+							<div className="spaceobserv ">ㅤㅤ</div>	
+
 							<img className="banerlogo" src= {baner} 
-             					 width="200px" height="100px" alt="filter applied" />  
+             					 width="150px" height="75px" alt="filter applied" />  
 							<img className="banerlogo1" src= {esea} 
              					 width="100px" height="100px" alt="filter applied" />  
 							<img className="banerlogo2" src= {faceit} 
-             					 width="200px" height="90px" alt="filter applied" />  
+             					 width="180px" height="76px" alt="filter applied" />  
 							</div>
 					</div>
 				</div>
