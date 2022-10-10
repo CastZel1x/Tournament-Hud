@@ -1,6 +1,6 @@
 .map_series_container {
 	position: fixed;
-	top: 10px;
+	top: 3px;
 	right: 10px;
 	width: 340px;
 	display: flex;
@@ -10,15 +10,14 @@
 	font-size: 13px;
 	.veto_container {
 		display: flex;
-		background-color: rgba(5,7,46, 0.7);
-		border: solid 1px white;
+		background-color: rgba(28,25,58, 0.7);
 		position: relative;
 		border-radius: 4px;
 		color: white;
 		align-items: center;
 		bottom: 2px;
 		position: relative;
-        height: 41px;
+        height: 40px;
         &.active {
             .veto_winner {
                 display: none;
@@ -37,12 +36,11 @@
 			font-weight: 700;
 			align-items: center;
 			justify-content: center;
-			background-color: rgba(5,7,46, 0.4);
-			border: solid 1px white;
+			background-color: rgba(28,25,58, 0.3);
 			font-size: 16px;
 			position: relative;
 			border-radius: 8px;
-			text-shadow: 1px 21px 42px black, 0 0 1em whitesmoke, 0 0 0.2em black;
+			text-shadow: 1px 12px 24px black, 0 0 1em whitesmoke, 0 0 0.2em black;
 		}
 		div {
 			img {
@@ -65,7 +63,7 @@
 			align-items: center;
 			justify-content: center;
 			.active {
-				background: rgba(0,0,0,0.65);
+				background-color: rgba(28,25,58, 0.65);
 				border: solid 2px white;
 				border-radius: 10px;
 				position: absolute;
@@ -98,7 +96,7 @@
 	}
 	.title_bar {
 		display: flex;
-		background-color: rgba(5,7,46, );
+		background-color: rgba(28,25,58, 0.8);
 		border: solid 1px white;
 		position: relative;
 		height: 25px;
@@ -127,12 +125,11 @@
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
-	top: 175px;
-	background-color: rgba(5,7,46, 0.5);
-	border: solid 2px white;
+	top: 91px;
+	background-color: rgba(28,25,58, 0.9);
 	color: white;
 	width: 420px;
-	border-radius: 8px;
+	border-radius: 0 0 8px 8px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -147,11 +144,10 @@
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
-	top: 175px;
-	background-color: rgba(5,7,46, 0.5);
-	border: solid 2px white;
+	top: 91px;
+	background-color: rgba(28,25,58, 0.9);
 	width: 420px;
-	border-radius: 8px;
+	border-radius: 0 0 8px 8px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -181,6 +177,7 @@
 .winmap1 {
 	position: relative;
 	left: 83px;
+	top: 1px;
 }
 .score1 {
 	position: relative;

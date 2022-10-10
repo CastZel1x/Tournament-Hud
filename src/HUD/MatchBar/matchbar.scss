@@ -26,10 +26,9 @@
 	top: 10px;
 	left: 50%;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-	border: solid 2px white;
-	background-color: rgba(5,7,46, 0.1);
+	background-color: rgba(28,25,58, 0.9);
 	transform: translateX(-50%);
-	border-radius: 10px;
+	border-radius: 2px;
 	.CT {
 		color: var(--color-new-ct);
 	}
@@ -168,6 +167,7 @@
 		font-size: 30px;
 		z-index: 3;
 		color: #fff !important;
+		text-shadow: 1px 10px  0 0 1em whitesmoke, 0 0 0.2em white;
 		&.left {
 			position: fixed;
 			top: 20px;

@@ -117,6 +117,7 @@ const Player = ({ player, isObserved }: IProps) => {
               width="25px" height="22px" alt="filter applied" />  
 						<Statistic label={""} value={stats.kills} />
 
+              <div className="space">ㅤ</div>
 
               <img className="dead" src= {dead} 
               width="24px" height="21px" alt="filter applied" />  

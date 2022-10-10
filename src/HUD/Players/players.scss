@@ -21,7 +21,9 @@
     &.left {
         left: 10px;
         .player {
-            height: 90px;
+            height: 75px;
+            position: relative;
+            margin: 3px;
             .hp_bar {
                 left: 0;
             }
@@ -29,22 +31,22 @@
                 flex-direction: row;
                 .grenades {
                     position: absolute;
-                    bottom: 29px;
-                    right: 170px;
+                    bottom: 5px;
+                    left: 200px;
                 }
                 
                 .armor_and_utility {
                     justify-content: flex-end;
                     position: relative;
-                    left: 70px;
-                    top: 10px;
+                    left: 35px;
+                    bottom: 17px;
                 }
                 .money {
                     margin-left: auto;
                     justify-content: flex-end;
                     position: absolute;
-                    bottom: 30px;
-                    right: 230px;
+                    bottom: 24px;
+                    right: 200px;
                 }
                 .statistics {
                     display: flex;
@@ -54,7 +56,7 @@
                     align-items: center;
                     position: absolute;
                     left: 5px;
-                    top: 20px;
+                    top: 14px;
                     letter-spacing: 1px;
                 }
                 .username .roundkills-container {
@@ -62,7 +64,7 @@
                 }
                 .secondary_weapon {
                     position: absolute;
-                    top: 15px;
+                    top: 10px;
                     left: 140px;
                 }
                 
@@ -76,7 +78,9 @@
         right: 10px;
         .player {
             flex-direction: row-reverse;
-            height: 90px;
+            height: 75px;
+            position: relative;
+            margin: 3px;
             .dead-stats {
                 left: 8px;
             }
@@ -89,33 +93,32 @@
                     flex-direction: row-reverse;
                     .grenades {
                         position: absolute;
-                        bottom: 27px;
-                        left: 180px;
+                        bottom: 5px;
+                        left: 10px;
                     }
                     .username {
                         flex-direction: row-reverse;
                         .roundkills-container {
-                            position: absolute;
                             left: 115px;
                         }
                     }
                     .secondary_weapon {
                         position: absolute;
-                        top: 15px;
+                        top: 5px;
                         right: 140px;
                     }
                     .armor_and_utility {
                         justify-content: flex-end;
                         position: relative;
-                        right: 80px;
-                        top: 10px;
+                        right: 60px;
+                        bottom: 18px;
                     }
                     .money {
                         margin-left: auto;
                         justify-content: flex-end;
                         position: absolute;
-                        bottom: 30px;
-                        left: 265px;
+                        bottom: 26px;
+                        left: 230px;
                     }
                     .statistics {
                         display: flex;
@@ -125,7 +128,7 @@
                         align-items: center;
                         position: absolute;
                         right: 5px;
-                        top: 20px;
+                        top: 14px;
                         letter-spacing: 1px;
                     }   
                     .weapon {
@@ -141,22 +144,24 @@
     .player {
         width: 645px;
         height: 90px;
-        margin-bottom: 4px;
         display: flex;
         flex-direction: row;
         align-items: center;
         &.active {
             .player_data {
-                border: 2px solid white;
+                position: relative;
+                margin: 1px;
+                border: solid 2px white;
+                border-radius: 8px;
             }
         }
         &.dead {
-            opacity: 0.55;
+            opacity: 0.50;
             .player_side_bar {
                 background-color: var(--main-panel-color) !important;
             }
             .player_data {
-                width: 47%;
+                width: 53%;
                 .avatar {
                     filter: grayscale(100%);
                 }
@@ -184,11 +189,10 @@
             }
         }
         .player_data {
-            background-color: rgba(5,7,46, 0.4);
-            border: solid 3px white;
+            background-color: rgba(28,25,58, 0.6);
             position: relative;
-            border-radius: 8px;
-            width: 370px;
+            border-radius: 6px;
+            width: 340px;
             display: flex;
             flex-direction: row;
             height: 100%;
@@ -200,6 +204,7 @@
                 .hp_bar {
                     height: 35%;
                     position: absolute;
+                    border-radius: 8px 8px 0 0;
                     &.low {
                         background-color: red;
                     }
@@ -275,7 +280,7 @@
                             margin-left: 5px;
                             margin-right: 5px;
                             max-width: 100px;
-                            height: 30px;
+                            height: 27px;
                         }
                     }
                     .money {
@@ -323,12 +328,12 @@
                 align-items: center;
                 justify-content: flex-end;
                 overflow: hidden;
-                position: relative;
                 z-index: 1;
-                top: 3px;
+                position: relative;
+                top: 1px;
                 img {
-                    width: 80px;
-                    height: 83px;
+                    width: 70px;
+                    height: 73px;
                 }
                 .videofeed {
                     width:70px;
@@ -367,10 +372,10 @@
             justify-content: center;
             font-size: 44px;
             color: white;
-            background-color: rgba(5,7,46, 0.4);
+            background-color: rgba(28,25,58, 0.7);
         }
         .team_counter {
-            background-color: rgba(5,7,46, 0.4);
+            background-color: rgba(28,25,58, 0.7);
         }
         .CT {
             color: var(--color-new-ct);

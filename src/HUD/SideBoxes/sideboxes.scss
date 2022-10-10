@@ -1,6 +1,6 @@
 .boxes {
 	position: fixed;
-	bottom: 480px;
+	bottom: 420px;
 }
 .boxes.left {
 	left: 10px;
@@ -35,17 +35,15 @@
 	opacity: 0;
 }
 .sidebox {
-	width: 372px;
+	width: 340px;
 	height: 70px;
 	display: flex;
 	flex-direction: row;
 	opacity: 1;
 	transition: all 0.75s;
 	align-items: center;
-	background-color: rgba(5,7,46, 0.4);
-	border: solid 3px white;
+	background-color: rgba(5,7,46, 0.6);
 	position: relative;
-	border-radius: 8px;
 	.title_container {
 		color: var(--white-full);
 		height: 60px;
@@ -73,17 +71,16 @@
 	}
 }
 .utilitybox {
-	width: 372px;
+	width: 340px;
 	height: 70px;
 	display: flex;
 	flex-direction: row;
 	opacity: 1;
 	transition: all 0.75s;
 	flex-direction: column;
-	background-color: rgba(5,7,46,0.4);
-	border: solid 3px white;
+	background-color: rgba(5,7,46,0.6);
 	position: relative;
-	border-radius: 8px;
+	border-radius: 8px 8px 0 0;
 	.title_container {
 		display: flex;
 		flex-direction: row;
@@ -123,15 +120,14 @@
 	}
 }
 .moneybox {
-	width: 372px;
+	width: 340px;
 	height: 70px;
 	display: flex;
 	flex-direction: row;
 	opacity: 1;
 	transition: all 0.75s;
-	background-color: rgba(5,7,46, 0.5);
-	border: solid 3px white;
-	border-radius: 8px;
+	background-color: rgba(5,7,46, 0.6);
+	border-radius: 0 0 8px 8px;
 	font-weight: 600;
 	.money_container {
 		display: flex;
@@ -142,7 +138,7 @@
 			height: 25px;
 			display: flex;
 			align-items: flex-end;
-			font-size: 15px;
+			font-size: 14px;
 			justify-content: center;
 		}
 		.value {
@@ -207,9 +203,6 @@
 	flex-direction: row-reverse;
 }
 .moneybox.CT {
-	position: absolute;
-	bottom: 429px;
-	right: 570px;
 	.money_container {
 		.title {
 			color: var(--color-new-ct);
@@ -217,9 +210,6 @@
 	}
 }
 .moneybox.T {
-	position: absolute;
-	bottom: 429px;
-	left: 570px;
 	.money_container {
 		.title {
 			color: var(--color-new-t);

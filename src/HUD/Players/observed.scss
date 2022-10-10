@@ -25,8 +25,7 @@
         position: relative;
         right: 34px;
         border-radius: 10px;
-        background-color: rgba(5,7,46, 0.5);
-        border: solid 3px white;
+        background-color: rgba(28,25,58, 0.7);
         position: relative;
         border-radius: 8px;
         .stats_cell {
@@ -138,8 +137,7 @@
         font-weight: 600;
         width: 400px;
         margin-left: 120px;
-        background-color: rgba(5,7,46, 0.5);
-        border: solid 1px white;
+        background-color: rgba(28,25,58, 0.7);
         position: relative;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
@@ -192,12 +190,14 @@
         width: 140px;
         height: 140px;
         left: 100px;
-        bottom: 120px;
+        bottom: 119px;
         img {
             height: 215px;
             width: 225px;
-        }
+            -webkit-mask-image: linear-gradient(to top, transparent 1%, black 10%);
+            mask-image: linear-gradient(to top, transparent 1%, black 30%);
      }
+}
     
     &.T {
         .main_row .username_container .username, .stats_row .ammo .ammo_counter .ammo_reserve {
