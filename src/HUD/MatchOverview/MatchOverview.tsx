@@ -23,7 +23,7 @@ export default class MatchOverview extends React.Component<IProps> {
                 <div className="match-overview-teams">
                     <div className="match-overview-team">
                         <div className="match-overview-team-logo">
-                            <TeamLogo team={left} height={40} />
+                            <TeamLogo team={left} height={50} />
                         </div>
                         <div className="match-overview-team-name">{left.name}</div>
                     </div>

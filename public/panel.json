@@ -1,35 +1,5 @@
 [
     {
-        "label": "Trivia",
-        "name":"trivia",
-        "inputs": [
-            {
-                "type": "text",
-                "name": "title",
-                "label": "Trivia title"
-            },
-            {
-                "type": "text",
-                "name": "content",
-                "label": "Trivia content"
-            },
-            {
-                "type": "action",
-                "name": "triviaState",
-                "values": [
-                    {
-                        "name": "show",
-                        "label": "Show trivia"
-                    },
-                    {
-                        "name": "hide",
-                        "label": "Hide trivia"
-                    }
-                ]
-            }
-        ]
-    },
-    {
         "label": "Display settings",
         "name":"display_settings",
         "inputs": [
@@ -76,16 +46,6 @@
                         "label": "Hide boxes"
                     }
                 ]
-            },
-            {
-                "type": "action",
-                "name": "toggleRadarView",
-                "values": [
-                    {
-                        "name": "toggler",
-                        "label": "Toggle radar view"
-                    }
-                ]
             }
         ]
     },
@@ -122,19 +82,64 @@
                 "type": "checkbox",
                 "name": "player_preview_toggle",
                 "label": "Show player preview"
+            }
+        ]
+    },
+    {
+        "label": "Trivia",
+        "name":"trivia",
+        "inputs": [
+            {
+                "type": "text",
+                "name": "title",
+                "label": "Trivia title"
             },
             {
-                "type": "checkbox",
-                "name": "match_preview_toggle",
-                "label": "Show upcoming match"
+                "type": "text",
+                "name": "content",
+                "label": "Trivia content"
             },
             {
                 "type": "action",
-                "name": "showTournament",
+                "name": "triviaState",
                 "values": [
                     {
                         "name": "show",
-                        "label": "Show tournament"
+                        "label": "Show trivia"
+                    },
+                    {
+                        "name": "hide",
+                        "label": "Hide trivia"
+                    }
+                ]
+            }
+        ]
+    },
+
+
+
+
+    {
+        "label": "Tournament",
+        "name":"tournament_settings",
+        "inputs": [
+            {
+                "type": "text",
+                "name": "tournament_left",
+                "label": "Tournament Left"
+            },
+            {
+                "type": "text",
+                "name": "tournament_right",
+                "label": "Tournament Right"
+            },
+            {
+                "type": "action",
+                "name": "boxesState",
+                "values": [
+                    {
+                        "name": "show",
+                        "label": "Show Tournament"
                     },
                     {
                         "name": "hide",
@@ -142,7 +147,6 @@
                     }
                 ]
             }
-
         ]
     }
 ]
