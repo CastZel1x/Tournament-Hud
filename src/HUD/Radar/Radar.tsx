@@ -4,7 +4,6 @@ import { CSGO } from "csgogsi-socket";
 import LexoRadarContainer from './LexoRadar/LexoRadarContainer';
 
 
-
 interface Props { radarSize: number, game: CSGO }
 interface State {
     showRadar: boolean,

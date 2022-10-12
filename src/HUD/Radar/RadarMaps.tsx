@@ -6,6 +6,7 @@ import { actions } from './../../App';
 import Radar from './Radar'
 import TeamLogo from "../MatchBar/TeamLogo";
 
+
 interface Props { match: Match | null, map: Map, game: CSGO }
 interface State { showRadar: boolean, radarSize: number, showBig: boolean }
 
@@ -59,7 +60,7 @@ class MapsBar extends React.PureComponent<Props> {
     }
 }
 
-class MapEntry extends React.PureComponent<{ veto: Veto, map: Map, team: Team | null }> {
+class MapEntry extends React.PureComponent<{ veto: Veto, map: Map, team: Team| null }> {
     render() {
         const { veto, map, team } = this.props;
         return <div className="veto_entry">

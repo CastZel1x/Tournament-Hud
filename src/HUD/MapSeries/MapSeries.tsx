@@ -53,15 +53,15 @@ export default class MapSeries extends React.Component<IProps> {
                 <div className="title_bar">
 
                 <img className="touch" src= {touch}
-                     width="25px" height="22px" alt="filter applied" />  
+                     width="27px" height="28px" alt="filter applied" />  
                     <div className="picked"></div>
 
                     <img className="winmap1" src= {winmap1}
-                     width="25px" height="22px" alt="filter applied" /> 
+                     width="27px" height="28px" alt="filter applied" />  
                     <div className="winner"></div>
 
                 <img className="score1" src= {score1}
-                     width="28px" height="25px" alt="filter applied" /> 
+                     width="27px" height="28px" alt="filter applied" />  
                     <div className="score"></div>
                 </div>
                 {match.vetos.filter(veto => veto.type !== "ban").map(veto => {

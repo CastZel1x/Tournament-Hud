@@ -21,9 +21,9 @@
     &.left {
         left: 10px;
         .player {
-            height: 75px;
+            height: 65px;
             position: relative;
-            margin: 3px;
+            margin: 5px;
             .hp_bar {
                 left: 0;
             }
@@ -38,7 +38,7 @@
                 .armor_and_utility {
                     justify-content: flex-end;
                     position: relative;
-                    left: 35px;
+                    left: 50px;
                     bottom: 17px;
                 }
                 .money {
@@ -78,9 +78,9 @@
         right: 10px;
         .player {
             flex-direction: row-reverse;
-            height: 75px;
+            height: 65px;
             position: relative;
-            margin: 3px;
+            margin: 5px;
             .dead-stats {
                 left: 8px;
             }
@@ -118,7 +118,7 @@
                         justify-content: flex-end;
                         position: absolute;
                         bottom: 26px;
-                        left: 230px;
+                        left: 227px;
                     }
                     .statistics {
                         display: flex;
@@ -163,7 +163,7 @@
             .player_data {
                 width: 53%;
                 .avatar {
-                    filter: grayscale(100%);
+                    filter: grayscale(45%);
                 }
                 .row {
                     .hp_background_2 {
@@ -332,8 +332,8 @@
                 position: relative;
                 top: 1px;
                 img {
-                    width: 70px;
-                    height: 73px;
+                    width: 60px;
+                    height: 63px;
                 }
                 .videofeed {
                     width:70px;

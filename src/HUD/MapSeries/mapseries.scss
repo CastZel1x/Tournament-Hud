@@ -18,6 +18,7 @@
 		bottom: 2px;
 		position: relative;
         height: 40px;
+		border-radius: 0 0 4px 4px;
         &.active {
             .veto_winner {
                 display: none;
@@ -97,7 +98,6 @@
 	.title_bar {
 		display: flex;
 		background-color: rgba(28,25,58, 0.8);
-		border: solid 1px white;
 		position: relative;
 		height: 25px;
 		color: white;
@@ -125,8 +125,8 @@
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
-	top: 91px;
-	background-color: rgba(28,25,58, 0.9);
+	top: 131px;
+	background-color: rgba(0,14,37,0.6);
 	color: white;
 	width: 420px;
 	border-radius: 0 0 8px 8px;
@@ -144,10 +144,9 @@
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
-	top: 91px;
-	background-color: rgba(28,25,58, 0.9);
+	top: 131px;
+	background-color: rgba(0,14,37,0.6);
 	width: 420px;
-	border-radius: 0 0 8px 8px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -173,15 +172,17 @@
 .touch {
 	position: relative;
 	left: 137px;
+	bottom: 1px;
 }
 .winmap1 {
 	position: relative;
 	left: 83px;
-	top: 1px;
+	bottom: 1px;
 }
 .score1 {
 	position: relative;
 	left: 55px;
+	bottom: 1px;
 }
 
 
