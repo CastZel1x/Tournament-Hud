@@ -1,12 +1,12 @@
 .boxes {
 	position: fixed;
-	bottom: 420px;
+	bottom: 390px;
 }
 .boxes.left {
-	left: 10px;
+	left: 15px;
 }
 .boxes.right {
-	right: 10px;
+	right: 15px;
 }
 .boxes.hide {
 	.utilitybox {
@@ -35,14 +35,14 @@
 	opacity: 0;
 }
 .sidebox {
-	width: 340px;
+	width: 330px;
 	height: 70px;
 	display: flex;
 	flex-direction: row;
 	opacity: 1;
 	transition: all 0.75s;
 	align-items: center;
-	background-color: rgba(5,7,46, 0.6);
+	background-color: rgba(0,0,0, 0.6);
 	position: relative;
 	.title_container {
 		color: var(--white-full);
@@ -71,14 +71,14 @@
 	}
 }
 .utilitybox {
-	width: 340px;
+	width: 330px;
 	height: 70px;
 	display: flex;
 	flex-direction: row;
 	opacity: 1;
 	transition: all 0.75s;
 	flex-direction: column;
-	background-color: rgba(5,7,46,0.6);
+	background-color: rgba(0,0,0, 0.6);
 	position: relative;
 	border-radius: 8px 8px 0 0;
 	.title_container {
@@ -120,13 +120,13 @@
 	}
 }
 .moneybox {
-	width: 340px;
+	width: 330px;
 	height: 70px;
 	display: flex;
 	flex-direction: row;
 	opacity: 1;
 	transition: all 0.75s;
-	background-color: rgba(5,7,46, 0.6);
+	background-color: rgba(0,0,0, 0.6);
 	border-radius: 0 0 8px 8px;
 	font-weight: 600;
 	.money_container {

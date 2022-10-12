@@ -20,13 +20,12 @@
 
     .stats_row {
         height: 32px;
-        background-color: black;
-        width: 700px;
+        width: 750px;
         position: relative;
-        right: 34px;
-        background-color: rgba(28,25,58, 0.7);
+        right: 60px;
+        background-color: rgba(20,33,59, 0.6);
         position: relative;
-        border-radius: 2px;
+        border-radius: 6px 6px 8px 8px;
         .stats_cell {
             height: 100%;
             width: 56px;
@@ -122,7 +121,7 @@
             align-items: center;
             justify-content: flex-end;
             position: relative;
-            right: 8px;
+            left: 35px;
             .stat {
                 display: flex;
                 font-weight: 600;
@@ -136,10 +135,10 @@
         font-weight: 600;
         width: 400px;
         margin-left: 120px;
-        background-color: rgba(28,25,58, 0.7);
+        background-color: rgba(20,33,59, 0.6);
         position: relative;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+        border-top-left-radius: 9px;
+        border-top-right-radius: 9px;
         .logo {
             height: 43px;
             display: flex;
@@ -155,7 +154,7 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            font-size: 40px;
+            font-size: 46px;
             position: relative;
             right: 60px;
         }
@@ -188,11 +187,11 @@
         position: relative;
         width: 140px;
         height: 140px;
-        left: 100px;
-        bottom: 119px;
+        right: 180px;
+        bottom: 40px;
         img {
-            height: 215px;
-            width: 225px;
+            height: 185px;
+            width: 195px;
             -webkit-mask-image: linear-gradient(to top, transparent 1%, black 10%);
             mask-image: linear-gradient(to top, transparent 1%, black 30%);
      }

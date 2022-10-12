@@ -107,8 +107,8 @@ const Player = ({ player, isObserved }: IProps) => {
           <div className={`hp_bar ${player.state.health <= 20 ? 'low' : ''}`} style={{ width: `${player.state.health}%` }}></div>
           <div className="row">
             <div className="armor_and_utility">
-              <Bomb player={player} />
               <Armor player={player} />
+              <Bomb player={player} />
               <Defuse player={player} />
             </div>
             <div className="money">${player.state.money}</div>

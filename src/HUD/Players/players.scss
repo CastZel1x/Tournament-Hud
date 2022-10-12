@@ -1,6 +1,6 @@
 .teambox {
     position: fixed;
-    bottom: 10px;
+    bottom: 15px;
     display: flex;
     flex-direction: column;
     opacity: 1;
@@ -19,33 +19,33 @@
         opacity: 0;
     }
     &.left {
-        left: 10px;
+        left: 15px;
         .player {
-            height: 65px;
+            height: 68px;
             position: relative;
-            margin: 5px;
+            margin: 3px;
             .hp_bar {
                 left: 0;
+                background: linear-gradient(190deg, rgba(195,149,33,1) 35%, rgba(255,186,11,1) 100%);
             }
             .row {
                 flex-direction: row;
                 .grenades {
                     position: absolute;
-                    bottom: 5px;
-                    left: 200px;
+                    bottom: 20px;
+                    left: 80px;
                 }
                 
                 .armor_and_utility {
                     justify-content: flex-end;
                     position: relative;
-                    left: 50px;
-                    bottom: 17px;
+                    left: 150px;
+                    top: 6px;
                 }
                 .money {
                     margin-left: auto;
                     justify-content: flex-end;
                     position: absolute;
-                    bottom: 24px;
                     right: 200px;
                 }
                 .statistics {
@@ -55,8 +55,8 @@
                     font-weight: 700;
                     align-items: center;
                     position: absolute;
-                    left: 5px;
-                    top: 14px;
+                    bottom: -1px;
+                    left: 75px;
                     letter-spacing: 1px;
                 }
                 .username .roundkills-container {
@@ -64,8 +64,8 @@
                 }
                 .secondary_weapon {
                     position: absolute;
-                    top: 10px;
-                    left: 140px;
+                    bottom: 15px;
+                    left: 20px;
                 }
                 
             }
@@ -75,12 +75,12 @@
         }
     }
     &.right {
-        right: 10px;
+        right: 15px;
         .player {
             flex-direction: row-reverse;
-            height: 65px;
+            height: 68px;
             position: relative;
-            margin: 5px;
+            margin: 3px;
             .dead-stats {
                 left: 8px;
             }
@@ -88,13 +88,14 @@
                 flex-direction: row-reverse;
                 .hp_bar {
                     right: 0;
+                    background: linear-gradient(190deg, rgba(65,154,215,1) 35%, rgba(38,109,205,1) 100%);
                 }
                 .row {
                     flex-direction: row-reverse;
                     .grenades {
                         position: absolute;
-                        bottom: 5px;
-                        left: 10px;
+                        bottom: 20px;
+                        right: 80px;
                     }
                     .username {
                         flex-direction: row-reverse;
@@ -104,20 +105,19 @@
                     }
                     .secondary_weapon {
                         position: absolute;
-                        top: 5px;
-                        right: 140px;
+                        bottom: 15px;
+                        right: 10px;
                     }
                     .armor_and_utility {
                         justify-content: flex-end;
                         position: relative;
-                        right: 60px;
-                        bottom: 18px;
+                        right: 150px;
+                        top: 6px;
                     }
                     .money {
                         margin-left: auto;
                         justify-content: flex-end;
                         position: absolute;
-                        bottom: 26px;
                         left: 227px;
                     }
                     .statistics {
@@ -127,8 +127,8 @@
                         font-weight: 700;
                         align-items: center;
                         position: absolute;
-                        right: 5px;
-                        top: 14px;
+                        bottom: -1px;
+                        right: 75px;
                         letter-spacing: 1px;
                     }   
                     .weapon {
@@ -150,9 +150,9 @@
         &.active {
             .player_data {
                 position: relative;
-                margin: 1px;
+                margin: 2px;
                 border: solid 2px white;
-                border-radius: 8px;
+                border-radius: 2px;
             }
         }
         &.dead {
@@ -163,7 +163,7 @@
             .player_data {
                 width: 53%;
                 .avatar {
-                    filter: grayscale(45%);
+                    filter: grayscale(100%);
                 }
                 .row {
                     .hp_background_2 {
@@ -189,10 +189,9 @@
             }
         }
         .player_data {
-            background-color: rgba(28,25,58, 0.6);
+            background-color: rgba(20,33,59, 0.4);
             position: relative;
-            border-radius: 6px;
-            width: 340px;
+            width: 330px;
             display: flex;
             flex-direction: row;
             height: 100%;
@@ -202,9 +201,8 @@
                 flex: 1;
                 min-width: 0;
                 .hp_bar {
-                    height: 35%;
+                    height: 40%;
                     position: absolute;
-                    border-radius: 8px 8px 0 0;
                     &.low {
                         background-color: red;
                     }
@@ -260,7 +258,8 @@
                         text-overflow: ellipsis;
                         white-space: nowrap;
                         position: relative;
-                        bottom: 5px;
+                        bottom: 1px;
+                        text-shadow: 1px 3px 0px #7A7A7A;
                         .roundkills-container {
                             position: absolute;
                             background-image: url('./../../assets/images/icon_skull_default.svg');
@@ -275,12 +274,13 @@
                             font-size:15px;
                         }
                         svg.weapon {
-                            max-height: 30px;
+                            max-height: 25px;
                             width: auto;
                             margin-left: 5px;
                             margin-right: 5px;
                             max-width: 100px;
                             height: 27px;
+
                         }
                     }
                     .money {
@@ -290,6 +290,8 @@
                         display: flex;
                         align-items: center;
                         justify-content: flex-start;
+                        position: absolute;
+                        top: 16px;
                     }
                     .grenades {
                         display: flex;
@@ -310,14 +312,14 @@
                         font-weight: 600;
                         font-size:20px;
                         position: relative;
-                        bottom: 5px;
+                        bottom: 0px;
                     }
                     .secondary_weapon {
                         display: flex;
                         align-items: center;
                         svg {
-                            max-height: 30px;
-                            height: 30px;
+                            max-height: 27px;
+                            height: 27px;
                         }
                     }
                 }
@@ -331,6 +333,7 @@
                 z-index: 1;
                 position: relative;
                 top: 1px;
+                margin: -10px;
                 img {
                     width: 60px;
                     height: 63px;
