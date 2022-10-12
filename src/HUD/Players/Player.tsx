@@ -113,15 +113,17 @@ const Player = ({ player, isObserved }: IProps) => {
             </div>
             <div className="money">${player.state.money}</div>
             <div className="statistics">
+
               <img className="kill" src= {kill}
               width="19px" height="16px" alt="filter applied" />  
 						<Statistic label={""} value={stats.kills} />
 
-              <div className="space">ㅤ</div>
+            <div className="spacekildead"> ㅤ</div>
 
               <img className="dead" src= {dead} 
               width="18px" height="15px" alt="filter applied" />  
 						<Statistic label={""} value={stats.deaths} />
+
 					</div>
             <div className="grenades">
               {grenades.map(grenade => (

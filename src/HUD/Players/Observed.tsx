@@ -70,6 +70,7 @@ export default class Observed extends React.Component<{ player: Player | null, v
 							<HealthFull />
 						</div>
 						<div className="health text">{player.state.health}</div>
+						<div className="spacehealth"> ㅤ</div>
 						<div className="armor-icon icon">
 							{player.state.helmet ? <ArmorHelmet /> : <ArmorFull />}
 						</div>

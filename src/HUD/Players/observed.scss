@@ -18,6 +18,16 @@
         height: 33px;
     }
 
+    .main_row {
+        font-weight: 600;
+        width: 400px;
+        margin-left: 120px;
+        background-color: rgba(20,33,59, 0.6);
+        position: relative;
+        border-top-left-radius: 9px;
+        border-top-right-radius: 9px;
+    }
+
     .stats_row {
         height: 32px;
         width: 750px;
@@ -91,13 +101,15 @@
             height: 100%;
             width: 140px;
             justify-content: center;
+            position: relative;
+            left: 10px;
             .text {
                 width: 30px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 font-weight: 600;
-                font-size: 21px;
+                font-size: 24px;
                 height: 100%;
                 padding-top: 2px;
             }
@@ -121,7 +133,7 @@
             align-items: center;
             justify-content: flex-end;
             position: relative;
-            left: 35px;
+            left: 5px;
             .stat {
                 display: flex;
                 font-weight: 600;
@@ -132,13 +144,6 @@
     }
 
     .main_row {
-        font-weight: 600;
-        width: 400px;
-        margin-left: 120px;
-        background-color: rgba(20,33,59, 0.6);
-        position: relative;
-        border-top-left-radius: 9px;
-        border-top-right-radius: 9px;
         .logo {
             height: 43px;
             display: flex;
@@ -154,7 +159,7 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            font-size: 46px;
+            font-size: 40px;
             position: relative;
             right: 60px;
         }
