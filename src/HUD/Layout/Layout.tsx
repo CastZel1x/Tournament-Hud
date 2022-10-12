@@ -6,7 +6,7 @@ import Observed from "./../Players/Observed";
 import { CSGO, Team } from "csgogsi-socket";
 import { Match } from "../../api/interfaces";
 import RadarMaps from "./../Radar/RadarMaps";
-import Trivia from "../Trivia/Trivia";
+import Trivia from "../TournamentName/Tournament";
 import SideBox from '../SideBoxes/SideBox';
 import { GSI, actions } from "./../../App";
 import MoneyBox from '../SideBoxes/Money';

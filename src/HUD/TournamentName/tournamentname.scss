@@ -1,0 +1,28 @@
+.tournament_container {
+    position: absolute;
+    left: 20px;
+    color: white;
+    width: 1132px;
+    top: 824px;
+    opacity:1;
+    transition: opacity 1s;
+    
+    font-size: 14pt;
+}
+
+.tournament_container .content {
+    padding-left:30px;
+    padding-bottom:15px;
+    bottom: 820px;
+    left: 374px;
+    height: 8px;
+    position: relative;
+    background-color: rgba(0,14,37,0.7);
+    color: white;
+    text-align: center;
+    border-radius: 12px 12px 0 0;
+}
+
+.tournament_container.hide {
+    opacity:0;
+}

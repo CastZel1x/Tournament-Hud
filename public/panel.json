@@ -86,18 +86,13 @@
         ]
     },
     {
-        "label": "Trivia",
+        "label": "Tournament Name",
         "name":"trivia",
         "inputs": [
             {
                 "type": "text",
-                "name": "title",
-                "label": "Trivia title"
-            },
-            {
-                "type": "text",
                 "name": "content",
-                "label": "Trivia content"
+                "label": "Tournament Name"
             },
             {
                 "type": "action",
@@ -105,45 +100,11 @@
                 "values": [
                     {
                         "name": "show",
-                        "label": "Show trivia"
+                        "label": "Show Tournament Name"
                     },
                     {
                         "name": "hide",
-                        "label": "Hide trivia"
-                    }
-                ]
-            }
-        ]
-    },
-
-
-
-
-    {
-        "label": "Tournament",
-        "name":"tournament_settings",
-        "inputs": [
-            {
-                "type": "text",
-                "name": "tournament_left",
-                "label": "Tournament Left"
-            },
-            {
-                "type": "text",
-                "name": "tournament_right",
-                "label": "Tournament Right"
-            },
-            {
-                "type": "action",
-                "name": "boxesState",
-                "values": [
-                    {
-                        "name": "show",
-                        "label": "Show Tournament"
-                    },
-                    {
-                        "name": "hide",
-                        "label": "Hide tournament"
+                        "label": "Hide Tournament Name"
                     }
                 ]
             }
