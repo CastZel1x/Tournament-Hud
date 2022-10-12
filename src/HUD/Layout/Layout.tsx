@@ -6,7 +6,7 @@ import Observed from "./../Players/Observed";
 import { CSGO, Team } from "csgogsi-socket";
 import { Match } from "../../api/interfaces";
 import RadarMaps from "./../Radar/RadarMaps";
-import Trivia from "../TournamentName/Tournament";
+import TournamentName from "../TournamentName/Tournament";
 import SideBox from '../SideBoxes/SideBox';
 import { GSI, actions } from "./../../App";
 import MoneyBox from '../SideBoxes/Money';
@@ -102,7 +102,7 @@ export default class Layout extends React.Component<Props, State> {
         <TeamBox team={left} players={leftPlayers} side="left" current={game.player} />
         <TeamBox team={right} players={rightPlayers} side="right" current={game.player} />
 
-        <Trivia />
+        <TournamentName />
 
         <MapSeries teams={[left, right]} match={match} isFreezetime={isFreezetime} map={game.map} />
         <div className={"boxes left"}>

@@ -3,7 +3,7 @@ import React from 'react';
 import {configs, actions} from './../../App';
 import './tournamentname.scss';
 
-export default class Trivia extends React.Component<any, { title: string, content: string, show: boolean }> {
+export default class Tournament extends React.Component<any, { title: string, content: string, show: boolean }> {
 	constructor(props: any) {
 		super(props);
 		this.state = {
@@ -16,17 +16,17 @@ export default class Trivia extends React.Component<any, { title: string, conten
 	componentDidMount() {
         configs.onChange((data:any) => {
             if(!data) return;
-            const trivia = data.trivia;
-            if(!trivia) return;
+            const tournament = data.tournament;
+            if(!tournament) return;
 
-            if(trivia.content){
-                this.setState({content:trivia.content})
+            if(tournament.content){
+                this.setState({content:tournament.content})
             }
         });
-        actions.on("triviaState", (state: any) => {
+        actions.on("tournamentState", (state: any) => {
             this.setState({show: state === "show"})
         });
-        actions.on("toggleTrivia", () => {
+        actions.on("toggleTournament", () => {
             this.setState({show: !this.state.show})
         });
 	}

@@ -50,7 +50,7 @@
         ]
     },
     {
-        "label": "Player & Match overview",
+        "label": "Player",
         "name":"preview_settings",
         "inputs": [
             {
@@ -87,7 +87,7 @@
     },
     {
         "label": "Tournament Name",
-        "name":"trivia",
+        "name":"tournament",
         "inputs": [
             {
                 "type": "text",
@@ -96,7 +96,7 @@
             },
             {
                 "type": "action",
-                "name": "triviaState",
+                "name": "tournamentState",
                 "values": [
                     {
                         "name": "show",
