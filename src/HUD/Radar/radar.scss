@@ -28,7 +28,7 @@
 	height:350px;
 	overflow: hidden;
 	position: relative;
-	top: 0px;
+	bottom: 7px;
 }
 #maps_container {
 	width: 100%;
@@ -39,7 +39,7 @@
 	background-color: rgba(0,14,37,0.7);
 	position: relative;
 	border-radius: 3px;
-	bottom: 340px;
+	bottom: 350px;
 }
 .veto_entry {
 	display: flex;
@@ -64,7 +64,7 @@
 		}
 	}
 	.map_name.active {
-		text-shadow: 1px 1px 22px white, 0 0 1em white;
+		text-shadow: 1px 1px 18px white, 0 0 1em white;
 		font-weight: 600;
 	}
 }

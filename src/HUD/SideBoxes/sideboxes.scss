@@ -1,12 +1,12 @@
 .boxes {
 	position: fixed;
-	bottom: 390px;
+	bottom: 435px;
 }
 .boxes.left {
-	left: 15px;
+	left: 20px;
 }
 .boxes.right {
-	right: 15px;
+	right: 20px;
 }
 .boxes.hide {
 	.utilitybox {
@@ -35,9 +35,9 @@
 	opacity: 0;
 }
 .sidebox {
-	width: 330px;
+	width: 320px;
 	height: 70px;
-	display: flex;
+	display: none;
 	flex-direction: row;
 	opacity: 1;
 	transition: all 0.75s;
@@ -71,7 +71,7 @@
 	}
 }
 .utilitybox {
-	width: 330px;
+	width: 320px;
 	height: 70px;
 	display: flex;
 	flex-direction: row;
@@ -120,7 +120,7 @@
 	}
 }
 .moneybox {
-	width: 330px;
+	width: 320px;
 	height: 70px;
 	display: flex;
 	flex-direction: row;

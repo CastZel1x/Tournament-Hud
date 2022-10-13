@@ -100,7 +100,6 @@ const Player = ({ player, isObserved }: IProps) => {
             <div className="username">
               <div>{isLeft ? <span>{player.observer_slot}</span> : null} {player.name} {!isLeft ? <span>{player.observer_slot}</span> : null}</div>
               {primary || secondary ? <Weapon weapon={primary ? primary.name : secondary.name} active={primary ? primary.state === "active" : secondary.state === "active"} /> : ""}
-              {player.state.round_kills ? <div className="roundkills-container">{player.state.round_kills}</div> : null}
             </div>
           </div>         
           { player.state.health > 0 ? <div className={`hp_bar hp_bar_background`} style={{ width: `${player.state.health}%` }}></div> : null }
@@ -125,6 +124,7 @@ const Player = ({ player, isObserved }: IProps) => {
 						<Statistic label={""} value={stats.deaths} />
 
 					</div>
+          {player.state.round_kills ? <div className="roundkills-container">{player.state.round_kills}</div> : null}
             <div className="grenades">
               {grenades.map(grenade => (
                 [

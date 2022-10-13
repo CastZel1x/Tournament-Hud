@@ -43,18 +43,6 @@ Fullfledged example of the React HUD made for HUD Manager. It has:
 |  Tournament Name content| `Text` |
 
 
-## Display settings
-
-
-|  Field|Description  |
-|--|--|
-|  Left/right box's title| `Text` |
-|  Left/right box's title| `Text` |
-|  Left/right box's image logo| `Image file` |
-
-## Example settings
-
-![Preview of HUDs settings](settings.png)
 
 ## Preview
 
