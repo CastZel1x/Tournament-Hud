@@ -36,12 +36,11 @@ Fullfledged example of the React HUD made for HUD Manager. It has:
 >Swap teams
 
 ## **Panel**
-## Trivia settings
+## Tournament Name settings
 
 |  Field|Description  |
 |--|--|
-|  Trivia title| `Text` |
-|  Trivia content| `Text` |
+|  Tournament Name content| `Text` |
 
 
 ## Display settings
