@@ -1,6 +1,6 @@
 {
   "name": "tournament_hud",
-  "version": "1.5",
+  "version": "1.5.2",
   "homepage": "./",
   "private": true,
   "dependencies": {

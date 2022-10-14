@@ -37,7 +37,7 @@ class VetoEntry extends React.Component<IVetoProps> {
                 {Object.values((veto.score || ['-','-'])).sort().join(":")}
             </div>
             <div className='active_container'>
-                <div className='active'> playing</div>
+                <div className='active'>live</div>
             </div>
         </div>
     }

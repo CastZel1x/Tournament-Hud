@@ -114,13 +114,13 @@ const Player = ({ player, isObserved }: IProps) => {
             <div className="statistics">
 
               <img className="kill" src= {kill}
-              width="19px" height="16px" alt="filter applied" />  
+              width="22px" height="19px" alt="filter applied" />  
 						<Statistic label={""} value={stats.kills} />
 
             <div className="spacekildead"> ㅤ</div>
 
               <img className="dead" src= {dead} 
-              width="18px" height="15px" alt="filter applied" />  
+              width="21px" height="18px" alt="filter applied" />  
 						<Statistic label={""} value={stats.deaths} />
 
 					</div>

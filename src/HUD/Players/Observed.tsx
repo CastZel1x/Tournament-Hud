@@ -61,8 +61,15 @@ export default class Observed extends React.Component<{ player: Player | null, v
 					<TeamLogo team={player.team} height={40} width={40} />
 					<div className="username_container">
 						<div className="username">{player.name}</div>
+						<div className="flag">{countryName ? <img src={`${apiUrl}files/img/flags/${countryName.replace(/ /g, "-")}.png`} alt={countryName} /> : ''}</div>
 					</div>
-					<div className="flag">{countryName ? <img src={`${apiUrl}files/img/flags/${countryName.replace(/ /g, "-")}.png`} alt={countryName} /> : ''}</div>
+					<div className="grenade_container">
+						{grenades.map(grenade => <React.Fragment key={`${player.steamid}_${grenade.name}_${grenade.ammo_reserve || 1}`} >
+						<Weapon weapon={grenade.name} active={grenade.state === "active"} isGrenade />
+							{
+								grenade.ammo_reserve === 2 ? <Weapon weapon={grenade.name} active={grenade.state === "active"} isGrenade /> : null}
+						</React.Fragment>)}
+					</div>
 				</div>
 				<div className="stats_row">
 					<div className="health_armor_container">
@@ -82,13 +89,6 @@ export default class Observed extends React.Component<{ player: Player | null, v
 						<Statistic label={"D"} value={stats.deaths} />
 						<Statistic label={"K/D"} value={ratio.toFixed(2)} />
 					</div>
-					<div className="grenade_container">
-						{grenades.map(grenade => <React.Fragment key={`${player.steamid}_${grenade.name}_${grenade.ammo_reserve || 1}`} >
-						<Weapon weapon={grenade.name} active={grenade.state === "active"} isGrenade />
-							{
-								grenade.ammo_reserve === 2 ? <Weapon weapon={grenade.name} active={grenade.state === "active"} isGrenade /> : null}
-						</React.Fragment>)}
-					</div>
 					<div className="ammo">
 						<div className="ammo_icon_container">
 							<Bullets />
@@ -102,11 +102,11 @@ export default class Observed extends React.Component<{ player: Player | null, v
 							<div className="spaceobserv ">ㅤㅤ</div>	
 
 							<img className="banerlogo" src= {baner} 
-             					 width="150px" height="75px" alt="filter applied" />  
+             					 width="100px" height="50px" alt="filter applied" />  
 							<img className="banerlogo1" src= {esea} 
-             					 width="100px" height="100px" alt="filter applied" />  
+             					 width="75px" height="75px" alt="filter applied" />  
 							<img className="banerlogo2" src= {faceit} 
-             					 width="180px" height="76px" alt="filter applied" />  
+             					 width="150px" height="56px" alt="filter applied" />  
 							</div>
 					</div>
 				</div>

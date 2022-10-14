@@ -157,9 +157,8 @@
         &.active {
             .player_data {
                 position: relative;
-                margin: 2px;
-                border: solid 2px white;
-                border-radius: 2px;
+                margin: 1px;
+                background-color: rgba(255,255,255,0.25);
             }
         }
         &.dead {
@@ -290,6 +289,7 @@
                         position: absolute;
                         margin-left: 11px;
                         margin-right: -18px;
+                        font-size: 16px;
                     }
                     .grenades {
                         display: flex;

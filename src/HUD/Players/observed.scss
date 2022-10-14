@@ -1,13 +1,14 @@
 .observed {
     position: fixed;
-    width: 640px;
+    width: 600px;
     bottom: 120px;
     margin-left: -310px;
     left: 50%;
-    height: 95px;
+    height: 86px;
     display: flex;
     flex-direction: column;
     color: white;
+    background-color: rgba(20,33,59, 0.4);
 
     .main_row, .stats_row {
         flex: 1;
@@ -15,25 +16,12 @@
         align-items: center;
         flex-direction: row;
         position: relative;
-        height: 33px;
-    }
-
-    .main_row {
-        font-weight: 600;
-        width: 400px;
-        margin-left: 120px;
-        background-color: rgba(20,33,59, 0.6);
-        position: relative;
+        height: 43px;
     }
 
     .stats_row {
-        height: 32px;
-        width: 750px;
-        position: relative;
-        right: 60px;
-        background-color: rgba(20,33,59, 0.6);
-        position: relative;
-        border-radius: 6px 6px 0 0;background-color: rgba(20,33,59, 0.6);
+        height: 28px;
+
         .stats_cell {
             height: 100%;
             width: 56px;
@@ -66,8 +54,6 @@
                 display: flex;
                 font-size: 18px;
                 font-weight: 600;
-                position: relative;
-                left: 20px;
                 > div {
                     width: 32px;
                     display: flex;
@@ -86,30 +72,29 @@
                 width: 48px;
                 align-items: center;
                 justify-content: center;
-                position: relative;
-                left: 28px;
                 svg {
-                    max-width: 30px;
+                    max-width: 27px;
                     fill: white;
+                    position: relative;
+                    left: 12px;
+                    bottom: 2px;
                 }
             }
         }
         .health_armor_container {
             display: flex;
             height: 100%;
-            width: 140px;
+            width: 125px;
             justify-content: center;
-            position: relative;
-            left: 10px;
             .text {
                 width: 30px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 font-weight: 600;
-                font-size: 24px;
+                font-size: 17px;
                 height: 100%;
-                padding-top: 2px;
+                padding-top: 0px;
             }
             
             .icon {
@@ -118,7 +103,7 @@
                 align-items: center;
                 justify-content: center;
                 svg {
-                    max-height:30px;
+                    max-height:21px;
                     max-width:22px;
                 }
             }
@@ -130,25 +115,42 @@
             flex-direction: row;
             align-items: center;
             justify-content: flex-end;
-            position: relative;
-            left: 10px;
             .stat {
                 display: flex;
                 font-weight: 600;
-                font-size: 24px;
+                font-size: 22px;
                 margin-right: 24px;
             }
         }
     }
 
     .main_row {
+        font-weight: 600;
+        position: relative;
+        border-bottom: solid 2px;
         .logo {
-            height: 43px;
+            height: 40px;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
-            right: 130px;
+            top: 43px;
+            left: 3px;
+            img {
+                max-height: 35px;
+                max-width: 35px;
+                height: 40px;
+                width: 40px;
+            }
+        }
+        .grenade_container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            width: 140px;
+            justify-content: center;
+            margin-right: -15px;
+        
         }
         .username_container {
             height: 100%;
@@ -159,7 +161,15 @@
             flex-direction: column;
             font-size: 40px;
             position: relative;
-            right: 70px;
+            top: 22px;
+        }
+        .weapon.grenade {
+            height: 28px;
+            /*filter: invert(1);*/
+
+            &:last-child {
+                margin-right: 5px;
+            }
         }
         
     }
@@ -179,7 +189,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-right: 5px;
+        position: relative;
+        right: 165px;
+        bottom: 45px;
+        box-shadow: 0 0 8px rgba(0,0,0, 0.4);
         img {
             height: 43px;
         }
@@ -190,15 +203,9 @@
         position: relative;
         width: 140px;
         height: 140px;
-        right: 180px;
-        bottom: 40px;
-        img {
-            height: 185px;
-            width: 195px;
-            -webkit-mask-image: linear-gradient(to top, transparent 1%, black 10%);
-            mask-image: linear-gradient(to top, transparent 1%, black 30%);
-     }
-}
+        right: 30px;
+        bottom: 20px;
+    }
     
     &.T {
         .main_row .username_container .username, .stats_row .ammo .ammo_counter .ammo_reserve {
@@ -253,36 +260,6 @@
         height: 300px;
     }
 }
-
-
-.grenade_container {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    width: 100px;
-    justify-content: center;
-    position: relative;
-    left: 10px;
-    .img {
-        max-height:20px;
-        max-width:22px;
-    }
-}
-
-.weapon.grenade {
-    height: 28px;
-    /*filter: invert(1);*/
-    svg {
-        max-height:30px;
-        max-width:22px;
-    }
-
-    &:last-child {
-        margin-right: 5px;
-    }
-}
-
-
 .baner {
     display: none;
     .spaceobserv {
@@ -290,7 +267,7 @@
         background-color: rgba(20,33,59, 0.4);
         top: 47px;
         left: 0px;
-        width: 750px;
+        width: 550px;
         height: 100px;
         border-radius: 0 0 8px 8px;
     }
