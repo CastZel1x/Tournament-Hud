@@ -35,7 +35,6 @@
         background-color: rgba(20,33,59, 0.6);
         position: relative;
         border-radius: 4px;
-        background-color: rgba(20,33,59, 0.6);
         .stats_cell {
             height: 100%;
             width: 56px;
@@ -64,6 +63,7 @@
             width: 140px;
             display: flex;
             position: relative;
+            left: 10px;
             .ammo_counter {
                 flex: 1;
                 display: flex;
@@ -144,7 +144,7 @@
             padding-left: 18px;
             font-size: 20px;
             color: white;
-            left: 159px;
+            left: 158px;
             bottom: 11px;
         }
         .statistics {

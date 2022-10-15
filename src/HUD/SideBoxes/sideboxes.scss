@@ -1,9 +1,9 @@
 .boxes {
 	position: fixed;
-	bottom: 435px;
+	bottom: 413px;
 }
 .boxes.left {
-	left: 20px;
+	left: 18px;
 }
 .boxes.right {
 	right: 20px;
@@ -127,7 +127,6 @@
 	opacity: 1;
 	transition: all 0.75s;
 	background-color: rgba(0,0,0, 0.6);
-	border-radius: 0 0 8px 8px;
 	font-weight: 600;
 	.money_container {
 		display: flex;

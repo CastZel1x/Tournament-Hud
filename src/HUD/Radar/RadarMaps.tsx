@@ -69,3 +69,4 @@ class MapEntry extends React.PureComponent<{ veto: Veto, map: Map, team: Team| n
         </div>
     }
 }
+
