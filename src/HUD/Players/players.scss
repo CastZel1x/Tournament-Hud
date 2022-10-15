@@ -156,9 +156,10 @@
         align-items: center;
         &.active {
             .player_data {
-                position: relative;
+                position: absolute;
                 margin: 1px;
-                background-color: rgba(255,255,255,0.25);
+                background-color: rgba(255,255,255,0.09);
+                margin: 2px;
             }
         }
         &.dead {

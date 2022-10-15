@@ -89,7 +89,7 @@ const Player = ({ player, isObserved }: IProps) => {
   const ratio = stats.deaths === 0 ? stats.kills : stats.kills / stats.deaths ;
   const isLeft = player.team.orientation === "left";
   return (
-    <div className={`player ${player.state.health === 0 ? "dead" : ""} ${isObserved ? 'active' : ''}`}>
+      <div className={`player ${player.state.health === 0 ? "dead" : ""} ${isObserved ? 'active' : ''}`}>
       <div className="player_data">
       <Avatar steamid={player.steamid} height={57} width={57} showSkull={false} showCam={false} sidePlayer={true} />
         <div className="player_stats">
