@@ -68,6 +68,23 @@
                     left: 10px;
                     letter-spacing: 1px;
                 }
+                .number{
+                    color: white;
+                    position: absolute;
+                    left: 255px;
+                    bottom: 100%;
+                    display: box;
+                    width: 20px;
+                    height: 20px;
+                    background-color: rgba(255,0,0, 0.8);
+                    border-radius: 12px;
+                    z-index: 1;
+                    .num{
+                        position: relative;
+                        left: 28%;
+                        top: 1px;
+                    }
+                } 
                 .secondary_weapon {
                     position: absolute;
                     top: 14px;
@@ -137,7 +154,24 @@
                         bottom: 23px;
                         right: 10px;
                         letter-spacing: 1px;
-                    }   
+                    }  
+                    .number{
+                        color: white;
+                        position: absolute;
+                        right: 255px;
+                        bottom: 100%;
+                        display: box;
+                        width: 20px;
+                        height: 20px;
+                        background-color: rgba(255,0,0, 0.8);
+                        border-radius: 12px;
+                        z-index: 1;
+                        .num{
+                            position: relative;
+                            left: 28%;
+                            top: 1px;
+                        }
+                    } 
                     .weapon {
                         transform: scaleX(-1);
                     }
@@ -149,7 +183,7 @@
         }
     }  
     .player {
-        width: 640px;
+        width: 320px;
         height: 90px;
         display: flex;
         flex-direction: row;
@@ -163,18 +197,17 @@
             }
         }
         &.dead {
-            opacity: 0.65;
+            opacity: 0.60;
             .player_side_bar {
                 background-color: var(--main-panel-color) !important;
             }
             .player_data {
-                width: 30%;
                 .avatar {
                     filter: grayscale(100%);
                 }
                 .row {
                     .hp_background_2 {
-                        opacity: 0;
+                        opacity: 1;
                     }
                     .health {
                         color: #b2b2b2;
@@ -192,7 +225,7 @@
             }
         }
         .player_data {
-            background-color: rgba(20,33,59, 0.4);
+            background-color: rgba(20,33,59, 0.5);
             position: relative;
             width: 320px;
             display: flex;
@@ -215,7 +248,7 @@
                     display: flex;
                     position: relative;
                     svg.weapon {
-                        filter: invert(45%);
+                        filter: invert(40%);
                         &.active {
                             filter: invert(0);
                         }

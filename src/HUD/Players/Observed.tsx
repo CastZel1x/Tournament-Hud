@@ -12,6 +12,7 @@ import { actions } from "../../App";
 import baner from "../.././assets/baner/baner.png";
 import esea from "../.././assets/baner/esea.png";
 import faceit from "../.././assets/baner/faceit.png";
+import roundkill from "../.././assets/roundkill.png";
 
 class Statistic extends React.PureComponent<{ label: string; value: string | number, }> {
 	render() {
@@ -76,6 +77,8 @@ export default class Observed extends React.Component<{ player: Player | null, v
 						</div>
 						<div className="health text">{player.state.armor}</div>
 					</div>
+					<img className="round_kills" src= {roundkill} 
+             				 width="21px" height="18px" alt="filter applied" />  
 					{player.state.round_kills ? <div className="roundkills-container">{player.state.round_kills}</div> : null}
 					<div className="statistics">
 						<Statistic label={"K"} value={stats.kills} />

@@ -98,13 +98,15 @@ const Player = ({ player, isObserved }: IProps) => {
             {player.state.health}
             </div>
             <div className="username">
-              <div>{isLeft ? <span>{player.observer_slot}</span> : null} {player.name} {!isLeft ? <span>{player.observer_slot}</span> : null}</div>
+            <div>{player.name}</div>
               {primary || secondary ? <Weapon weapon={primary ? primary.name : secondary.name} active={primary ? primary.state === "active" : secondary.state === "active"} /> : ""}
             </div>
           </div>         
-          { player.state.health > 0 ? <div className={`hp_bar hp_bar_background`} style={{ width: `${player.state.health}%` }}></div> : null }
           <div className={`hp_bar ${player.state.health <= 20 ? 'low' : ''}`} style={{ width: `${player.state.health}%` }}></div>
           <div className="row">
+          <div className="number">
+              <div className="num">{player.observer_slot}</div>
+            </div>
             <div className="armor_and_utility">
               <Armor player={player} />
               <Bomb player={player} />
