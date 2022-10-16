@@ -19,7 +19,7 @@
         opacity: 0;
     }
     &.left {
-        left: 15px;
+        left: 35px;
         .player {
             height: 73px;
             position: relative;
@@ -61,8 +61,8 @@
                     padding-left: 13px;
                     font-size: 13px;
                     color: white;
-                    left: 150px;
-                    bottom: 24px;
+                    left: 140px;
+                    bottom: 22px;
                     img {
                         filter: invert (100%);
                     }
@@ -75,18 +75,19 @@
                 }
                 .number{
                     position: absolute;
-                    left: 97%;
-                    top: 60%;
+                    right: 97%;
+                    top: 50%;
                     display: box;
                     width: 20px;
                     height: 20px;
-                    background-color: rgba(255,0,0, 0.7);
+                    background: linear-gradient(190deg, rgba(195,149,33,1) 35%, rgba(255,186,11,1) 100%);
+                    border:solid 1px white;
                     color: white;
                     border-radius: 12px;
                     z-index: 1;
                     .num{
                         position: relative;
-                        left: 28%;
+                        left: 30%;
                         top: 1px;
                     }
                 } 
@@ -98,7 +99,7 @@
         }
     }
     &.right {
-        right: 15px;
+        right: 35px;
         .player {
             flex-direction: row-reverse;
             height: 73px;
@@ -133,8 +134,8 @@
                         padding-left: 13px;
                         font-size: 13px;
                         color: white;
-                        right: 150px;
-                        bottom: 24px;
+                        right: 140px;
+                        bottom: 22px;
                     }
                     .secondary_weapon {
                         padding-left: 10px;
@@ -160,19 +161,20 @@
                         letter-spacing: 1px;
                     }  
                     .number{
-                        background-color: rgba(255,0,0, 0.7);
-                        color: white;
                         position: absolute;
-                        right: 97%;
-                        top: 60%;
+                        left: 97%;
+                        top: 50%;
                         display: box;
                         width: 20px;
                         height: 20px;
+                        background: linear-gradient(190deg, rgba(65,154,215,1) 35%, rgba(38,109,205,1) 100%);
+                        border:solid 1px white;
+                        color: white;
                         border-radius: 12px;
                         z-index: 1;
                         .num{
                             position: relative;
-                            left: 28%;
+                            left: 30%;
                             top: 1px;
                         }
                     } 
@@ -228,6 +230,9 @@
                     }
                     .money {
                         color: #466722;
+                    }
+                    .number {
+                        display: none;
                     }
                 }
             }
@@ -408,7 +413,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size:40px;
+            font-size:47px;
             color: white;
             background-color: rgba(29,63,99, 0.5);
         }

@@ -1,12 +1,12 @@
 .boxes {
 	position: fixed;
-	bottom: 413px;
+	bottom: 415px;
 }
 .boxes.left {
-	left: 18px;
+	left: 38px;
 }
 .boxes.right {
-	right: 20px;
+	right: 38px;
 }
 .boxes.hide {
 	.utilitybox {
@@ -87,7 +87,7 @@
 		justify-content: center;
 		align-items: center;
 		font-weight: 600;
-		font-size: 20px;
+		font-size: 18px;
 		position: relative;
 		top: 2px;
 		height: 24px;
@@ -111,6 +111,7 @@
 			font-weight: 600;
 			font-size: 18px;
 			justify-content: center;
+			margin-left: -30px;
 			
 			svg {
 				height: 30px;
