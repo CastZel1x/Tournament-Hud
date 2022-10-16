@@ -33,7 +33,6 @@ code {
 .layout {
   width: 100%;
   height: 100%;
-  perspective: 500px;
 }
 
 :root {
@@ -51,7 +50,42 @@ code {
   --color-new-ct: #5ab8f4;
   --color-bomb: #f22222;
   --color-defuse: #2222f2;
+} 
+
+
+
+div#theme.CSGO1 {
+  --main-panel-color: rgba(27, 43, 73, 0.8);
+    --sub-panel-color: rgba(27, 43, 73, 0.9);
+    --white-full: #fafafa;
+    --white-half: hsla(0,0%,98%,0.5);
+    --color-new-t: #B35E30;
+    --color-new-ct: #188BB6;
+}
+div#theme.CSGO2 {
+  --main-panel-color: rgba(27, 43, 73, 0.8);
+    --sub-panel-color: rgba(27, 43, 73, 0.9);
+    --white-full: #fafafa;
+    --white-half: hsla(0,0%,98%,0.5);
+    --color-new-t: #c6b72e;
+    --color-new-ct: #1838b6;
+} 
+div#theme.CSGO3 {
+  --main-panel-color: rgba(27, 43, 73, 0.8);
+    --sub-panel-color: rgba(27, 43, 73, 0.9);
+    --white-full: #fafafa;
+    --white-half: hsla(0,0%,98%,0.5);
+    --color-new-t: #e06806;
+    --color-new-ct: #3d6cee;
+    --color-new-bomb: #ec0a0a; /*used only in lexoradar*/
 }
 
-
+div#theme.clc {
+  --main-panel-color: rgba(12, 15, 18, 0.85);
+  --sub-panel-color: rgba(0, 0, 0, 0.83);
+  --white-full: rgba(250, 250, 250, 1);
+  --white-half: rgba(250, 250, 250, 0.5);
+  --color-new-t: rgb(223, 185, 61);
+  --color-new-ct: #5ab8f4;
+} 
 

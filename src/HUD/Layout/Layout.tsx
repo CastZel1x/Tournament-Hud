@@ -6,7 +6,6 @@ import Observed from "./../Players/Observed";
 import { CSGO, Team } from "csgogsi-socket";
 import { Match } from "../../api/interfaces";
 import RadarMaps from "./../Radar/RadarMaps";
-import TournamentName from "../TournamentName/Tournament";
 import SideBox from '../SideBoxes/SideBox';
 import { GSI, actions } from "./../../App";
 import MoneyBox from '../SideBoxes/Money';
@@ -17,7 +16,8 @@ import Overview from "../Overview/Overview";
 import Tournament from "../Tournament/Tournament";
 import Pause from "../PauseTimeout/Pause";
 import Timeout from "../PauseTimeout/Timeout";
-import PlayerCamera from "../Camera/Camera";
+import { ChangeColor } from "../../utils/ChangeColor";
+import TournamentName from "../TournamentName/Tournament";
 
 interface Props {
   game: CSGO,
@@ -55,6 +55,7 @@ export default class Layout extends React.Component<Props, State> {
         this.setState({ forceHide: true });
       }
     });
+    ChangeColor();
   }
 
   getVeto = () => {
@@ -67,7 +68,7 @@ export default class Layout extends React.Component<Props, State> {
     return veto;
   }
 
-  render() { 
+  render() {
     const { game, match } = this.props;
     const left = game.map.team_ct.orientation === "left" ? game.map.team_ct : game.map.team_t;
     const right = game.map.team_ct.orientation === "left" ? game.map.team_t : game.map.team_ct;
@@ -78,8 +79,9 @@ export default class Layout extends React.Component<Props, State> {
     const { forceHide } = this.state;
 
     return (
+      <div id="theme">
       <div className="layout">
-        <div className={`players_alive`}>
+        <div className={`players_alive ${isFreezetime ? 'hide':''}`}>
         <div className="title_container">Players alive</div>
           <div className="counter_container">
             <div className={`team_counter ${left.side}`}>{leftPlayers.filter(player => player.state.health > 0).length}</div>
@@ -106,8 +108,8 @@ export default class Layout extends React.Component<Props, State> {
 
         <MapSeries teams={[left, right]} match={match} isFreezetime={isFreezetime} map={game.map} />
         <div className={"boxes left"}>
-          <UtilityLevel side={left.side} players={game.players} show={isFreezetime && !forceHide} />
           <SideBox side="left" hide={forceHide} />
+          <UtilityLevel side={left.side} players={game.players} show={isFreezetime && !forceHide} />
           <MoneyBox
             team={left.side}
             side="left"
@@ -118,8 +120,8 @@ export default class Layout extends React.Component<Props, State> {
           />
         </div>
         <div className={"boxes right"}>
-          <UtilityLevel side={right.side} players={game.players} show={isFreezetime && !forceHide} />
           <SideBox side="right" hide={forceHide} />
+          <UtilityLevel side={right.side} players={game.players} show={isFreezetime && !forceHide} />
           <MoneyBox
             team={right.side}
             side="right"
@@ -130,6 +132,7 @@ export default class Layout extends React.Component<Props, State> {
           />
         </div>
       </div>
+      </div>
     );
   }
-}
+} 

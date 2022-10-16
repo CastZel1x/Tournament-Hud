@@ -25,7 +25,7 @@
             position: relative;
             margin: 3px;
             .hp_bar {
-                background: linear-gradient(190deg, rgba(195,149,33,1) 35%, rgba(255,186,11,1) 100%);
+                background: var(--color-new-t);
             }
             .row {
                 flex-direction: row;
@@ -80,7 +80,7 @@
                     display: box;
                     width: 20px;
                     height: 20px;
-                    background: linear-gradient(190deg, rgba(195,149,33,1) 35%, rgba(255,186,11,1) 100%);
+                    background: var(--color-new-t);
                     border:solid 1px white;
                     color: white;
                     border-radius: 12px;
@@ -109,7 +109,7 @@
                 flex-direction: row-reverse;
                 .hp_bar {
                     align-self: flex-end;
-                    background: linear-gradient(190deg, rgba(65,154,215,1) 35%, rgba(38,109,205,1) 100%);
+                    background: var(--color-new-ct);
                 }
                 .row {
                     flex-direction: row-reverse;
@@ -167,7 +167,7 @@
                         display: box;
                         width: 20px;
                         height: 20px;
-                        background: linear-gradient(190deg, rgba(65,154,215,1) 35%, rgba(38,109,205,1) 100%);
+                        background: var(--color-new-ct);
                         border:solid 1px white;
                         color: white;
                         border-radius: 12px;
@@ -248,7 +248,7 @@
             }
         }
         .player_data {
-            background-color: rgba(20,33,59, 0.4);
+            background-color: var(--white-dull);
             width: 320px;
             display: flex;
             flex-direction: row;
