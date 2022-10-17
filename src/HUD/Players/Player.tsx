@@ -7,11 +7,16 @@ import Defuse from "./../Indicators/Defuse";
 import Avatar from "./Avatar";
 import dead from "../.././assets/kd/dead.svg";
 import kill from "../.././assets/kd/kill.svg";
+import { GSI } from "../../App";
 
 interface IProps {
   player: Player,
   isObserved: boolean,
   isFreezetime: boolean,
+}
+
+interface IState {
+  startRoundMoney: number;
 }
 
 class Statistic extends React.PureComponent<{ label: string; value: string | number, }> {
@@ -25,7 +30,19 @@ class Statistic extends React.PureComponent<{ label: string; value: string | num
 	}
 }
 
-export default class PlayerBox extends React.Component<IProps> {
+export default class PlayerBox extends React.Component<IProps, IState> {
+  constructor(props: IProps) {
+    super(props);
+    this.state = {
+      startRoundMoney: 800
+    }
+  }
+  componentDidMount() {
+    GSI.on("freezetimeStart", () => {
+      this.setState({ startRoundMoney: this.props.player.state.money });
+    });
+  }
+
   render() {
     const { player } = this.props;
     const weapons: WeaponRaw[] = Object.values(player.weapons).map(weapon => ({ ...weapon, name: weapon.name.replace("weapon_", "") }));
@@ -34,6 +51,7 @@ export default class PlayerBox extends React.Component<IProps> {
     const grenades = weapons.filter(weapon => weapon.type === "Grenade");
     const { stats } = player;
 		const ratio = stats.deaths === 0 ? stats.kills : stats.kills / stats.deaths ;
+    var moneySpent = Math.abs(this.state.startRoundMoney - player.state.money);
     return (
       <div className={`player ${player.state.health === 0 ? "dead" : ""} ${this.props.isObserved ? 'active' : ''}`}>
         <div className="player_data">
@@ -59,6 +77,9 @@ export default class PlayerBox extends React.Component<IProps> {
                 <Defuse player={player} />
               </div>
               <div className="money">${player.state.money}</div>
+              <div className={`spending ${this.props.isFreezetime && this.props.isFreezetime === true ? 'show' : 'hide'}`}>
+                  <div className="value">-${moneySpent}</div>
+              </div>
               <div className="statistics">
 
                 <img className="kill" src= {kill}

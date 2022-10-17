@@ -26,6 +26,14 @@
             height: 73px;
             position: relative;
             margin: 3px;
+            &.active {
+                .player_data {
+                    box-shadow: 0 0 8px #fff;
+                    border: 2px solid white;
+                    z-index: 1;
+                    background: linear-gradient(90deg,rgba(10, 5, 5, 0.15) 15%, var(--color-new-t) 100%);
+                }
+            }
             .hp_bar {
                 background: var(--color-new-t);
             }
@@ -106,6 +114,14 @@
             height: 73px;
             position: relative;
             margin: 3px;
+            &.active {
+                .player_data {
+                    box-shadow: 0 0 8px #fff;
+                    border: 2px solid white;
+                    z-index: 1; 
+                    background: linear-gradient(190deg,rgba(10, 5, 5, 0.15) 15%, var(--color-new-ct) 100%);
+                }
+            }
             .player_data {
                 flex-direction: row-reverse;
                 .hp_bar {
@@ -196,10 +212,7 @@
         flex-direction: row;
         align-items: center;
         &.active {
-            .player_data {
-                border: 2px solid white;
-                margin: 2px;
-            }
+            filter: invert(10%) drop-shadow(0 1px 5px black);
         }
         &.dead {
             opacity: 0.65;
@@ -462,7 +475,30 @@
     transition: width 1s 2s;
 }
 
-.flashed {
-    position: relative;
-    background-image: url(../../assets/flashed_kill.png);
+
+.teambox .player .spending {
+    display: flex;
+    flex-direction: column;
+    width: 6rem;
+    height: 100%;
+    position: absolute;
+    opacity: 1;
+    margin-left: 77px;
+    margin-right: 77px;
+    top: 8px;
+    transition: opacity 0.75s;
+}
+.teambox .player .spending.hide {
+    opacity: 0;
+}
+.teambox .player .spending .value {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+.teambox .player .spending {
+    .value {
+        color: red;
+    }
 }
