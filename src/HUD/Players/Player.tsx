@@ -50,7 +50,7 @@ export default class PlayerBox extends React.Component<IProps, IState> {
     const secondary = weapons.filter(weapon => weapon.type === "Pistol")[0] || null;
     const grenades = weapons.filter(weapon => weapon.type === "Grenade");
     const { stats } = player;
-		const ratio = stats.deaths === 0 ? stats.kills : stats.kills / stats.deaths ;
+		const ratio = stats.deaths === 0 ? stats.kills : stats.kills / stats.deaths /player.state.adr;
     var moneySpent = Math.abs(this.state.startRoundMoney - player.state.money);
     return (
       <div className={`player ${player.state.health === 0 ? "dead" : ""} ${this.props.isObserved ? 'active' : ''}`}>
@@ -86,12 +86,11 @@ export default class PlayerBox extends React.Component<IProps, IState> {
                   width="22px" height="19px" alt="filter applied" />  
                 <Statistic label={""} value={stats.kills} />
 
-                <div className="spacekildead"> ㅤ</div>
+                <div className="spacekildead"></div>
 
                 <img className="dead" src= {dead} 
                   width="21px" height="18px" alt="filter applied" />  
                 <Statistic label={""} value={stats.deaths} />
-
               </div>
               {player.state.round_kills ? <div className="roundkills-container">{player.state.round_kills}</div> : null}
               <div className="grenades">

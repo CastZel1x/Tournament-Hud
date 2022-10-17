@@ -84,7 +84,7 @@ export default class Observed extends React.Component<{ player: Player | null, v
 						<Statistic label={"K"} value={stats.kills} />
 						<Statistic label={"A"} value={stats.assists} />
 						<Statistic label={"D"} value={stats.deaths} />
-						<Statistic label={"K/D"} value={ratio.toFixed(2)} />
+						<Statistic label={"ADR"} value={player.state.adr} />
 					</div>
 					<div className="grenade_container">
 						{grenades.map(grenade => <React.Fragment key={`${player.steamid}_${grenade.name}_${grenade.ammo_reserve || 1}`} >

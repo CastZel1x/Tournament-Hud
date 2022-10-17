@@ -1,6 +1,6 @@
 .map_series_container {
 	position: fixed;
-	top: 23px;
+	top: 18px;
 	right: 10px;
 	width: 340px;
 	display: flex;
@@ -102,7 +102,6 @@
 		position: relative;
 		height: 25px;
 		color: white;
-		border-radius: 8px 8px 0 0;
 		font-size: 13px;
 		font-weight: 600;
 		margin-bottom: 2px;
@@ -130,7 +129,6 @@
 	background-color: rgba(20,33,59, 0.7);
 	color: white;
 	width: 420px;
-	border-radius: 0 0 8px 8px;
 	display: flex;
 	align-items: center;
 	justify-content: center;

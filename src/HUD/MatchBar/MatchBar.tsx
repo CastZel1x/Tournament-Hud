@@ -6,6 +6,7 @@ import Bomb from "./../Timers/BombTimer";
 import Countdown from "./../Timers/Countdown";
 import { GSI } from "../../App";
 import { Match } from "../../api/interfaces";
+import WinAnnouncement from "./WinAnnouncement";    
 
 
 function stringToClock(time: string | number, pad = true) {
@@ -41,15 +42,18 @@ interface IState {
   defusing: Timer,
   planting: Timer,
   winState: {
-    side: "left"|"right",
+    team_name: string,
+    orientation: "left" | "right",
+    side: "CT" | "T",
     show: boolean
   }
 }
 
 
 
-export default class TeamBox extends React.Component<IProps, IState> {
-  constructor(props: IProps){
+
+export default class MatchBar extends React.Component<IProps, IState> {
+  constructor(props: IProps) {
     super(props);
     this.state = {
       defusing: {
@@ -69,7 +73,9 @@ export default class TeamBox extends React.Component<IProps, IState> {
         player: null
       },
       winState: {
-        side: 'left',
+        team_name: "",
+        orientation: "right",
+        side: "CT",
         show: false
       }
     }
@@ -148,17 +154,20 @@ export default class TeamBox extends React.Component<IProps, IState> {
     }, 6000);
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.initDefuseTimer();
     this.initPlantTimer();
     GSI.on("roundEnd", score => {
       this.setState(state => {
         state.winState.show = true;
-        state.winState.side = score.winner.orientation;
+        state.winState.team_name = score.winner.name;
+        state.winState.side = score.winner.side;
+        state.winState.orientation = score.winner.orientation;
         return state;
       }, this.resetWin);
     });
   }
+
   getRoundLabel = () => {
     const { map } = this.props;
     const round = map.round + 1;
@@ -194,7 +203,7 @@ export default class TeamBox extends React.Component<IProps, IState> {
     return (
    <> 
       <div id={`matchbar`}>
-          <TeamScore team={left} orientation={"left"} timer={leftTimer} showWin={winState.show && winState.side === "left"} />
+          <TeamScore team={left} orientation={"left"} timer={leftTimer} showWin={winState.show && winState.orientation === "left"} />
           <div className={`score left ${left.side}`}>{left.score}</div>
           <div id="timer" className={bo === 0 ? 'no-bo' : ''}>
             <div id="round_now" className={isPlanted ? "hide":""}>{this.getRoundLabel()}</div>
@@ -203,8 +212,9 @@ export default class TeamBox extends React.Component<IProps, IState> {
             <Bomb/>
             </div>
           <div className={`score right ${right.side}`}>{right.score}</div>
-          <TeamScore team={right} orientation={"right"} timer={rightTimer} showWin={winState.show && winState.side === "right"} />
+          <TeamScore team={right} orientation={"right"} timer={rightTimer} showWin={winState.show && winState.orientation === "right"} />
         </div>
+        <WinAnnouncement team_name={winState.team_name} side={winState.side} show={winState.show}/>
       </>
     );
   }
