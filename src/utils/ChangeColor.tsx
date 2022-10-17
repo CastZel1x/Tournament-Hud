@@ -3,7 +3,7 @@ export function ChangeColor() {
     console.log("function has been loaded");
 
     const onChange = (data: any) => {
-        if (!data) return;
+        if (!data || !data.color_scheme) return;
 
         const color = data.color_scheme.select_variant;
         console.log(color);

@@ -98,7 +98,7 @@ export default class Layout extends React.Component<Props, State> {
         <SeriesBox map={game.map} phase={game.phase_countdowns} match={match} />
 
         <Tournament />
-
+ 
         <Observed player={game.player} veto={this.getVeto()} round={game.map.round+1}/>
 
         <TeamBox team={left} players={leftPlayers} side="left" current={game.player} isFreezetime={isFreezetime} />
@@ -116,7 +116,7 @@ export default class Layout extends React.Component<Props, State> {
             loss={Math.min(left.consecutive_round_losses * 500 + 1400, 3400)}
             equipment={leftPlayers.map(player => player.state.equip_value).reduce((pre, now) => pre + now, 0)}
             money={leftPlayers.map(player => player.state.money).reduce((pre, now) => pre + now, 0)}
-            show={isFreezetime && !forceHide}
+            show={isFreezetime && !forceHide} 
           />
         </div>
         <div className={"boxes right"}>
@@ -130,9 +130,9 @@ export default class Layout extends React.Component<Props, State> {
             money={rightPlayers.map(player => player.state.money).reduce((pre, now) => pre + now, 0)}
             show={isFreezetime && !forceHide}
           />
-        </div>
+        </div> 
       </div>
-      </div>
+      </div> 
     );
   }
 } 

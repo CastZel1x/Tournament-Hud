@@ -33,7 +33,7 @@ export default class PlayerBox extends React.Component<IProps> {
     const secondary = weapons.filter(weapon => weapon.type === "Pistol")[0] || null;
     const grenades = weapons.filter(weapon => weapon.type === "Grenade");
     const { stats } = player;
-		const ratio = stats.deaths === 0 ? stats.kills : stats.kills / stats.deaths;
+		const ratio = stats.deaths === 0 ? stats.kills : stats.kills / stats.deaths ;
     return (
       <div className={`player ${player.state.health === 0 ? "dead" : ""} ${this.props.isObserved ? 'active' : ''}`}>
         <div className="player_data">
@@ -50,6 +50,7 @@ export default class PlayerBox extends React.Component<IProps> {
                 {primary || secondary ? <Weapon weapon={primary ? primary.name : secondary.name} active={primary ? primary.state === "active" : secondary.state === "active"} /> : ""}
               </div>
             </div>
+            { player.state.health > 0 ? <div className={`hp_bar hp_bar_bg`} style={{ width: `${player.state.health}%` }}></div> : null}
             <div className={`hp_bar ${player.state.health <= 20 ? 'low':''}`} style={{ width: `${player.state.health}%` }}></div>
             <div className="row">
               <div className="armor_and_utility">

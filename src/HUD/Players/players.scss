@@ -5,6 +5,7 @@
     flex-direction: column;
     opacity: 1;
     transition: opacity 0.75s;
+
     &.CT {
         .player .hp_bar {
             background: var(--color-new-ct);
@@ -15,6 +16,7 @@
             background: var(--color-new-t);
         }
 	}
+
     &.hide {
         opacity: 0;
     }
@@ -69,8 +71,7 @@
                 }
                 .health {
                     .skull {
-                        right: 236px;
-                        border-right: solid 2px white;
+                        right: 233px;
                     }
                 }
                 .number{
@@ -121,8 +122,7 @@
                     }
                     .health {
                         .skull {
-                            left: 236px;
-                            border-left: solid 2px white;
+                            left: 233px;
                         }
                     }
                     .roundkills-container {
@@ -189,7 +189,7 @@
         }
     }  
     .player {
-        width: 640px;
+        width: 500px;
         height: 70px;
         margin-bottom: 4px;
         display: flex;
@@ -218,18 +218,33 @@
                         .skull {
                             position: absolute;
                             top: 8px;
-                            transform: scale(0.75);
+                            transform: scale(0.85);
+                            margin-right: -70px;
+                            margin-left: -70px;
                         }
                     }
                     .username {
                         color: #b2b2b2;
+                        margin-left: 20px;
+                        margin-right: 20px;
                     }
                     .armor_and_utility {
                         width: 0px;
                         overflow: hidden;
                     }
                     .money {
-                        color: #466722;
+                        color: #b2b2b2 !important;
+                        margin-right: 20px;
+                        margin-left: 20px;
+                    }
+                    .statistics {
+                        margin-right: 15px;
+                        margin-left: 15px;
+                        transform: scale(0.90);
+                    }
+                    .roundkills-container {
+                        margin-right: 20px;
+                        margin-left: 20px;
                     }
                     .number {
                         display: none;
@@ -248,7 +263,7 @@
             }
         }
         .player_data {
-            background-color: var(--white-dull);
+            background-color: rgba(10, 5, 5, 0.15);
             width: 320px;
             display: flex;
             flex-direction: row;
@@ -259,7 +274,7 @@
                 flex-direction: column;
                 flex: 1;
                 min-width: 0;
-                .hp_bar {
+                 .hp_bar {
                     height: 41%;
                     position:absolute;
                     &.low {
@@ -438,4 +453,16 @@
     &.hide {
         opacity: 0;
     }
+}
+
+
+
+.hp_bar_bg {
+    background-color: red !important;
+    transition: width 1s 2s;
+}
+
+.flashed {
+    position: relative;
+    background-image: url(../../assets/flashed_kill.png);
 }
