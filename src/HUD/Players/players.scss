@@ -20,7 +20,7 @@
     &.hide {
         opacity: 0;
     }
-    &.left {
+    &.T {
         left: 35px;
         .player {
             height: 73px;
@@ -47,19 +47,49 @@
                     position: relative;
                     right: 2px;
                 }
-                .statistics {
+                .adr {
+                    position: absolute;
+                    left: 145px;
+                    .stat-label {
+                        position: relative;
+                        top: 38px;
+                        color: var(--color-new-t);
+                    }
+                    .stat-value {
+                        position: relative;
+                        top: 19px;
+                        left: 35px;
+                    }
+                }
+                .dead-adr {
+                    left: 120px;
+                    .stat-label {
+                        position: absolute;
+                        right: 23px;
+                        top: 13px;
+                    }
+                    .stat-value {
+                        position: absolute;
+                        left: 43px;
+                        top: 13px;
+                    }
+                }
+                .statistics_T {
                     display: flex;
                     color: #fff;
                     font-size: 16px;
                     font-weight: 700;
                     align-items: center;
                     position: absolute;
-                    bottom: 20px;
+                    bottom: 22px;
                     left: 27px;
                     letter-spacing: 1px;
                     img {
                         margin-left: 16px;
                     }
+                }
+                .statistics_CT {
+                    display: none;
                 }
                 .roundkills-container {
                     position: absolute;
@@ -88,14 +118,14 @@
                     display: box;
                     width: 20px;
                     height: 20px;
-                    background-color: rgba(255,255,255,1);
+                    background-color: var(--color-new-t);
                     border:solid 1px white;
-                    color: black;
+                    color: white;
                     border-radius: 12px;
                     z-index: 1;
                     .num{
                         position: relative;
-                        left: 30%;
+                        left: 29%;
                         top: 1px;
                     }
                 } 
@@ -106,7 +136,7 @@
             }
         }
     }
-    &.right {
+    &.CT {
         right: 35px;
         .player {
             flex-direction: row-reverse;
@@ -159,20 +189,50 @@
                         position: relative;
                         left: 18px;
                     } 
-                    .statistics {
+                    .adr {
+                        position: absolute;
+                        right: 145px;
+                        .stat-label {
+                            position: relative;
+                            top: 38px;
+                            color: var(--color-new-ct);
+                        }
+                        .stat-value {
+                            position: relative;
+                            top: 19px;
+                            right: 25px;
+                        }
+                    }
+                    .dead-adr {
+                        right: 120px;
+                        .stat-label {
+                            position: absolute;
+                            left: 23px;
+                            top: 13px;
+                        }
+                        .stat-value {
+                            position: absolute;
+                            right: 43px;
+                            top: 13px;
+                        }
+                    }
+                    .statistics_CT {
                         display: flex;
                         color: #fff;
                         font-size: 16px;
                         font-weight: 700;
                         align-items: center;
                         position: absolute;
-                        bottom: 20px;
+                        bottom: 22px;
                         right: 50px;
                         letter-spacing: 1px;
                         img {
                             margin-left: 16px;
                         }
                     }  
+                    .statistics_T {
+                        display: none;
+                    }
                     .number{
                         position: absolute;
                         left: 97%;
@@ -180,14 +240,14 @@
                         display: box;
                         width: 20px;
                         height: 20px;
-                        background-color: rgba(255,255,255,1);
+                        background-color: var(--color-new-ct);
                         border:solid 1px white;
-                        color: black;
+                        color: white;
                         border-radius: 12px;
                         z-index: 1;
                         .num{
                             position: relative;
-                            left: 30%;
+                            left: 29%;
                             top: 1px;
                         }
                     } 
@@ -202,7 +262,7 @@
         }
     }  
     .player {
-        width: 500px;
+        width: 420px;
         height: 70px;
         margin-bottom: 4px;
         display: flex;
@@ -212,12 +272,15 @@
             filter: invert(10%) drop-shadow(0 1px 5px black);
         }
         &.dead {
-            opacity: 0.65;
+            opacity: 0.75;
             .player_side_bar {
                 background-color: var(--main-panel-color) !important;
             }
             .player_data {
                 width: 45%;
+                .dead-adr {
+                    display: flex;
+                }
                 .row {
                     .hp_background_2 {
                         opacity: 0;
@@ -229,14 +292,15 @@
                             position: absolute;
                             top: 8px;
                             transform: scale(0.85);
-                            margin-right: -70px;
-                            margin-left: -70px;
+                            margin-right: -105px;
+                            margin-left: -105px;
                         }
                     }
                     .username {
                         color: #b2b2b2;
                         margin-left: 20px;
                         margin-right: 20px;
+                        font-size: 17px !important;
                     }
                     .armor_and_utility {
                         width: 0px;
@@ -249,12 +313,13 @@
                     }
                     .statistics {
                         margin-right: 15px;
-                        margin-left: 15px;
+                        margin-left: 20px;
                         transform: scale(0.90);
                     }
                     .roundkills-container {
-                        margin-right: 20px;
-                        margin-left: 20px;
+                        margin-right: 25px;
+                        margin-left: 25px;
+                        bottom: 48px;
                     }
                     .number {
                         display: none;
@@ -272,9 +337,31 @@
                 background-color: var(--color-new-t);
             }
         }
+        .dead-adr {
+            position: absolute;
+            height: 85%;
+            width: 60px;
+            display: none;
+            flex-direction: column;
+            font-weight: 600;
+            color: white;
+            opacity: 0.75;
+            top: 10%;
+            .labels, .values {
+                display: flex;
+                flex-direction: row;
+                flex: 1;
+                .stat-label, .stat-value {
+                    display: flex;
+                    flex: 1;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
         .player_data {
-            background-color: rgba(10, 5, 5, 0.15);
-            width: 320px;
+            background-color: rgba(10, 5, 5, 0.35);
+            width: 290px;
             display: flex;
             flex-direction: row;
             position: relative;
@@ -498,4 +585,24 @@
     .value {
         color: red;
     }
+}
+
+
+
+
+.teambox .player .adr {
+    position: absolute;
+    color: white;
+    font-size: 16px;
+    bottom: 40px;
+    transition: opacity 0.75s;
+}
+.teambox .player .adr.hide {
+    opacity: 0;
+}
+.teambox .player .adr .value {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
 }

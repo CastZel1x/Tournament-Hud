@@ -5,9 +5,11 @@ import Armor from "./../Indicators/Armor";
 import Bomb from "./../Indicators/Bomb";
 import Defuse from "./../Indicators/Defuse";
 import Avatar from "./Avatar";
-import dead from "../.././assets/kd/dead.svg";
-import kill from "../.././assets/kd/kill.svg";
 import { GSI } from "../../App";
+import dead_T from "../.././assets/kd/T/dead.png";
+import kill_T from "../.././assets/kd/T/kill.png";
+import dead_CT from "../.././assets/kd/CT/dead.png";
+import kill_CT from "../.././assets/kd/CT/kill.png";
 
 interface IProps {
   player: Player,
@@ -76,22 +78,56 @@ export default class PlayerBox extends React.Component<IProps, IState> {
                 <Armor player={player} />
                 <Defuse player={player} />
               </div>
+              <div className="dead-adr">
+                  <div className="labels">
+                    <div className="stat-label">ADR</div>
+                 </div>
+                  <div className="values">
+                    <div className="stat-value">{player.state.adr}</div>
+                </div>
+               </div>
               <div className="money">${player.state.money}</div>
               <div className={`spending ${this.props.isFreezetime && this.props.isFreezetime === true ? 'show' : 'hide'}`}>
                   <div className="value">-${moneySpent}</div>
               </div>
-              <div className="statistics">
+              <div className={`adr ${this.props.isFreezetime && this.props.isFreezetime === true ? 'show' : 'hide'}`}>
+                  <div className="stat-label">ADR</div>
+                  <div className="stat-value">{player.state.adr}</div>
+              </div>
 
-                <img className="kill" src= {kill}
+
+
+              <div className="statistics_T">
+
+                <img className="kill" src= {kill_T}
                   width="22px" height="19px" alt="filter applied" />  
                 <Statistic label={""} value={stats.kills} />
 
                 <div className="spacekildead"></div>
 
-                <img className="dead" src= {dead} 
+                <img className="dead" src= {dead_T} 
                   width="21px" height="18px" alt="filter applied" />  
                 <Statistic label={""} value={stats.deaths} />
               </div>
+
+
+
+              <div className="statistics_CT">
+
+                <img className="kill" src= {kill_CT}
+                  width="22px" height="19px" alt="filter applied" />  
+                <Statistic label={""} value={stats.kills} />
+
+                <div className="spacekildead"></div>
+
+                <img className="dead" src= {dead_CT} 
+                  width="21px" height="18px" alt="filter applied" />  
+                <Statistic label={""} value={stats.deaths} />
+              </div>
+
+
+
+
               {player.state.round_kills ? <div className="roundkills-container">{player.state.round_kills}</div> : null}
               <div className="grenades">
                 {grenades.map(grenade => (
