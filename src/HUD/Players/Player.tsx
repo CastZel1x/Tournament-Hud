@@ -6,11 +6,8 @@ import Bomb from "./../Indicators/Bomb";
 import Defuse from "./../Indicators/Defuse";
 import Avatar from "./Avatar";
 import { GSI } from "../../App";
-import dead_T from "../.././assets/kd/T/dead.png";
-import kill_T from "../.././assets/kd/T/kill.png";
-import dead_CT from "../.././assets/kd/CT/dead.png";
-import kill_CT from "../.././assets/kd/CT/kill.png";
-
+import dead from "../.././assets/kd/dead.svg";
+import kill from "../.././assets/kd/kill.svg";
 interface IProps {
   player: Player,
   isObserved: boolean,
@@ -73,16 +70,16 @@ export default class PlayerBox extends React.Component<IProps, IState> {
             { player.state.health > 0 ? <div className={`hp_bar hp_bar_bg`} style={{ width: `${player.state.health}%` }}></div> : null}
             <div className={`hp_bar ${player.state.health <= 20 ? 'low':''}`} style={{ width: `${player.state.health}%` }}></div>
             <div className="row">
-              <div className="armor_and_utility">
+            <div className="armor_and_utility">
                 <Bomb player={player} />
                 <Armor player={player} />
                 <Defuse player={player} />
               </div>
               <div className="dead-adr">
-                  <div className="labels">
-                    <div className="stat-label">ADR</div>
-                 </div>
-                  <div className="values">
+                    <div className="labels">
+                   <div className="stat-label">ADR</div>
+                      </div>
+                    <div className="values">
                     <div className="stat-value">{player.state.adr}</div>
                 </div>
                </div>
@@ -94,41 +91,6 @@ export default class PlayerBox extends React.Component<IProps, IState> {
                   <div className="stat-label">ADR</div>
                   <div className="stat-value">{player.state.adr}</div>
               </div>
-
-
-
-              <div className="statistics_T">
-
-                <img className="kill" src= {kill_T}
-                  width="22px" height="19px" alt="filter applied" />  
-                <Statistic label={""} value={stats.kills} />
-
-                <div className="spacekildead"></div>
-
-                <img className="dead" src= {dead_T} 
-                  width="21px" height="18px" alt="filter applied" />  
-                <Statistic label={""} value={stats.deaths} />
-              </div>
-
-
-
-              <div className="statistics_CT">
-
-                <img className="kill" src= {kill_CT}
-                  width="22px" height="19px" alt="filter applied" />  
-                <Statistic label={""} value={stats.kills} />
-
-                <div className="spacekildead"></div>
-
-                <img className="dead" src= {dead_CT} 
-                  width="21px" height="18px" alt="filter applied" />  
-                <Statistic label={""} value={stats.deaths} />
-              </div>
-
-
-
-
-              {player.state.round_kills ? <div className="roundkills-container">{player.state.round_kills}</div> : null}
               <div className="grenades">
                 {grenades.map(grenade => (
                   [
@@ -137,7 +99,26 @@ export default class PlayerBox extends React.Component<IProps, IState> {
                   ]
                 ))}
               </div>
-              <div className="secondary_weapon">{primary && secondary ? <Weapon weapon={secondary.name} active={secondary.state === "active"} /> : ""}</div>
+
+
+
+              <div className="statistics">
+
+                <img className="kill" src= {kill}
+                  width="22px" height="19px" alt="filter applied" />  
+                <Statistic label={""} value={stats.kills} />
+
+                <div className="spacekildead"></div>
+
+                <img className="dead" src= {dead} 
+                  width="21px" height="18px" alt="filter applied" />  
+                <Statistic label={""} value={stats.deaths} />
+              </div>
+
+
+
+              {player.state.round_kills ? <div className="roundkills-container">{player.state.round_kills}</div> : null}
+              <div className={`secondary_weapon ${this.props.isFreezetime && this.props.isFreezetime === true ? 'hide' : 'show'}`}>{primary && secondary ? <Weapon weapon={secondary.name} active={secondary.state === "active"} /> : ""}</div>
             </div>
             <div className="active_border"></div>
           </div>

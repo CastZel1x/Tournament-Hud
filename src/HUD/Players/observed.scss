@@ -22,9 +22,8 @@
         font-weight: 600;
         width: 400px;
         margin-left: 120px;
-        background-color: rgba(20,33,59, 0.6);
+        background-color: rgba(0,0,0, 0.8);
         position: relative;
-        border-radius: 4px 4px 0 0;
     }
 
     .stats_row {
@@ -32,9 +31,8 @@
         width: 700px;
         position: relative;
         right: 50px;
-        background-color: rgba(20,33,59, 0.6);
+        background-color: rgba(0,0,0, 0.8);
         position: relative;
-        border-radius: 4px;
         .stats_cell {
             height: 100%;
             width: 56px;
@@ -101,10 +99,9 @@
         .health_armor_container {
             display: flex;
             height: 100%;
-            width: 140px;
+            width: 170px;
             justify-content: center;
             position: relative;
-            left: 5px;
             .text {
                 width: 30px;
                 display: flex;
@@ -129,7 +126,7 @@
         }
         .round_kills {
             position: relative;
-            left: 25px;
+            left: 5px;
             height: 40px;
             max-height: 32px;
             width: 40px;
@@ -144,7 +141,7 @@
             padding-left: 18px;
             font-size: 20px;
             color: white;
-            left: 158px;
+            left: 168px;
             bottom: 11px;
         }
         .statistics {
@@ -215,12 +212,10 @@
         width: 140px;
         height: 140px;
         right: 175px;
-        bottom: 40px;
+        bottom: 45px;
         img {
             height: 185px;
             width: 195px;
-            -webkit-mask-image: linear-gradient(to top, transparent 1%, black 10%);
-            mask-image: linear-gradient(to top, transparent 1%, black 30%);
      }
 }
     

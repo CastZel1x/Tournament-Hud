@@ -12,13 +12,11 @@
 		display: flex;
 		background-color: rgba(28,25,58, 0.7);
 		position: relative;
-		border-radius: 4px;
 		color: white;
 		align-items: center;
 		bottom: 2px;
 		position: relative;
         height: 40px;
-		border-radius: 0 0 4px 4px;
         &.active {
             .veto_winner {
                 display: none;
@@ -40,7 +38,6 @@
 			background-color: rgba(28,25,58, 0.3);
 			font-size: 16px;
 			position: relative;
-			border-radius: 8px;
 			text-shadow: 1px 12px 24px black, 0 0 1em whitesmoke, 0 0 0.2em black;
 		}
 		div {
@@ -66,7 +63,7 @@
 			.active {
 				background-color: rgba(20,33,59, 0.4);
 				border: solid 2px white;
-				border-radius: 10px;
+				border-radius: 6px;
 				position: absolute;
 				color: white;
 				width: 67px;
@@ -98,13 +95,14 @@
 	}
 	.title_bar {
 		display: flex;
-		background-color: rgba(28,25,58, 0.8);
+		background-color: rgba(0,14,37,0.7);
 		position: relative;
 		height: 25px;
 		color: white;
 		font-size: 13px;
 		font-weight: 600;
 		margin-bottom: 2px;
+		border-radius: 6px 6px 0 0;
 		div {
 			width: 77px;
 			display: flex;

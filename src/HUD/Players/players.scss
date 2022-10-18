@@ -37,10 +37,11 @@
                 flex-direction: row;
                 .grenades {
                     padding-right: 5px;
+                    left: 190px;
                 }
-                
                 .armor_and_utility {
-                    justify-content: flex-start;
+                    justify-content: center;
+                    margin-top: 10px;
                 }
                 .money {
                     margin-right: auto;
@@ -49,16 +50,16 @@
                 }
                 .adr {
                     position: absolute;
-                    left: 145px;
+                    left: 130px;
                     .stat-label {
                         position: relative;
-                        top: 38px;
+                        top: 39px;
                         color: var(--color-new-t);
                     }
                     .stat-value {
                         position: relative;
-                        top: 19px;
-                        left: 35px;
+                        top: 20px;
+                        left: 33px;
                     }
                 }
                 .dead-adr {
@@ -74,22 +75,20 @@
                         top: 13px;
                     }
                 }
-                .statistics_T {
+                .statistics {
                     display: flex;
                     color: #fff;
                     font-size: 16px;
                     font-weight: 700;
                     align-items: center;
                     position: absolute;
-                    bottom: 22px;
+                    bottom: 21px;
                     left: 27px;
                     letter-spacing: 1px;
+                    transform: scale(0.93);
                     img {
                         margin-left: 16px;
                     }
-                }
-                .statistics_CT {
-                    display: none;
                 }
                 .roundkills-container {
                     position: absolute;
@@ -100,8 +99,8 @@
                     padding-left: 13px;
                     font-size: 13px;
                     color: white;
-                    left: 140px;
-                    bottom: 22px;
+                    left: 260px;
+                    bottom: 3px;
                     img {
                         filter: invert (100%);
                     }
@@ -130,7 +129,7 @@
                     }
                 } 
                 .secondary_weapon {
-                    padding-right: 10px;
+                    padding-right: 115px;
                 }
                 
             }
@@ -156,6 +155,7 @@
                     flex-direction: row-reverse;
                     .grenades {
                         padding-left: 5px;
+                        right: 190px;
                     }
                     .username {
                         flex-direction: row-reverse;
@@ -174,14 +174,15 @@
                         padding-left: 13px;
                         font-size: 13px;
                         color: white;
-                        right: 140px;
-                        bottom: 22px;
+                        right: 260px;
+                        bottom: 3px;
                     }
                     .secondary_weapon {
-                        padding-left: 10px;
+                        padding-left: 115px;
                     }
                     .armor_and_utility {
-                        justify-content: flex-end;
+                        justify-content: center;
+                        margin-top: 10px;
                     }
                     .money {
                         margin-left: auto;
@@ -191,16 +192,16 @@
                     } 
                     .adr {
                         position: absolute;
-                        right: 145px;
+                        right: 130px;
                         .stat-label {
                             position: relative;
-                            top: 38px;
+                            top: 39px;
                             color: var(--color-new-ct);
                         }
                         .stat-value {
                             position: relative;
-                            top: 19px;
-                            right: 25px;
+                            top: 20px;
+                            right: 21px;
                         }
                     }
                     .dead-adr {
@@ -216,22 +217,20 @@
                             top: 13px;
                         }
                     }
-                    .statistics_CT {
+                    .statistics {
                         display: flex;
                         color: #fff;
                         font-size: 16px;
                         font-weight: 700;
                         align-items: center;
                         position: absolute;
-                        bottom: 22px;
-                        right: 50px;
+                        bottom: 21px;
+                        right: 47px;
                         letter-spacing: 1px;
+                        transform: scale(0.93);
                         img {
                             margin-left: 16px;
                         }
-                    }  
-                    .statistics_T {
-                        display: none;
                     }
                     .number{
                         position: absolute;
@@ -308,17 +307,21 @@
                     }
                     .money {
                         color: #b2b2b2 !important;
-                        margin-right: 20px;
-                        margin-left: 20px;
+                        margin-right: 75px;
+                        margin-left: 60px;
                     }
                     .statistics {
                         margin-right: 15px;
                         margin-left: 20px;
                         transform: scale(0.90);
+                        bottom: 23px;
+                        svg {
+                            margin-top: 2px;
+                        }
                     }
                     .roundkills-container {
-                        margin-right: 25px;
-                        margin-left: 25px;
+                        margin-right: -100px;
+                        margin-left: -100px;
                         bottom: 48px;
                     }
                     .number {
@@ -404,8 +407,7 @@
                         align-items: center;
                         padding-left: 5px;
                         padding-right: 5px;
-                        top: 5px;
-                        position: relative;
+                        margin-top: 12px;
                         .armor_indicator, .bomb_indicator, .defuse_indicator {
                             svg {
                                 max-height: 20px;
@@ -465,11 +467,13 @@
                         display: flex;
                         align-items: center;
                         justify-content: space-around;
-                        position: relative;
-                        top: 5px;
+                        position: absolute;
+                        bottom: 22px;
                         svg.grenade {
-                            max-height: 18px;
+                            max-height: 19px;
                             height: 20px;
+                            margin-right: 6px;
+                            margin-left: 6px;
                         }
                     }
                     .health {
@@ -486,7 +490,7 @@
                         display: flex;
                         align-items: center;
                         position: relative;
-                        top: 6px;
+                        bottom: 13px;
                         svg {
                             max-height: 26px;
                             height: 30px;
@@ -560,6 +564,8 @@
 }
 
 
+
+
 .teambox .player .spending {
     display: flex;
     flex-direction: column;
@@ -567,8 +573,8 @@
     height: 100%;
     position: absolute;
     opacity: 1;
-    margin-left: 77px;
-    margin-right: 77px;
+    margin-left: 78px;
+    margin-right: 78px;
     top: 8px;
     transition: opacity 0.75s;
 }
@@ -590,6 +596,7 @@
 
 
 
+
 .teambox .player .adr {
     position: absolute;
     color: white;
@@ -605,4 +612,25 @@
     flex: 1;
     align-items: center;
     justify-content: center;
+}
+
+
+
+
+.teambox .player .secondary_weapon {
+    display: flex;
+}
+.teambox .player .secondary_weapon.hide {
+    opacity: 0;
+}
+.teambox .player .secondary_weapon .value {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+.teambox .player .secondary_weapon {
+    .value {
+        color: red;
+    }
 }
