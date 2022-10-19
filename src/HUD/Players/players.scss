@@ -9,18 +9,20 @@
     &.CT {
         .player .hp_bar {
             background: var(--color-new-ct);
+            right: 0;
         }
     }
     &.T {
         .player .hp_bar {
             background: var(--color-new-t);
+            left: 0;
         }
 	}
 
     &.hide {
         opacity: 0;
     }
-    &.left{
+    &.T{
         left: 35px;
         .player {
             height: 73px;
@@ -38,6 +40,9 @@
                 .grenades {
                     padding-right: 5px;
                     left: 70%;
+                }
+                .hp_bar {
+                    right: 0;
                 }
                 .armor_and_utility {
                     justify-content: center;
@@ -59,7 +64,7 @@
                     .stat-value {
                         position: relative;
                         top: 19px;
-                        left: 33px;
+                        left: 110%;
                     }
                 }
                 .dead-adr {
@@ -135,7 +140,7 @@
             }
         }
     }
-    &.right{
+    &.CT{
         right: 35px;
         .player {
             flex-direction: row-reverse;
@@ -201,7 +206,7 @@
                         .stat-value {
                             position: relative;
                             top: 20px;
-                            right: 21px;
+                            right: 70%;
                         }
                     }
                     .dead-adr {
@@ -634,3 +639,6 @@
         color: red;
     }
 }
+
+
+

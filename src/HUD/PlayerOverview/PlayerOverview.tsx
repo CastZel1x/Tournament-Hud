@@ -14,6 +14,18 @@ interface IProps {
     round: number
 }
 
+class Statistic extends React.PureComponent<{ label: string; value: string | number, }> {
+	render() {
+		return (
+			<div className="stat">
+				<div className="label">{this.props.label}</div>
+				<div className="value">{this.props.value}</div>
+			</div>
+		);
+	}
+}
+
+
 export default class PlayerOverview extends React.Component<IProps> {
     sum = (data: number[]) => data.reduce((a, b) => a + b, 0);
 

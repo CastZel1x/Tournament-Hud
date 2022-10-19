@@ -1,3 +1,4 @@
+import WinAnnouncement from "./WinAnnouncement";    
 import React from "react";
 import * as I from "csgogsi-socket";
 import "./matchbar.scss";
@@ -6,8 +7,6 @@ import Bomb from "./../Timers/BombTimer";
 import Countdown from "./../Timers/Countdown";
 import { GSI } from "../../App";
 import { Match } from "../../api/interfaces";
-import WinAnnouncement from "./WinAnnouncement";    
-
 
 function stringToClock(time: string | number, pad = true) {
   if (typeof time === "string") {
@@ -49,9 +48,6 @@ interface IState {
   }
 }
 
-
-
-
 export default class MatchBar extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
@@ -80,6 +76,7 @@ export default class MatchBar extends React.Component<IProps, IState> {
       }
     }
   }
+
   plantStop = () => this.setState(state => {
     state.planting.active = false;
     return state;
@@ -167,7 +164,6 @@ export default class MatchBar extends React.Component<IProps, IState> {
       }, this.resetWin);
     });
   }
-
   getRoundLabel = () => {
     const { map } = this.props;
     const round = map.round + 1;
@@ -197,13 +193,10 @@ export default class MatchBar extends React.Component<IProps, IState> {
         else rightTimer = planting;
       }
     }
-
-
-
     return (
-   <> 
-      <div id={`matchbar`}>
-          <TeamScore team={left} orientation={"left"} timer={leftTimer} showWin={winState.show && winState.orientation === "left"} />
+      <>
+        <div id={`matchbar`}>
+        <TeamScore team={left} orientation={"left"} timer={leftTimer} showWin={winState.show && winState.orientation === "left"} />
           <div className={`score left ${left.side}`}>{left.score}</div>
           <div id="timer" className={bo === 0 ? 'no-bo' : ''}>
             <div id="round_now" className={isPlanted ? "hide":""}>{this.getRoundLabel()}</div>
