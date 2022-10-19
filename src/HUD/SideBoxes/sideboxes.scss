@@ -35,9 +35,9 @@
 	opacity: 0;
 }
 .sidebox {
-	width: 320px;
+	width: 290px;
 	height: 70px;
-	display: none;
+	display: flex;
 	flex-direction: row;
 	opacity: 1;
 	transition: all 0.75s;

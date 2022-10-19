@@ -20,7 +20,7 @@
     &.hide {
         opacity: 0;
     }
-    &.T {
+    &.left{
         left: 35px;
         .player {
             height: 73px;
@@ -37,7 +37,7 @@
                 flex-direction: row;
                 .grenades {
                     padding-right: 5px;
-                    left: 190px;
+                    left: 70%;
                 }
                 .armor_and_utility {
                     justify-content: center;
@@ -50,15 +50,15 @@
                 }
                 .adr {
                     position: absolute;
-                    left: 130px;
+                    left: 48%;
                     .stat-label {
                         position: relative;
-                        top: 39px;
-                        color: var(--color-new-t);
+                        top: 38px;
+                        color: var(--white-full);
                     }
                     .stat-value {
                         position: relative;
-                        top: 20px;
+                        top: 19px;
                         left: 33px;
                     }
                 }
@@ -117,9 +117,9 @@
                     display: box;
                     width: 20px;
                     height: 20px;
-                    background-color: var(--color-new-t);
+                    background-color: var(--white-full);
                     border:solid 1px white;
-                    color: white;
+                    color: black;
                     border-radius: 12px;
                     z-index: 1;
                     .num{
@@ -129,13 +129,13 @@
                     }
                 } 
                 .secondary_weapon {
-                    padding-right: 115px;
+                    padding-right: 35%;
                 }
                 
             }
         }
     }
-    &.CT {
+    &.right{
         right: 35px;
         .player {
             flex-direction: row-reverse;
@@ -155,7 +155,7 @@
                     flex-direction: row-reverse;
                     .grenades {
                         padding-left: 5px;
-                        right: 190px;
+                        right: 70%;
                     }
                     .username {
                         flex-direction: row-reverse;
@@ -178,7 +178,7 @@
                         bottom: 3px;
                     }
                     .secondary_weapon {
-                        padding-left: 115px;
+                        padding-left: 35%;
                     }
                     .armor_and_utility {
                         justify-content: center;
@@ -192,11 +192,11 @@
                     } 
                     .adr {
                         position: absolute;
-                        right: 130px;
+                        right: 48%;
                         .stat-label {
                             position: relative;
                             top: 39px;
-                            color: var(--color-new-ct);
+                            color: var(--white-full);
                         }
                         .stat-value {
                             position: relative;
@@ -239,9 +239,9 @@
                         display: box;
                         width: 20px;
                         height: 20px;
-                        background-color: var(--color-new-ct);
+                        background-color: var(--white-full);
                         border:solid 1px white;
-                        color: white;
+                        color: black;
                         border-radius: 12px;
                         z-index: 1;
                         .num{
@@ -472,8 +472,8 @@
                         svg.grenade {
                             max-height: 19px;
                             height: 20px;
-                            margin-right: 6px;
-                            margin-left: 6px;
+                            margin-right: 4px;
+                            margin-left: 4px;
                         }
                     }
                     .health {
