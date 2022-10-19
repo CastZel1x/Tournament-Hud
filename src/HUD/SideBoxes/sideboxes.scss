@@ -42,7 +42,7 @@
 	opacity: 1;
 	transition: all 0.75s;
 	align-items: center;
-	background-color: rgba(0,0,0, 0.6);
+	background-color: #0F2A31;
 	position: relative;
 	.title_container {
 		color: var(--white-full);
@@ -78,7 +78,7 @@
 	opacity: 1;
 	transition: all 0.75s;
 	flex-direction: column;
-	background-color: rgba(0,0,0, 0.6);
+	background-color: #0F2A31;
 	position: relative;
 	border-radius: 8px 8px 0 0;
 	.title_container {
@@ -127,7 +127,7 @@
 	flex-direction: row;
 	opacity: 1;
 	transition: all 0.75s;
-	background-color: rgba(0,0,0, 0.6);
+	background-color: #0F2A31;
 	font-weight: 600;
 	.money_container {
 		display: flex;

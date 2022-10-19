@@ -8,13 +8,19 @@
 
     &.CT {
         .player .hp_bar {
-            background: var(--color-new-ct);
+            /*
+            background: var(--color-new-ct);*/
+            background: linear-gradient(90deg, rgba(79,198,224,1) 35%, rgba(21,116,166,1) 100%);
+            opacity: 70%;
             right: 0;
         }
     }
     &.T {
         .player .hp_bar {
-            background: var(--color-new-t);
+            /*
+            background: var(--color-new-t);*/
+            background-color: #be1e2d;
+            opacity: 70%;
             left: 0;
         }
 	}
@@ -368,7 +374,7 @@
             }
         }
         .player_data {
-            background-color: rgba(10, 5, 5, 0.35);
+            background-color: #0F2A31;
             width: 290px;
             display: flex;
             flex-direction: row;
@@ -520,7 +526,7 @@
     display: flex;
     flex-direction: column;
     width: 200px;
-    background-color: rgba(29,63,99, 0.5);
+    background-color: #0F2A31;
     position: fixed;
     right: 25px;
     top: 15px;
@@ -536,7 +542,7 @@
             justify-content: center;
             font-size:47px;
             color: white;
-            background-color: rgba(29,63,99, 0.5);
+            background-color: #0F2A31;
         }
         .CT {
             color: var(--color-new-ct);
@@ -554,7 +560,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: rgba(29,63,99, 0.9);
+		background-color: #0F2A31;
     }
     &.hide {
         opacity: 0;

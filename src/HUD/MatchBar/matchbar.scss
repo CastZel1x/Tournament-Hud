@@ -41,9 +41,9 @@
 		flex-direction: column;
 		position: relative;
 		width: 126px;
-		height: 80px;
-		bottom: 2px;
-		background-color: rgba(29,63,99, 0.7);
+		height: 79px;
+		bottom: 1px;
+		background-color: #0F2A31;
         &.no-bo {
             height: 87px;
         }
@@ -56,7 +56,7 @@
 		position: absolute;
 		left: 4px;
 		width: 120px;
-		bottom: 20px;
+		bottom: 0px;
 		height:  70px;
 		z-index: 0;
 		.bomb_timer {
@@ -142,11 +142,11 @@
 			display: flex;
 			flex-direction: row;
 			width: 135px;
-			height: 80px;
+			height: 79px;
 			top: 3px;
 			align-items: center;
 			overflow: hidden;
-			background-color: rgba(29,63,99, 0.7);
+			background-color: #0F2A31;
 			img {
 				max-width: 90%;
 				max-height: 75%;
@@ -192,7 +192,7 @@
 		justify-content: center;
 		font-weight: 600;
 		font-size: 46px;
-		background-color: rgba(29,63,99, 0.7);
+		background-color: #0F2A31;
 		&.CT {
 			border-bottom: solid 0px var(--color-new-ct);
 		}

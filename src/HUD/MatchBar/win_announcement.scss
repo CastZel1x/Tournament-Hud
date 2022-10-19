@@ -93,11 +93,20 @@
   }
 }
 
-.T .bottom-left, .T .top-right {
-  background-color: var(--color-new-t);
+.T .bottom-left {
+  background: #0F2A31;
 }
-.CT .bottom-left, .CT .top-right {
-  background-color: var(--color-new-ct);
+
+.T .top-right {
+  background: #BE1E2D;
+}
+
+.CT .bottom-left {
+ background: #0F2A31;
+}
+
+.CT .top-right { 
+  background: #1574A6;
 }
 
 .team_name_container {
