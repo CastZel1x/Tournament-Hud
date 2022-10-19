@@ -26,9 +26,6 @@ export default class SeriesBox extends React.Component<Props> {
             </div>
           </div>
         </div>
-        <div id="series_container">
-          <div id="series_text">{ bo ? `Best of ${bo}` : '' }</div>
-        </div>
         <div className="container right">
           <div className={`series_wins right `}>
             <div className={`wins_box_container`}>

@@ -23,7 +23,7 @@
 	justify-content: center;
 	width: 1148px;
 	height: 70px;
-	top: 27px;
+	top: 37px;
 	left: 50%;
 	transform: translateX(-50%);
 	.CT {
@@ -41,10 +41,9 @@
 		flex-direction: column;
 		position: relative;
 		width: 126px;
-		height: 98px;
+		height: 80px;
 		bottom: 2px;
-		background-color: rgba(0,14,37,0.7);
-		border-radius: 0 0 8px 8px;
+		background-color: rgba(29,63,99, 0.7);
         &.no-bo {
             height: 87px;
         }
@@ -55,9 +54,9 @@
 		justify-content: flex-end;
 		align-items: center;
 		position: absolute;
-		left: 5px;
+		left: 4px;
 		width: 120px;
-		bottom: 27px;
+		bottom: 20px;
 		height:  70px;
 		z-index: 0;
 		.bomb_timer {
@@ -91,8 +90,8 @@
 		width: 100%;
 		height: 55px;
 		justify-content: center;
-		font-size: 40px;
-		bottom: 10px;
+		font-size: 46px;
+		top: 13px;
 		position: relative;
 		font-weight: bold;
 		z-index: 1;
@@ -109,10 +108,10 @@
 		height: 7px;
 		text-align: justify;
 		position: relative;
-		top: 58px;
+		top: 8px;
 		align-items: center;
 		justify-content: center;
-		font-size: 18px;
+		font-size: 16px;
 		font-weight: bold;
 		z-index: 1;
         color: var(--white-full);
@@ -123,7 +122,7 @@
 	#site {
 		position: relative;
 		color: white;
-		top: 5px;
+		top: 10px;
 		text-transform: capitalize;
 		font-size: 50px;
 		font-weight: bold;
@@ -142,11 +141,12 @@
 		.logo {
 			display: flex;
 			flex-direction: row;
-			width: 105px;
+			width: 135px;
 			height: 80px;
 			top: 3px;
 			align-items: center;
 			overflow: hidden;
+			background-color: rgba(29,63,99, 0.7);
 			img {
 				max-width: 90%;
 				max-height: 75%;
@@ -158,8 +158,7 @@
             .logo {
 				position: relative;
 				justify-content: center;
-				border-radius: 0 0 0 12px ;
-				background-color: rgba(29,63,99, 0.9);
+				border-radius: 0 0 0 6px ;
             }
         }
         &.right {
@@ -168,8 +167,7 @@
             .logo {
 				position: relative;
 				justify-content: center;
-				border-radius: 0 0 12px 0;
-				background-color: rgba(29,63,99, 0.9);
+				border-radius: 0 0 6px 0;
             }
         }
 	}
@@ -186,20 +184,20 @@
 	.score {
 		display: flex;
 		flex-direction: row;
-		width: 87px;
+		width: 100px;
 		height: 79px;
-		bottom: 2px;
+		bottom: 1px;
 		position: relative;
 		align-items: center;
 		justify-content: center;
 		font-weight: 600;
-		font-size: 44px;
-		background-color: rgba(0,14,37,0.7);
+		font-size: 46px;
+		background-color: rgba(29,63,99, 0.7);
 		&.CT {
-			border-bottom: solid 3px var(--color-new-ct);
+			border-bottom: solid 0px var(--color-new-ct);
 		}
 		&.T {
-			border-bottom: solid 3px var(--color-new-t);
+			border-bottom: solid 0px var(--color-new-t);
 		}
 	}
 	.bar {
@@ -296,9 +294,9 @@
 	flex-direction: row;
 	position: fixed;
 	justify-content: center;
-	top: 30px;
-	width: 270px;
-	height: 150px;
+	top: 41px;
+	width: 290px;
+	height: 100px;
 	left: 50%;
 	transform: translateX(-50%);
 	.CT {
@@ -314,7 +312,7 @@
 	display: flex;
 	flex-direction: row;
 	width: 186px;
-	height: 30px;
+	height: 25px;
 	position: relative;
 	top: 67px;
 }

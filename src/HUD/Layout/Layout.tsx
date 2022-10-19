@@ -18,6 +18,7 @@ import Pause from "../PauseTimeout/Pause";
 import Timeout from "../PauseTimeout/Timeout";
 import { ChangeColor } from "../../utils/ChangeColor";
 import TournamentName from "../TournamentName/Tournament";
+import PlayerCamera from "../Camera/Camera";
 
 interface Props {
   game: CSGO,
