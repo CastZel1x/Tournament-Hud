@@ -54,17 +54,20 @@ export default class PlayerBox extends React.Component<IProps, IState> {
     return (
       <div className={`player ${player.state.health === 0 ? "dead" : ""} ${this.props.isObserved ? 'active' : ''}`}>
         <div className="player_data">
+         <Avatar steamid={player.steamid} height={57} width={57} showSkull={false} showCam={false} sidePlayer={true} />
           <div className="player_stats">
             <div className="row">
-            <div className="number">
+            <div className="obs_ps">
               <div className="num">{player.observer_slot}</div>
             </div>
               <div className="health">
-                {player.state.health > 0 ? player.state.health : <div className="skull"><Avatar steamid={player.steamid} height={57} width={57} showSkull={true}/></div>}
+              {player.state.health > 0 ? player.state.health :""}
               </div>
               <div className="username">
                 <div>{player.name}</div>
-                {primary || secondary ? <Weapon weapon={primary ? primary.name : secondary.name} active={primary ? primary.state === "active" : secondary.state === "active"} /> : ""}
+              </div>
+              <div className="weapon">
+              {primary || secondary ? <Weapon weapon={primary ? primary.name : secondary.name} active={primary ? primary.state === "active" : secondary.state === "active"} /> : ""}
               </div>
             </div>
             { player.state.health > 0 ? <div className={`hp_bar hp_bar_bg`} style={{ width: `${player.state.health}%` }}></div> : null}
@@ -114,7 +117,6 @@ export default class PlayerBox extends React.Component<IProps, IState> {
                   width="21px" height="18px" alt="filter applied" />  
                 <Statistic label={""} value={stats.deaths} />
               </div>
-
 
 
               {player.state.round_kills ? <div className="roundkills-container">{player.state.round_kills}</div> : null}

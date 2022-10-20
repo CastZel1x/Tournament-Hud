@@ -50,7 +50,7 @@ code {
   --color-new-ct: #5ab8f4;
   --color-bomb: #f22222;
   --color-defuse: #2222f2;
-  --color-ct-gradient:linear-gradient(90deg, rgba(79,198,224,1) 35%, rgba(21,116,166,1) 100%);
+  --color-ct-gradient: linear-gradient(90deg, rgba(79,198,224,1) 35%, rgba(21,116,166,1) 100%);
   --color-t-gradient: #be1e2d;;
 } 
 
