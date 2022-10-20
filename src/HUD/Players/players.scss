@@ -8,15 +8,13 @@
 
     &.CT {
         .player .hp_bar {
-            background: var(--color-ct-gradient);
-            opacity: 70%;
+            background: var(--color-new-ct);
             right: 0;
         }
     }
     &.T {
         .player .hp_bar {
-            background-color: var(--color-t-gradient);
-            opacity: 70%;
+            background: var(--color-new-t);
             left: 0;
         }
 	}
@@ -24,7 +22,7 @@
     &.hide {
         opacity: 0;
     }
-    &.T{
+    &.left{
         left: 35px;
         .player {
             height: 73px;
@@ -64,7 +62,7 @@
                 }
                 .adr {
                     position: absolute;
-                    left: 31%;
+                    left: 33%;
                     .stat-label {
                         position: relative;
                         top: 39px;
@@ -81,16 +79,16 @@
                     .stat-label {
                         position: absolute;
                         right: 53px;
-                        bottom: 22px;
+                        top: 13px;
                     }
                     .stat-value {
                         position: absolute;
                         left: 13px;
-                        bottom: 22px;
+                        top: 13px;
                     }
                 }
                 .statistics {
-                    right: 227px;
+                    right: 220px;
                 }
                 .roundkills-container {
                     left: 91%;
@@ -115,7 +113,7 @@
             }
         }
     }
-    &.CT{
+    &.right{
         right: 35px;
         .player {
             flex-direction: row-reverse;
@@ -167,7 +165,7 @@
                     }
                     .adr {
                         position: absolute;
-                        right: 31%;
+                        right: 33%;
                         .stat-label {
                             position: relative;
                             top: 39px;
@@ -184,16 +182,16 @@
                         .stat-label {
                             position: absolute;
                             left: 53px;
-                            bottom: 22px;
+                            top: 13px;
                         }
                         .stat-value {
                             position: absolute;
                             right: 13px;
-                            bottom: 22px;
+                            top: 13px;
                         }
                     }
                     .statistics {
-                        left: 212px;
+                        left: 210px;
                     }
                     .weapon {
                         transform: scaleX(-1);
@@ -411,10 +409,10 @@
                         flex: 1;
                         top: 12px;
                         svg {
-                            max-height: 27px;
-                            margin-left: -39px;
-                            margin-right: -39px;
-                            max-width: 100px;
+                            max-height: 25px;
+                            margin-left: -29px;
+                            margin-right: -29px;
+                            max-width: 90px;
                             width: auto;
                             height: 50px;
                         }
@@ -589,6 +587,15 @@
 }
 
 
+.teambox.CT .player .adr .stat-label {
+    color: var(--color-new-ct) !important;
+}
+.teambox.T .player .adr  .stat-label{
+    color: var(--color-new-t) !important;
+}
+
+
+
 
 
 .teambox .player .secondary_weapon {
@@ -612,24 +619,26 @@
 
 .teambox .obs_ps {
     position: absolute; 
-    top: 153%;
+    top: 163%;
     display: box;
-    width: 17px;
-    height: 17px;
+    width: 14px;
+    height: 14px;
     z-index: 1;
     color: white;
     .num{
         position: relative;
         left: 28%;
         top: 0px;
-        font-size: 16px;
+        font-size: 12px;
     }
 }
 .teambox.T .obs_ps {
-    left: 94.5%;
-    background-color: var(--color-t-gradient);
+    left: 95.5%;
+    background-color: var(--color-new-t);
 }
 .teambox.CT .obs_ps {
-    right: 94.5%;
-    background: var(--color-ct-gradient);
+    right: 95.5%;
+    background: var(--color-new-ct);
 }
+
+

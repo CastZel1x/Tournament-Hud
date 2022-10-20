@@ -35,7 +35,6 @@
 			font-weight: 700;
 			align-items: center;
 			justify-content: center;
-			background-color: var(--main-panel-color);
 			font-size: 16px;
 			position: relative;
 			text-shadow: 1px 12px 24px black, 0 0 1em whitesmoke, 0 0 0.2em black;
@@ -95,7 +94,7 @@
 	}
 	.title_bar {
 		display: flex;
-		background-color: #0F2A31;
+		background-color: var(--sub-panel-color);
 		position: relative;
 		height: 25px;
 		color: white;
