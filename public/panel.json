@@ -141,7 +141,22 @@
                     }
                 ]
             }
-
         ]
-    }
+    },
+    {
+    "label": "Player Preview",
+    "name":"player_preview_roundfunc",
+    "inputs": [
+        {
+            "type": "player",
+            "name": "player_preview_round",
+            "label": "Pick a round to preview"
+         },
+        {
+            "type": "checkbox",
+            "name": "player_preview_toggle",
+            "label": "Show player preview"
+        }
+    ]
+  }
 ]
