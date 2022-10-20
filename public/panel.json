@@ -134,6 +134,10 @@
                     {
                         "name": "clc",
                         "label": "Classic"
+                    },
+                    {
+                        "name": "iesf",
+                        "label": "IESF World Esports Championship 2022"
                     }
                 ]
             }

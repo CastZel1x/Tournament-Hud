@@ -8,18 +8,14 @@
 
     &.CT {
         .player .hp_bar {
-            /*
-            background: var(--color-new-ct);*/
-            background: linear-gradient(90deg, rgba(79,198,224,1) 35%, rgba(21,116,166,1) 100%);
+            background: var(--color-ct-gradient);
             opacity: 70%;
             right: 0;
         }
     }
     &.T {
         .player .hp_bar {
-            /*
-            background: var(--color-new-t);*/
-            background-color: #be1e2d;
+            background-color: var(--color-t-gradient);
             opacity: 70%;
             left: 0;
         }
@@ -374,7 +370,7 @@
             }
         }
         .player_data {
-            background-color: #0F2A31;
+            background-color: var(--main-panel-color);
             width: 290px;
             display: flex;
             flex-direction: row;
@@ -526,7 +522,7 @@
     display: flex;
     flex-direction: column;
     width: 200px;
-    background-color: #0F2A31;
+	background-color: var(--main-panel-color);
     position: fixed;
     right: 25px;
     top: 15px;
@@ -542,7 +538,7 @@
             justify-content: center;
             font-size:47px;
             color: white;
-            background-color: #0F2A31;
+            background-color: var(--main-panel-color);
         }
         .CT {
             color: var(--color-new-ct);
@@ -560,7 +556,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-		background-color: #0F2A31;
+        background-color: var(--main-panel-color);
     }
     &.hide {
         opacity: 0;

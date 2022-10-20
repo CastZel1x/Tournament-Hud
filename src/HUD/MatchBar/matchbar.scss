@@ -43,7 +43,7 @@
 		width: 126px;
 		height: 79px;
 		bottom: 1px;
-		background-color: #0F2A31;
+		background-color: var(--main-panel-color);
         &.no-bo {
             height: 87px;
         }
@@ -146,7 +146,7 @@
 			top: 3px;
 			align-items: center;
 			overflow: hidden;
-			background-color: #0F2A31;
+			background-color: var(--main-panel-color);
 			img {
 				max-width: 90%;
 				max-height: 75%;
@@ -192,7 +192,7 @@
 		justify-content: center;
 		font-weight: 600;
 		font-size: 46px;
-		background-color: #0F2A31;
+		background-color: var(--main-panel-color);
 		&.CT {
 			border-bottom: solid 0px var(--color-new-ct);
 		}
@@ -295,7 +295,7 @@
 	position: fixed;
 	justify-content: center;
 	top: 41px;
-	width: 290px;
+	width: 270px;
 	height: 100px;
 	left: 50%;
 	transform: translateX(-50%);

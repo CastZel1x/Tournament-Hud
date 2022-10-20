@@ -30,6 +30,10 @@ export function ChangeColor() {
             setTheme('clc');
             console.log("tema4");
         }
+        if (color === 'iesf') {
+            setTheme('iesf');
+            console.log("tema5");
+        }
     }
 
     configs.onChange(onChange);

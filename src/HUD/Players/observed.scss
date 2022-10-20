@@ -22,7 +22,7 @@
         font-weight: 600;
         width: 400px;
         margin-left: 120px;
-        background-color: #0F2A31;
+        background-color: var(--main-panel-color);
         position: relative;
     }
 
@@ -31,7 +31,7 @@
         width: 700px;
         position: relative;
         right: 50px;
-		background-color: rgba(15, 42, 49, 0.7);
+        background-color: var(--sub-panel-color);
         position: relative;
         .stats_cell {
             height: 100%;
@@ -221,7 +221,7 @@
     
     &.T {
         .main_row .username_container .username, .stats_row .ammo .ammo_counter .ammo_reserve {
-            color: var(--color-new-t)
+            color: var(--white-full)
         }
         .sidebar {
             background-color: var(--color-new-t)
@@ -238,7 +238,7 @@
     }
     &.CT {
         .main_row .username_container .username, .stats_row .ammo .ammo_counter .ammo_reserve {
-            color: var(--color-new-ct)
+            color: var(--white-full)
         }
         .sidebar {
             background-color: var(--color-new-ct)
