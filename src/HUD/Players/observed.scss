@@ -61,7 +61,6 @@
             width: 140px;
             display: flex;
             position: relative;
-            left: 10px;
             .ammo_counter {
                 flex: 1;
                 display: flex;
@@ -102,6 +101,7 @@
             width: 170px;
             justify-content: center;
             position: relative;
+            right: 10px;
             .text {
                 width: 30px;
                 display: flex;
@@ -110,7 +110,7 @@
                 font-weight: 600;
                 font-size: 24px;
                 height: 100%;
-                padding-top: 2px;
+                padding-top: -1px;
             }
             
             .icon {
