@@ -2,12 +2,14 @@ import React from "react";
 import Weapon from "./../Weapon/Weapon";
 import { Player, WeaponRaw, Side } from "csgogsi-socket";
 
+
 interface Props {
     sides?: 'reversed',
     show: boolean;
     side: 'CT' | 'T',
     players: Player[]
 }
+
 
 function utilityState(amount: number) {
   if (amount === 20) {
@@ -106,3 +108,4 @@ export default class SideBox extends React.Component<Props> {
         );
     }
 }
+

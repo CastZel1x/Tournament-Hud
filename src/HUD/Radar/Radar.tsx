@@ -1,8 +1,7 @@
 import React from "react";
 import { isDev } from './../../api/api';
-import { CSGO } from "csgogsi";
+import { CSGO } from "csgogsi-socket";
 import LexoRadarContainer from './LexoRadar/LexoRadarContainer';
-
 
 
 interface Props { radarSize: number, game: CSGO }

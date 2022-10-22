@@ -42,9 +42,11 @@ Fullfledged example of the React HUD made for HUD Manager. It has:
 |--|--|
 |  Tournament Name content| `Text` |
 
+## Preview Freeze Time 
 
+![Preview of HUDs panel in action](previewfreeze.png)
 
-## Preview
+## Preview Round
 
 ![Preview of HUDs panel in action](preview.png)
 

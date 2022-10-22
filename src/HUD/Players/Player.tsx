@@ -63,6 +63,11 @@ export default class PlayerBox extends React.Component<IProps, IState> {
 
 
             <div className="row">
+            <div className="armor_and_utility">
+              <Bomb player={player} />
+              <Armor player={player} />
+              <Defuse player={player} />
+            </div>
               <div className="health">
               {player.state.health > 0 ? player.state.health :""}
               </div>
@@ -112,8 +117,14 @@ export default class PlayerBox extends React.Component<IProps, IState> {
                   <div className="stat-value">{player.state.adr}</div>
               </div>
             </div>
-
-
+            <div className="dead-adr">
+                  <div className="labels">
+                    <div className="stat-label">ADR</div>
+                 </div>
+                  <div className="values">
+                    <div className="stat-value">{player.state.adr}</div>
+                </div>
+               </div>
             <div className="active_border"></div>
           </div>
         </div>

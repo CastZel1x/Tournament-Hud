@@ -24,6 +24,7 @@
         margin-left: 120px;
         background-color: var(--main-panel-color);
         position: relative;
+        align-items: center;
     }
 
     .stats_row {
@@ -118,15 +119,17 @@
                 width: 30px;
                 align-items: center;
                 justify-content: center;
+                margin-left: 2px;
+                margin-right: 2px;
                 svg {
                     max-height:30px;
-                    max-width:22px;
+                    max-width:20px;
                 }
             }
         }
         .round_kills {
             position: relative;
-            left: 5px;
+            left: 6px;
             height: 40px;
             max-height: 32px;
             width: 40px;
@@ -139,9 +142,9 @@
             background-size: 12px;
             background-position: left 6px;
             padding-left: 18px;
-            font-size: 20px;
+            font-size: 17px;
             color: white;
-            left: 168px;
+            left: 167.5px;
             bottom: 11px;
         }
         .statistics {
@@ -216,6 +219,7 @@
         img {
             height: 175px;
             width: 175px;
+            border-radius: 0;
      }
 }
     

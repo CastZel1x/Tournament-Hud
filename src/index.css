@@ -66,13 +66,16 @@ div#theme.CSGO1 {
     --color-new-ct: #188BB6;
 }
 div#theme.CSGO2 {
-  --main-panel-color: rgba(27, 43, 73, 0.8);
-    --sub-panel-color: rgba(27, 43, 73, 0.9);
-    --white-full: #fafafa;
-    --white-half: hsla(0,0%,98%,0.5);
-    --color-new-t: #c6b72e;
-    --color-new-ct: #1838b6;
-} 
+  --main-panel-color: #242d3e;
+  --sub-panel-color: rgba(36,45,62,0.9);
+  --white-full: #fafafa;
+  --color-moneys: #ffc43d;
+  --color-new-t: #e7a049;
+  --color-new-ct: #55989b;
+  --color-bomb: #f22222;
+  --color-defuse: #2222f2;
+}
+ 
 div#theme.CSGO3 {
   --main-panel-color: rgba(27, 43, 73, 0.8);
     --sub-panel-color: rgba(27, 43, 73, 0.9);

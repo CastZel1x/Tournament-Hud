@@ -77,8 +77,8 @@ export default class Observed extends React.Component<{ player: Player | null, v
 						</div>
 						<div className="health text">{player.state.armor}</div>
 					</div>
-					<img className="round_kills" src= {roundkill} 
-             				 width="21px" height="18px" alt="filter applied" />  
+					{player.state.round_kills > 0 ? <img className="round_kills" src= {roundkill} 
+             				 width="21px" height="18px" alt="filter applied" /> : null}  
 					{player.state.round_kills ? <div className="roundkills-container">{player.state.round_kills}</div> : null}
 					<div className="statistics">
 						<Statistic label={"K"} value={stats.kills} />
