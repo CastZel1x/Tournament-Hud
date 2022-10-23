@@ -63,17 +63,17 @@ export default class PlayerBox extends React.Component<IProps, IState> {
 
 
             <div className="row">
-            <div className="armor_and_utility">
+              <div className="username">
+                <div>{player.name}</div>
+              </div>
+              <div className="health">
+              {player.state.health > 0 ? player.state.health :""}
+              </div>
+              <div className="armor_and_utility">
               <Bomb player={player} />
               <Armor player={player} />
               <Defuse player={player} />
             </div>
-              <div className="health">
-              {player.state.health > 0 ? player.state.health :""}
-              </div>
-              <div className="username">
-                <div>{player.name}</div>
-              </div>
               {player.state.round_kills ? <div className="roundkills-container">{player.state.round_kills}</div> : null}
               <div className="grenades">
                 {grenades.map(grenade => (

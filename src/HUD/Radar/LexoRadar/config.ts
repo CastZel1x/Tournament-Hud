@@ -1,5 +1,5 @@
 const config = {
-    playerSize: 80,
+    playerSize: 60,
 }
 
 export default config;

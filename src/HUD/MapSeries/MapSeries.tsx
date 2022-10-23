@@ -43,6 +43,9 @@ class VetoEntry extends React.Component<IVetoProps> {
     }
 }
 
+
+
+
 export default class MapSeries extends React.Component<IProps> {
 
     render() {
@@ -51,7 +54,7 @@ export default class MapSeries extends React.Component<IProps> {
         return (
             <div className={`map_series_container ${isFreezetime ? 'show': 'hide'}`}>
                 <div className="title_bar">
-
+                    
                 <img className="touch" src= {touch}
                      width="27px" height="28px" alt="filter applied" />  
                     <div className="picked"></div>

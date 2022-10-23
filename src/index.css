@@ -9,15 +9,19 @@ body,
 
 body {
   margin: 0;
-  font-family: "Titillium","Stratum2","Montserrat","Roboto",sans-serif;
+  font-family: "Titillium","Stratum2","Montserrat","Roboto",sans-serif, "bignoodletitling";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /*background-image: url('./assets/bg.png');/**/
 }
-
+bignoodletitling
 @font-face {
   font-family: 'Louis George Cafe';
   src: local('Louis George Cafe'), url('./fonts/Louis George Cafe.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'bignoodletitling';
+  src: local('bignoodletitling'), url('./fonts/bignoodletitling/big_noodle_titling.ttf') format('truetype');
 }
 
 @font-face {
@@ -53,6 +57,11 @@ code {
   --color-new-ct: rgba(21,116,166,1);
   --color-bomb: #f22222;
   --color-defuse: #2222f2;
+  --panel: rgba(0, 0, 0, 0.8);
+  --label: #333333;
+  --pick: #26CD00;
+  --ban: #FF0000;
+  --decider: #fd0;
 } 
 
 
