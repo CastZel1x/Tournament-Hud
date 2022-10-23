@@ -14,11 +14,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
   /*background-image: url('./assets/bg.png');/**/
 }
-bignoodletitling
+
 @font-face {
   font-family: 'Louis George Cafe';
   src: local('Louis George Cafe'), url('./fonts/Louis George Cafe.ttf') format('truetype');
 }
+
 @font-face {
   font-family: 'bignoodletitling';
   src: local('bignoodletitling'), url('./fonts/bignoodletitling/big_noodle_titling.ttf') format('truetype');
