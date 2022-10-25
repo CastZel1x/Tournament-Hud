@@ -31,9 +31,8 @@ Fullfledged example of the React HUD made for HUD Manager. It has:
 ### **Left Alt + C**
 >Toggles camera feed
 ### **Left Ctrl + B**
->Make radar invisible
-### **Left Alt + R**
 >Swap teams
+### **Left Alt + R**
 
 ## **Panel**
 ## Tournament Name settings

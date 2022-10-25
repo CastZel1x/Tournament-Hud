@@ -43,7 +43,7 @@ export default class PlayerBox extends React.Component<IProps, IState> {
   }
 
   render() {
-    const { player } = this.props;
+    const { player, isFreezetime  } = this.props;
     const weapons: WeaponRaw[] = Object.values(player.weapons).map(weapon => ({ ...weapon, name: weapon.name.replace("weapon_", "") }));
     const primary = weapons.filter(weapon => !['C4', 'Pistol', 'Knife', 'Grenade', undefined].includes(weapon.type))[0] || null;
     const secondary = weapons.filter(weapon => weapon.type === "Pistol")[0] || null;
@@ -54,7 +54,7 @@ export default class PlayerBox extends React.Component<IProps, IState> {
     return (
       <div className={`player ${player.state.health === 0 ? "dead" : ""} ${this.props.isObserved ? 'active' : ''}`}>
         <div className="player_data">
-         <Avatar steamid={player.steamid} height={57} width={57} showSkull={false} showCam={false} sidePlayer={true} />
+          <Avatar steamid={player.steamid} height={57} width={57} showSkull={false} showCam={false} sidePlayer={true} />
          <div className="obs_ps">  <div className="num">{player.observer_slot}</div>   </div>
           <div className="player_stats">
           { player.state.health > 0 ? <div className={`hp_bar hp_bar_bg`} style={{ width: `${player.state.health}%` }}></div> : null}
@@ -91,7 +91,7 @@ export default class PlayerBox extends React.Component<IProps, IState> {
               <div className="weapon">
               {primary || secondary ? <Weapon weapon={primary ? primary.name : secondary.name} active={primary ? primary.state === "active" : secondary.state === "active"} /> : ""}
               </div>
-              <div className="statt">
+              <div className={`statt ${this.props.isFreezetime && this.props.isFreezetime === true ? 'hide' : 'show'}`}>
 
                 <img className="kill" src= {kill}
                   width="18px" height="18px" alt="filter applied" />  
@@ -109,13 +109,11 @@ export default class PlayerBox extends React.Component<IProps, IState> {
 
             <div className="row_top">
               <div className="money">${player.state.money}</div>
-              <div className={`spending ${this.props.isFreezetime && this.props.isFreezetime === true ? 'show' : 'hide'}`}>
-                  <div className="value">-${moneySpent}</div>
-              </div>
               <div className={`adr ${this.props.isFreezetime && this.props.isFreezetime === true ? 'show' : 'hide'}`}>
                   <div className="stat-label">ADR</div>
                   <div className="stat-value">{player.state.adr}</div>
               </div>
+              <div className={`secondary_weapon ${this.props.isFreezetime && this.props.isFreezetime === true ? 'hide' : 'show'}`}>{primary && secondary ? <Weapon weapon={secondary.name} active={secondary.state === "active"} /> : ""}</div>
             </div>
             <div className="dead-adr">
                   <div className="labels">
@@ -127,6 +125,23 @@ export default class PlayerBox extends React.Component<IProps, IState> {
                </div>
             <div className="active_border"></div>
           </div>
+        </div>
+        <div className="spen_kad">
+          <div className={`freezetime_KAD ${!isFreezetime? 'hide' : ''}`}>
+          <div className="labels">
+            <div className="stat-label">K</div>
+            <div className="stat-label">A</div>
+            <div className="stat-label">D</div>
+          </div>
+          <div className="values">
+            <div className="stat-value">{player.stats.kills}</div>
+            <div className="stat-value">{player.stats.assists}</div>
+            <div className="stat-value">{player.stats.deaths}</div>
+          </div>
+        </div>
+        <div className={`spending ${this.props.isFreezetime && this.props.isFreezetime === true ? 'show' : 'hide'}`}>
+                <div className="value">-${moneySpent}</div>
+        </div>
         </div>
       </div>
     );

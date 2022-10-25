@@ -4,6 +4,7 @@
 	left: 10px;
 	border: none;
 	transition: all 1s;
+	font-family: "bignoodletitling";
 	.map-container {
 		transition: all 1s;
 	}
@@ -44,6 +45,7 @@
 .veto_entry {
 	display: flex;
 	justify-content: center;
+	letter-spacing: 2px;
 	>div {
 		display: flex;
 		justify-content: center;
@@ -51,6 +53,7 @@
 		color: whitesmoke;
 		text-transform: uppercase;
 		font-size: 10pt;
+		margin-left: 5px;
 	}
 	.team_logo {
 		img {

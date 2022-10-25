@@ -94,6 +94,7 @@ export default class SideBox extends React.Component<Props> {
         const total = Object.values(grenades).reduce((a, b) => a+b, 0);
         return (
             <div className={`utilitybox ${this.props.side || ''} ${this.props.show ? "show" : "hide"}`}>
+            <div className={`utilitybox ${this.props.side || ''} ${this.props.show ? "show" : "hide"}`}></div>
                 <div className="title_container">
                     <div className="title">Utility -&nbsp;</div>
                     <div className="subtitle" style={{color: utilityColor(total)}}>{utilityState(total)}</div>

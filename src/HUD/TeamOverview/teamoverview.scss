@@ -6,9 +6,9 @@
 	flex-direction: column;
 	right: 10px;
 	top: 375px;
-	background-color: #000000a8;
+	background-color: var(--sub-panel-color);
 	text-transform: uppercase;
-	width: 250px;
+	width: 390px;
 	color: white;
 }
 .match-overview.show {
@@ -23,20 +23,15 @@
 		justify-content: center;
 		flex-direction: column;
 		padding: 5px 0;
-		&:not(.match-overview-vs) {
-			background-color: rgba(0,0,0,0.7);
-		}
 	}
 }
 .match-overview-title {
 	text-align: center;
 	font-weight: 600;
-	background-color: rgba(0,0,0,0.5);
 	padding: 3px 0;
 }
 .match-overview-vs {
 	width: 20px;
 	flex: unset;
-	background-color: rgba(0,0,0,0.6);
-	font-size: 30px;
+	font-size: 34px;
 }

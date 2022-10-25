@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: column;
     color: white;
+    font-family: "bignoodletitling";
 
     .main_row, .stats_row {
         flex: 1;
@@ -144,8 +145,8 @@
             padding-left: 18px;
             font-size: 17px;
             color: white;
-            left: 167.5px;
-            bottom: 11px;
+            left: 171px;
+            bottom: 14px;
         }
         .statistics {
             height: 100%;
@@ -156,11 +157,12 @@
             justify-content: flex-end;
             position: relative;
             left: 5px;
+            letter-spacing: 1px;
             .stat {
                 display: flex;
                 font-weight: 600;
                 font-size: 24px;
-                margin-right: 18px;
+                margin-right: 28px;
             }
         }
     }
@@ -171,8 +173,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
-            right: 130px;
+            position: absolute;
+            right: 350px;
         }
         .username_container {
             height: 100%;
@@ -181,9 +183,10 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            font-size: 40px;
+            font-size: 34px;
             position: relative;
             right: 70px;
+            text-transform: uppercase;
         }
         
     }
@@ -204,6 +207,8 @@
         align-items: center;
         justify-content: center;
         margin-right: 5px;
+        position: absolute;
+        left: 350px;
         img {
             height: 43px;
         }
@@ -214,7 +219,7 @@
         position: relative;
         width: 140px;
         height: 140px;
-        right: 175px;
+        right: 165px;
         bottom: 35px;
         img {
             height: 175px;

@@ -9,7 +9,7 @@ let port = 1349;
 
 const getPort = () => {
     if(!fs.existsSync(pathToConfig)){
-        console.warn('LHM Config file unavailable');
+        console.warn('HUD Config file unavailable');
         return port;
     }
 
@@ -17,7 +17,7 @@ const getPort = () => {
         const config = JSON.parse(fs.readFileSync(pathToConfig, 'utf-8'));
 
         if(!config.port){
-            console.warn('LHM Port unavailable');
+            console.warn('HUD Port unavailable');
         }
 
         console.warn('LHM Port detected as', config.port);

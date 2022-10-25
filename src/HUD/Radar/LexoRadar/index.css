@@ -21,12 +21,13 @@ html, body, .map-container {
 .map-avatar img {
     margin-left: -18px;
     margin-top: -1px;
-    zoom: 250%
+    zoom: 250%;
 }
 
 .label {
     display: block;
 }
+
 
 @keyframes FlashOrFragDeployed {
     0% {
@@ -205,10 +206,10 @@ html, body, .map-container {
     animation: BombDefused 2s 1 forwards;
 }
 .map .player.CT .label {
-    background: radial-gradient(rgb(61, 141, 224), rgb(42, 49, 119));
+   background-color: var(--color-new-ct);
 }
 .map .player.T .label {
-    background: radial-gradient(rgb(255, 129, 0), var(--color-new-t));
+    background-color: var(--color-new-t);
 }
 .map .player.T.hasBomb .label {
     background: red;
