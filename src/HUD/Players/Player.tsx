@@ -88,7 +88,7 @@ export default class PlayerBox extends React.Component<IProps, IState> {
 
 
             <div className="row_center">
-              <div className="weapon">
+              <div className="container_weapon">
               {primary || secondary ? <Weapon weapon={primary ? primary.name : secondary.name} active={primary ? primary.state === "active" : secondary.state === "active"} /> : ""}
               </div>
               <div className={`statt ${this.props.isFreezetime && this.props.isFreezetime === true ? 'hide' : 'show'}`}>
