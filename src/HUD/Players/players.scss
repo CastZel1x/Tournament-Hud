@@ -23,7 +23,7 @@
         left: 35px;
         .player {
             .avatar {
-                right: 15px;
+                right: 13px;
                 position: relative;
             }
             .hp_bar {
@@ -50,7 +50,7 @@
             .row_center {
                 .weapon {
                     position: absolute;
-                    left: 74px;
+                    left: 150px;
                 }
             }
             .row_top {
@@ -103,6 +103,7 @@
                 .row_center {
                     .weapon {
                         left: 21px;
+                        transform: scaleX(-1);
                     }
                 }
                 .row_top {
@@ -111,18 +112,22 @@
                         position: relative;
                         left: 190px;
                         height: 65px;
-                    }.secondary_weapon {
+                    }
+                    .secondary_weapon {
                         left: 100px;
                         bottom: 100px;
                         position: relative;
+                        .weapon {
+                            transform: scaleX(-1);
+                        }
                     }
                 }
-            .freezetime_KAD {
+                .freezetime_KAD {
                     margin-right: 0.5rem;
-            }
+                 }
                 .avatar {
                     justify-content: flex-start;
-                    left: 15px;
+                    left: 14px;
                     position: relative;
                 }
             }
@@ -321,6 +326,26 @@
                     }
                 }
                 .row_center {
+                    .container_weapon {
+                        max-height: 24px;
+                        width: auto;
+                        max-width: 100px;
+                        height: 30px;
+                        top: 2.5px;
+                        position: relative;
+                        // position: relative;
+                        // display: flex;
+                        // flex: 1;
+                        // top: 12px;
+                        // svg {
+                        //     max-height: 27px;
+                        //     margin-left: -39px;
+                        //     margin-right: -39px;
+                        //     max-width: 100px;
+                        //     width: auto;
+                        //     height: 50px;
+                        // }
+                    }
                     .weapon {
                         max-height: 24px;
                         width: auto;
@@ -361,9 +386,8 @@
                     color: var(--color-moneys);
                     font-weight: 600;
                     display: flex;
-                    align-items: center;
                     justify-content: flex-start;
-                    bottom: 33px;
+                    bottom: 16px;
                     }
                 }
             }
@@ -375,7 +399,7 @@
     display: flex;
     flex-direction: column;
     width: 200px;
-	background-color: var(--main-panel-color);
+    background-color: var(--main-color-transparant);
     position: fixed;
     right: 25px;
     top: 15px;
@@ -410,7 +434,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: var(--main-panel-color);
+        //background-color: var(--main-color-transparant);
     }
     &.hide {
         opacity: 0;

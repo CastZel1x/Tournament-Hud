@@ -88,18 +88,16 @@ export default class PlayerBox extends React.Component<IProps, IState> {
 
 
             <div className="row_center">
-              <div className="weapon">
+              <div className="container_weapon">
               {primary || secondary ? <Weapon weapon={primary ? primary.name : secondary.name} active={primary ? primary.state === "active" : secondary.state === "active"} /> : ""}
               </div>
               <div className={`statt ${this.props.isFreezetime && this.props.isFreezetime === true ? 'hide' : 'show'}`}>
 
-                <img className="kill" src= {kill}
-                  width="18px" height="18px" alt="filter applied" />  
+              <img className="kill" src= {kill} width="18px" height="18px" alt="filter applied" />  
                 <Statistic label={""} value={stats.kills} />
 
 
-                <img className="dead" src= {dead} 
-                  width="16px" height="17px" alt="filter applied" />  
+                <img className="dead" src= {dead} width="16px" height="17px" alt="filter applied" />  
                 <Statistic label={""} value={stats.deaths} />
               </div>
             </div>
@@ -116,16 +114,17 @@ export default class PlayerBox extends React.Component<IProps, IState> {
               <div className={`secondary_weapon ${this.props.isFreezetime && this.props.isFreezetime === true ? 'hide' : 'show'}`}>{primary && secondary ? <Weapon weapon={secondary.name} active={secondary.state === "active"} /> : ""}</div>
             </div>
             <div className="dead-adr">
-                  <div className="labels">
-                    <div className="stat-label">ADR</div>
-                 </div>
-                  <div className="values">
-                    <div className="stat-value">{player.state.adr}</div>
-                </div>
-               </div>
+            <div className="labels">
+                  <div className="stat-label">ADR</div>
+              </div>
+              <div className="values">
+                  <div className="stat-value">{player.state.adr}</div>
+              </div>
+            </div>
             <div className="active_border"></div>
           </div>
         </div>
+
         <div className="spen_kad">
           <div className={`freezetime_KAD ${!isFreezetime? 'hide' : ''}`}>
           <div className="labels">

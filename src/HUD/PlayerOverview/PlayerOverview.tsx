@@ -4,6 +4,7 @@ import { avatars } from './../../api/avatars';
 import { apiUrl } from '../../api/api';
 import { getCountry } from '../countries';
 import { Player } from 'csgogsi-socket';
+import img from '../../assets/playeroverview.png'
 import "./playeroverview.scss";
 
 interface IProps {
@@ -62,7 +63,9 @@ export default class PlayerOverview extends React.Component<IProps> {
         const inGamePlayer = players.find(inGamePlayer => inGamePlayer.steamid === player.steamid);
         if(inGamePlayer) side = inGamePlayer.team.side;
 		return (
-            <div className={`player-overview ${this.props.show ? 'show':''} ${side}`}>
+                <div className={`player-overview ${this.props.show ? 'show':''} ${side}`}>
+                    <img className="imgoverview" src= {img} 
+                        width="350px" height="220px" alt="filter applied" />  
                 <div className="player-overview-picture">
                     {url ? <img src={url} alt={`${player.username}'s avatar`}/> : null}
                 </div>

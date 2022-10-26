@@ -4,9 +4,11 @@
 }
 .boxes.left {
 	left: 35px;
+	background-image: url(../../../../../../Downloads/displaysettingsleft.png);
 }
 .boxes.right {
 	right: 35px;
+	background-image: url(../../../../../../Downloads/displaysettingsright.png);
 }
 .boxes.hide {
 	.utilitybox {
@@ -42,7 +44,7 @@
 	opacity: 1;
 	transition: all 0.75s;
 	align-items: center;
-	background-color: var(--main-panel-color);
+	/*background-color: var(--main-panel-color);*/
 	position: relative;
 	font-family: "bignoodletitling";
 	.title_container {
@@ -66,7 +68,7 @@
 		align-items: center;
 		justify-content: center;
 		img {
-			max-width: 70px;
+			max-width: 310px;
 			max-height: 70px;
 		}
 	}
@@ -79,7 +81,7 @@
 	opacity: 1;
 	transition: all 0.75s;
 	flex-direction: column;
-	background-color: var(--main-panel-color);
+	/*background-color: var(--main-panel-color);*/
 	position: relative;
 	border-radius: 8px 8px 0 0;
 	font-family: "bignoodletitling";
@@ -129,7 +131,7 @@
 	flex-direction: row;
 	opacity: 1;
 	transition: all 0.75s;
-	background-color: var(--main-panel-color);
+	/*background-color: var(--main-panel-color);*/
 	font-weight: 600;
 	font-family: "bignoodletitling";
 	.money_container {
