@@ -14,18 +14,6 @@ interface IProps {
     round: number
 }
 
-class Statistic extends React.PureComponent<{ label: string; value: string | number, }> {
-	render() {
-		return (
-			<div className="stat">
-				<div className="label">{this.props.label}</div>
-				<div className="value">{this.props.value}</div>
-			</div>
-		);
-	}
-}
-
-
 export default class PlayerOverview extends React.Component<IProps> {
     sum = (data: number[]) => data.reduce((a, b) => a + b, 0);
 
@@ -83,15 +71,24 @@ export default class PlayerOverview extends React.Component<IProps> {
                 <div className="player-overview-stats">
                     <div className="player-overview-stat">
                         <div className="label">KILLS: {data.kills}</div>
+                        <div className="panel">
+                            <div className="filling" style={{width:`${this.calcWidth(data.kills, data.kills <= 30 ? 30 : 40)}%`}}></div>
+                        </div>
                     </div>
                     <div className="player-overview-stat">
                         <div className="label">HS: {data.hsp}%</div>
+                        <div className="panel">
+                            <div className="filling" style={{width:`${this.calcWidth(data.hsp, 100)}%`}}></div>
                         </div>
                     </div>
                     <div className="player-overview-stat">
                         <div className="label">ADR: {data.adr}</div>
+                        <div className="panel">
+                            <div className="filling" style={{width:`${this.calcWidth(data.adr)}%`}}></div>
                         </div>
                     </div>
+                </div>
+            </div>
         );
 	}
 }

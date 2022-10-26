@@ -39,12 +39,6 @@ export default class Observed extends React.Component<{ player: Player | null, v
 			this.setState({ showCam: !this.state.showCam });
 		});
 	}
-	getAdr = () => {
-		const { veto, player } = this.props;
-		if (!player || !veto || !veto.rounds) return null;
-		const damageInRounds = veto.rounds.map(round => round.players[player.steamid]).filter(data => !!data).map(roundData => roundData.damage);
-		return damageInRounds.reduce((a, b) => a + b, 0) / (this.props.round - 1);
-	}
 	render() {
 		if (!this.props.player) return '';
 		const { player } = this.props;
@@ -84,7 +78,6 @@ export default class Observed extends React.Component<{ player: Player | null, v
 						<Statistic label={"K"} value={stats.kills} />
 						<Statistic label={"A"} value={stats.assists} />
 						<Statistic label={"D"} value={stats.deaths} />
-						<Statistic label={"ADR"} value={player.state.adr} />
 					</div>
 					<div className="grenade_container">
 						{grenades.map(grenade => <React.Fragment key={`${player.steamid}_${grenade.name}_${grenade.ammo_reserve || 1}`} >

@@ -16,7 +16,7 @@
 	opacity: 0;
 }
 #radar_maps_container.preview {
-    transform: rotate3d(1, 0, 0, 14deg) translateX(-50%);
+	transform: rotate3d(1, 0, 0, 14deg) translateX(-50%);
     transform-style: preserve-3d;
     left: 50%;
     top: 100px;
@@ -29,7 +29,6 @@
 	height:350px;
 	overflow: hidden;
 	position: relative;
-	bottom: 7px;
 }
 #maps_container {
 	width: 100%;
