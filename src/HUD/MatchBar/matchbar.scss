@@ -296,7 +296,7 @@
 	position: fixed;
 	justify-content: center;
 	top: 44px;
-	width: 275px;
+	width: 688px;
 	height: 100px;
 	left: 50%;
 	transform: translateX(-50%);
@@ -312,10 +312,11 @@
 #series_container {
 	display: flex;
 	flex-direction: row;
-	width: 186px;
+	width: 2606px;
 	height: 25px;
 	position: relative;
-	top: 67px;
+	top: 72px;
+	background-color: var(--main-panel-color);
 }
 #series_text {
 	display: flex;
@@ -325,7 +326,7 @@
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	font-size: 18px;
+	font-size: 16px;
 	font-weight: bold;
 	color: white;
 }
@@ -334,7 +335,7 @@
 .container {
 	display: flex;
 	flex-direction: row;
-	width: 280px;
+	width:280px;
 	height: 10px;
 }
 .container.left {
@@ -355,6 +356,16 @@
 	.wins_box_container {
 		flex-direction: row-reverse;
 		justify-content: left;
+		left: 210px;
+		position: relative;
+	}
+}
+.series_wins.right {
+	.wins_box_container {
+		flex-direction: row-reverse;
+		justify-content: left;
+		right: 200px;
+		position: relative;
 	}
 }
 .wins_box {

@@ -12,7 +12,6 @@ interface State { showRadar: boolean, radarSize: number, showBig: boolean }
 
 
 
-
 export default class RadarMaps extends React.Component<Props, State> {
     state = {
         showRadar: true,
@@ -59,9 +58,10 @@ class MapsBar extends React.PureComponent<Props> {
         }
         return <div id="maps_container">
             {match.vetos.filter(veto => veto.type !== "ban").filter(veto => veto.teamId || veto.type === "decider").map(veto => <MapEntry key={veto.mapName} veto={veto} map={this.props.map} team={veto.type === "decider" ? null : map.team_ct.id === veto.teamId ? map.team_ct : map.team_t} />)}
-        </div>
+        </div> 
     }
 }
+
 
 class MapEntry extends React.PureComponent<{ veto: Veto, map: Map, team: Team| null }> {
     render() {

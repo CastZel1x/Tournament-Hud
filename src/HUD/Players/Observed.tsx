@@ -14,16 +14,6 @@ import esea from "../.././assets/baner/esea.png";
 import faceit from "../.././assets/baner/faceit.png";
 import roundkill from "../.././assets/roundkill.png";
 
-class Statistic extends React.PureComponent<{ label: string; value: string | number, }> {
-	render() {
-		return (
-			<div className="stat">
-				<div className="label">{this.props.label}</div>
-				<div className="value">{this.props.value}</div>
-			</div>
-		);
-	}
-}
 
 export default class Observed extends React.Component<{ player: Player | null, veto: Veto | null, round: number }, { showCam: boolean }> {
 	constructor(props: any){
@@ -46,18 +36,22 @@ export default class Observed extends React.Component<{ player: Player | null, v
 		const weapons = Object.values(player.weapons).map(weapon => ({ ...weapon, name: weapon.name.replace("weapon_", "") }));
 		const currentWeapon = weapons.filter(weapon => weapon.state === "active")[0];
 		const grenades = weapons.filter(weapon => weapon.type === "Grenade");
-		const { stats } = player;
-		const ratio = stats.deaths === 0 ? stats.kills : stats.kills / stats.deaths;
 		const countryName = country ? getCountry(country) : null;
 		return (
 			<div className={`observed ${player.team.side}`}>
 				<div className="main_row">
 					{<Avatar steamid={player.steamid} height={160} width={160} showCam={this.state.showCam} slot={player.observer_slot} />}
 					<TeamLogo team={player.team} height={40} width={40} />
+					<div className="grenade_container">
+						{grenades.map(grenade => <React.Fragment key={`${player.steamid}_${grenade.name}_${grenade.ammo_reserve || 1}`} >
+						<Weapon weapon={grenade.name} active={grenade.state === "active"} isGrenade />
+							{
+								grenade.ammo_reserve === 2 ? <Weapon weapon={grenade.name} active={grenade.state === "active"} isGrenade /> : null}
+						</React.Fragment>)}
+					</div>
 					<div className="username_container">
 						<div className="username">{player.name}</div>
 					</div>
-					<div className="flag">{countryName ? <img src={`${apiUrl}files/img/flags/${countryName.replace(/ /g, "-")}.png`} alt={countryName} /> : ''}</div>
 				</div>
 				<div className="stats_row">
 					<div className="health_armor_container">
@@ -74,18 +68,6 @@ export default class Observed extends React.Component<{ player: Player | null, v
 					{player.state.round_kills > 0 ? <img className="round_kills" src= {roundkill} 
              				 width="21px" height="18px" alt="filter applied" /> : null}  
 					{player.state.round_kills ? <div className="roundkills-container">{player.state.round_kills}</div> : null}
-					<div className="statistics">
-						<Statistic label={"K"} value={stats.kills} />
-						<Statistic label={"A"} value={stats.assists} />
-						<Statistic label={"D"} value={stats.deaths} />
-					</div>
-					<div className="grenade_container">
-						{grenades.map(grenade => <React.Fragment key={`${player.steamid}_${grenade.name}_${grenade.ammo_reserve || 1}`} >
-						<Weapon weapon={grenade.name} active={grenade.state === "active"} isGrenade />
-							{
-								grenade.ammo_reserve === 2 ? <Weapon weapon={grenade.name} active={grenade.state === "active"} isGrenade /> : null}
-						</React.Fragment>)}
-					</div>
 					<div className="ammo">
 						<div className="ammo_icon_container">
 							<Bullets />
