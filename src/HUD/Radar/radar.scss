@@ -29,6 +29,7 @@
 	height:350px;
 	overflow: hidden;
 	position: relative;
+	top: 20px;
 }
 #maps_container {
 	width: 100%;
@@ -38,8 +39,8 @@
 	justify-content: space-evenly;
 	background-color: var(--main-panel-color);
 	position: relative;
-	bottom: 350px;
-	border-radius: 5px;
+	bottom: 340px;
+	border-radius: 2px;
 }
 .veto_entry {
 	display: flex;
