@@ -12,7 +12,7 @@
 
 .imgoverview {
 	margin-left: -30px;
-	bottom: 15px;
+	bottom: 25px;
 	position: relative;
 }
 
@@ -22,7 +22,7 @@
 	background-color: var(--main-panel-color);
 	left: 50%;
 	transform: translateX(-50%);
-	height: 220px;
+	height: 210px;
 	width: 290px;
 	padding: 30px;
 	color: white;
@@ -38,7 +38,7 @@
 	height: 180px;
 	width: 173px;
 	position: absolute;
-	bottom: 45px;
+	bottom: 40px;
 	align-items: center;
 	text-align: center;
 	left: 173px;
@@ -76,9 +76,9 @@
 	justify-content: center;
 	position: relative;
 	img {
-		bottom: 215px;
-		max-width: 180px;
-		max-height: 180px;
+		bottom: 218px;
+		max-width: 190px;
+		max-height: 190px;
 		position: relative;
 		z-index: 1;
 		right: 84px;
@@ -91,7 +91,7 @@
 	align-items: center;
 	justify-content: center;
 	font-size: 36px;
-	bottom: 12px;
+	bottom: 213px;
 }
 img.flag {
 	border-radius: 0;
