@@ -1,6 +1,7 @@
 .boxes {
 	position: fixed;
 	bottom: 388px;
+	font-family: Prototype;
 }
 .boxes.left {
 	left: 35px;
@@ -46,7 +47,6 @@
 	align-items: center;
 	/*background-color: var(--main-panel-color);*/
 	position: relative;
-	font-family: "bignoodletitling";
 	.title_container {
 		color: var(--white-full);
 		height: 60px;
@@ -84,7 +84,6 @@
 	/*background-color: var(--main-panel-color);*/
 	position: relative;
 	border-radius: 8px 8px 0 0;
-	font-family: "bignoodletitling";
 	.title_container {
 		display: flex;
 		flex-direction: row;
@@ -133,7 +132,6 @@
 	transition: all 0.75s;
 	/*background-color: var(--main-panel-color);*/
 	font-weight: 600;
-	font-family: "bignoodletitling";
 	.money_container {
 		display: flex;
 		flex-direction: column;

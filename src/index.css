@@ -9,7 +9,7 @@ body,
 
 body {
   margin: 0;
-  font-family: "Titillium","Stratum2","Montserrat","Roboto",sans-serif, "bignoodletitling";
+  font-family: "Titillium","Stratum2","Montserrat","Roboto",sans-serif, "bignoodletitling", "Prototype";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /*background-image: url('./assets/bg.png');/**/
@@ -19,10 +19,18 @@ body {
   font-family: 'Louis George Cafe';
   src: local('Louis George Cafe'), url('./fonts/Louis George Cafe.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Roboto';
+  src: local('Roboto'), url('./fonts/Roboto/Roboto.ttf') format('truetype');
+}
 
 @font-face {
   font-family: 'bignoodletitling';
   src: local('bignoodletitling'), url('./fonts/bignoodletitling/big_noodle_titling.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Prototype';
+  src: local('Prototype'), url('./fonts/Prototype/Prototype.ttf') format('truetype');
 }
 
 @font-face {

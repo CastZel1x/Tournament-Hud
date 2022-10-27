@@ -103,16 +103,18 @@
 }
 
 .CT .bottom-left {
- background: #0F2A31;
+  background: #0F2A31;
 }
 
 .CT .top-right { 
-  background: #1574A6;
+  background: var(--color-new-ct);
 }
 
 .team_name_container {
   font-weight: 600;
   font-size: 30px;
+  bottom: 8px;
+  position: relative;
 }
 
 .win_text {

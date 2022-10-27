@@ -1,3 +1,4 @@
+
 .teambox {
     position: fixed;
     bottom: 35px;
@@ -5,7 +6,7 @@
     flex-direction: column;
     opacity: 1;
     transition: opacity 0.75s;
-    font-family: "bignoodletitling";
+    font-family: bignoodletitling;
     &.CT {
         .player .hp_bar {
             background-color: var(--color-new-ct);
@@ -387,13 +388,15 @@
                     font-weight: 600;
                     display: flex;
                     justify-content: flex-start;
-                    bottom: 16px;
+                    bottom: 10px;
                     }
                 }
             }
         }
     }
 }
+
+
 
 .players_alive {
     display: flex;
@@ -405,7 +408,7 @@
     top: 15px;
     opacity: 1;
     transition: opacity 1s;
-    font-family: "bignoodletitling";
+    font-family: bignoodletitling;
     .counter_container {
         display: flex;
         height: 60px;
