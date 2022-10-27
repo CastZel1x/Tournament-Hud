@@ -11,10 +11,12 @@ interface Props { match: Match | null, map: Map, game: CSGO }
 interface State { showRadar: boolean, radarSize: number, showBig: boolean }
 
 
+
+
 export default class RadarMaps extends React.Component<Props, State> {
     state = {
         showRadar: true,
-        radarSize: 350,
+        radarSize: 350, 
         showBig: false
     }
     componentDidMount() {
