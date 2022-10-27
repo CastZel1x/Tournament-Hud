@@ -1,6 +1,6 @@
 {
-  "name": "tournament_hud",
-  "version": "2.3",
+  "name": "iesf_hud",
+  "version": "2.5",
   "homepage": "./",
   "private": true,
   "dependencies": {
