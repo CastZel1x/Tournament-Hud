@@ -13,19 +13,19 @@ interface Props {
 
 function utilityState(amount: number) {
   if (amount === 20) {
-    return "Full";
+    return "Full Buy";
   }
   if (amount > 14) {
-    return "Great";
+    return "Great Buy";
   }
   if (amount > 9) {
-    return "Good";
+    return "Semi Buy";
   }
   if (amount > 5) {
-    return "Low";
+    return "Low Buy";
   }
   if (amount > 0) {
-    return "Poor";
+    return "Eko";
   }
   return "None";
 }
@@ -109,4 +109,3 @@ export default class SideBox extends React.Component<Props> {
         );
     }
 }
-
