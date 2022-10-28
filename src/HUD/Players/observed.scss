@@ -52,7 +52,7 @@
             display: flex;
             position: relative;
             bottom: 5px;
-            left: 220px;
+            left: 240px;
             .ammo_counter {
                 flex: 1;
                 display: flex;
@@ -93,7 +93,7 @@
             width: 170px;
             justify-content: center;
             position: relative;
-            left: 390px;
+            left: 410px;
             bottom: 38px;
             .text {
                 width: 30px;
@@ -144,7 +144,7 @@
             justify-content: center;
             position: relative;
             bottom: 4px;
-            right: 130px;
+            right: 165px;
             img {
                 max-height: 33px;
             }
@@ -156,7 +156,7 @@
             width: 100px;
             justify-content: center;
             position: absolute;
-            left: 165px;
+            left: 125px;
             top: 30px;
             svg {
                 max-height:25px;
@@ -173,9 +173,9 @@
             font-size: 30px;
             letter-spacing: 1.5px;
             position: relative;
-            right: 175px;
+            right: 245px;
             bottom: 3px;
-            flex-direction: row-reverse;
+            flex-direction: column-reverse;
         }
         .weapon.grenade {
             height: 28px;
@@ -202,14 +202,14 @@
         align-self: flex-end;
         display: flex;
         position: relative;
-        width: 140px;
+        width: 170px;
         height: 140px;
-        left: 240px;
+        left: 235px;
         bottom: 15px;
         img {
             // border-radius:50%;
             zoom: 130%;
-            max-width: 160px;
+            max-width: 180px;
             max-height: 140px;
         }
     }
@@ -233,7 +233,7 @@
         }
     }
     &.CT {
-        border-bottom: 50px solid var(--color-new-ct);
+        border-bottom: 35px solid var(--color-new-ct);
         .main_row .username_container .username, .stats_row .ammo .ammo_counter .ammo_reserve {
             color: var(--white-full)
         }

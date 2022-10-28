@@ -137,9 +137,9 @@
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
-	top: 115px;
+	top: 141px;
 	background-color: var(--main-panel-color);
-	width: 420px;
+	width: 528px;
 	border-bottom: 4px;
 	display: flex;
 	align-items: center;
@@ -150,25 +150,27 @@
 	opacity: 0;
 	color: whitesmoke;
 	transition: width 0.5;
+	font-family: "bignoodletitling";
 }
 #pause {
 	text-transform: uppercase;
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
-	top: 115px;
+	top: 141px;
 	background-color: var(--main-panel-color);
-	width: 250px;
+	width: 528px;
 	border-bottom: 4px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 50px;
-	font-size: 25px;
+	height: 40px;
+	font-size: 28px;
 	transition: opacity 1.5s;
 	opacity: 0;
 	color: whitesmoke;
 	transition: width 0.5;
+	font-family: "bignoodletitling";
 }
 #timeout.show, #pause.show {
 	opacity: 1;
