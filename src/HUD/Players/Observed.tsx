@@ -4,15 +4,12 @@ import Weapon from "./../Weapon/Weapon";
 import Avatar from "./Avatar";
 import TeamLogo from "./../MatchBar/TeamLogo";
 import "./observed.scss";
-import { apiUrl } from './../../api/api';
 import { getCountry } from "./../countries";
 import { ArmorHelmet, ArmorFull, HealthFull, Bullets } from './../../assets/Icons';
 import { Veto } from "../../api/interfaces";
 import { actions } from "../../App";
-import baner from "../.././assets/baner/baner.png";
-import esea from "../.././assets/baner/esea.png";
-import faceit from "../.././assets/baner/faceit.png";
 import roundkill from "../.././assets/roundkill.png";
+
 
 
 export default class Observed extends React.Component<{ player: Player | null, veto: Veto | null, round: number }, { showCam: boolean }> {
@@ -65,9 +62,11 @@ export default class Observed extends React.Component<{ player: Player | null, v
 						</div>
 						<div className="health text">{player.state.armor}</div>
 					</div>
+					<div className="roundkills-container">
 					{player.state.round_kills > 0 ? <img className="round_kills" src= {roundkill} 
              				 width="21px" height="18px" alt="filter applied" /> : null}  
-					{player.state.round_kills ? <div className="roundkills-container">{player.state.round_kills}</div> : null}
+					{player.state.round_kills ? <div className="roundkills-num">{player.state.round_kills}</div> : null}
+					</div>
 					<div className="ammo">
 						<div className="ammo_icon_container">
 							<Bullets />
@@ -76,17 +75,6 @@ export default class Observed extends React.Component<{ player: Player | null, v
 							<div className="ammo_clip">{(currentWeapon && currentWeapon.ammo_clip) || "-"}</div>
 							<div className="ammo_reserve">/{(currentWeapon && currentWeapon.ammo_reserve) || "-"}</div>
 						</div>
-						<div className="baner">
-
-							<div className="spaceobserv ">ㅤㅤ</div>	
-
-							<img className="banerlogo" src= {baner} 
-             					 width="150px" height="75px" alt="filter applied" />  
-							<img className="banerlogo1" src= {esea} 
-             					 width="100px" height="100px" alt="filter applied" />  
-							<img className="banerlogo2" src= {faceit} 
-             					 width="180px" height="76px" alt="filter applied" />  
-							</div>
 					</div>
 				</div>
 			</div>

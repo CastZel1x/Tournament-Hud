@@ -1,6 +1,7 @@
 import React from "react";
 import { Timer } from "../MatchBar/MatchBar";
 import { Player } from "csgogsi";
+import * as I from "./../../assets/Icons";
 
 interface IProps {
   timer: Timer | null;
@@ -10,11 +11,13 @@ export default class Bomb extends React.Component<IProps> {
     if(!player) return null;
     if(type === "defusing"){
       return <>
-        <div className={'W'}>{player.name} <br/>DEFUSING THE BOMB</div>
+        <I.Defuse height={22} width={22} fill="var(--color-new-ct)" />
+        <div className={'W'}>{player.name} DEFUSING THE BOMB</div>
       </>;
     }
     return <>
-      <div className={'W'}>{player.name} <br/>PLANTING THE BOMB</div>
+          <I.SmallBomb height={22} fill="var(--color-new-t)"/>
+      <div className={'W'}>{player.name} PLANTING ON</div>
     </>;
   }
   render() {

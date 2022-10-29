@@ -33,41 +33,59 @@
 }
 #maps_container {
 	width: 100%;
-	height: 30px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-	background-color: var(--main-panel-color);
-	position: relative;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    //justify-content: space-evenly;
+    color: #fff;
+    background-color: var(--sub-panel-color);
 	bottom: 340px;
-	border-radius: 2px;
+	position: relative;
 }
 .veto_entry {
 	display: flex;
 	justify-content: center;
-	letter-spacing: 2px;
+	letter-spacing: .1em;
+	left: 123px;
+	position: relative;
 	>div {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		color: whitesmoke;
 		text-transform: uppercase;
-		font-size: 10pt;
-		margin-left: 5px;
-	}
-	.team_logo {
-		img {
-			max-height: 23px;
-			padding-right: 3px;
-			max-width: 23px;
-		}
-		.logo {
-			height: 23px;
-			width: 23px;
-		}
+		font-size: 13pt;
+		margin: 15px;
 	}
 	.map_name.active {
-		text-shadow: 1px 1px 18px white, 0 0 1em white;
+		color: 	white;
 		font-weight: 600;
 	}
+	.map_name:not(.active) {
+		color: rgb(162, 158, 158);
+	}
+}
+
+
+#series_container {
+	display: flex;
+	flex-direction: row;
+	height: 25px;
+	right: 895px;
+	position: relative;
+	top: 23px;
+}
+#series_text {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 19px;
+	font-weight: bold;
+	color: white;
+	font-family: "bignoodletitling";
+	letter-spacing: .1em;
 }

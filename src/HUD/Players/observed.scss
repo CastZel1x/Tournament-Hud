@@ -119,23 +119,26 @@
                 }
             }
         }
-        .round_kills {
-            position: absolute;
-            left: 105px;
-            bottom: 36px;
-            height: 40px;
-            max-height: 32px;
-            width: 40px;
-            max-width: 32px;
-            filter: invert(100%);
-        }
+
         .roundkills-container {
-            position: absolute;
-            padding-left: 18px;
-            font-size: 18px;
-            color: white;
-            left: 100px;
-            bottom: 43px;
+            right: 167px;
+            position: relative;
+            bottom: 20px;
+            .round_kills {
+                position: absolute;
+                height: 40px;
+                max-height: 32px;
+                width: 40px;
+                max-width: 32px;
+                filter: invert(100%);
+            }
+            .roundkills-num {
+                position: absolute;
+                padding-left: 13px;
+                font-size: 18px;
+                color: white;
+                padding-top: 6px;
+            }
         }
         .statistics {
             height: 100%;
@@ -165,6 +168,7 @@
             right: 165px;
             img {
                 max-height: 33px;
+                max-width: 33px;
             }
         }
         .grenade_container {
@@ -288,7 +292,3 @@
     }
 }
 
-
-.baner {
-    display: none;
-}

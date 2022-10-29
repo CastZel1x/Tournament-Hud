@@ -1,13 +1,13 @@
 #cameras-container {
     overflow: hidden;
     height: 122.5%;
-    width: 122%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    top: 4px;
-    left: 0px;
+    top: 10px;
+    left: 5px;
     video {
         height: 100%;
         position: absolute;
