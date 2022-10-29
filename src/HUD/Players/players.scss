@@ -135,7 +135,6 @@
         display: flex;
         flex-direction: row;
         align-items: center;
-        margin-bottom: 2px;
         .teambox .player.T &.active {
             background-color: black;
             filter: invert(10%) drop-shadow(0 1px 5px black);
@@ -669,18 +668,15 @@
 
 
 
-
 .teambox.left .player .spen_kad {
     position: relative;
     height: 35px;
     bottom: 18px;
-    left: 2px;
 }
 
 .teambox.right .player .spen_kad {
     position: relative;
     height: 35px;
-    right: 2px;
     bottom: 18px;
 }
 
@@ -694,6 +690,8 @@
     display: flex;
     flex-direction: row;
     flex: 1;
+    position: relative;
+    bottom: 8px;
 }
 
 
@@ -723,8 +721,8 @@
     height: 100%;
     opacity: 1;
     transition: opacity 0.75s;
-    border-left: solid 1px var(--main-panel-color);
-    border-right: solid 1px var(--main-panel-color);
+    font-family: Titillium;
+    font-size: 13px;
 }
 
 .teambox .player .freezetime_KAD.hide {
@@ -757,8 +755,8 @@
     height: 100%;
     opacity: 1;
     transition: opacity 0.75s;
-    border-left: solid 1px var(--main-panel-color);
-    border-right: solid 1px var(--main-panel-color);
+    font-family: Titillium;
+    font-size: 13px;
 }
 .teambox .player .spending.hide {
     opacity: 0;
@@ -769,6 +767,8 @@
     flex: 1;
     align-items: center;
     justify-content: center;
+    position: relative;
+    bottom: 4px;
 }
 .teambox .player .spending {
     .label {

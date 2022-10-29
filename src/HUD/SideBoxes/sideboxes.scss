@@ -1,6 +1,6 @@
 .boxes {
 	position: fixed;
-	bottom: 398px;
+	bottom: 387px;
 	font-family: Prototype;
 }
 .boxes.left {
@@ -36,6 +36,16 @@
 .sidebox.hide {
 	height: 0;
 	opacity: 0;
+}
+
+.title_economy {
+	position: absolute;
+	color: white;
+	text-shadow: 1px 12px 34px black, 0 0 1em whitesmoke, 0 0 0.2em black;
+	background-color: var(--white-half);
+	text-align: center;
+	width: 310px;
+	bottom: 160px;
 }
 .sidebox {
 	width: 310px;
@@ -74,14 +84,10 @@
 	}
 }
 .utilitybox {
-	width: 310px;
-	height: 70px;
+	height: 20px;
 	display: flex;
-	flex-direction: row;
-	opacity: 1;
-	transition: all 0.75s;
 	flex-direction: column;
-	/*background-color: var(--main-panel-color);*/
+    font-family: bignoodletitling;
 	position: relative;
 	border-radius: 8px 8px 0 0;
 	.title_container {
@@ -92,7 +98,7 @@
 		font-weight: 600;
 		font-size: 18px;
 		position: relative;
-		bottom: 10px;
+		top: 3px;
 		height: 24px;
 	}
 	.title {
@@ -152,14 +158,16 @@
 		}
 	}
 	.loss_container {
-		width: 4px;
+		width: 8px;
 		display: flex;
 		align-items: center;
 		flex-direction: column;
 		justify-content: center;
 		bottom: 10px;
+		margin-left: 4px;
+		margin-right: 4px;
 		.loss-box {
-			height: 13px;
+			height: 10px;
 			width: 100%;
 			background-color: #515254;
 			margin-top: 1px;
@@ -190,16 +198,6 @@
 			text-align: left;
 			padding-left: 10px;
 		}
-	}
-}
-.utilitybox.CT {
-	.title {
-		color: var(--color-new-ct);
-	}
-}
-.utilitybox.T {
-	.title {
-		color: var(--color-new-t);
 	}
 }
 .moneybox.right {

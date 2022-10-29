@@ -12,38 +12,26 @@ interface Props {
 
 
 function utilityState(amount: number) {
-  if (amount === 20) {
-    return "Full Buy";
-  }
-  if (amount > 14) {
-    return "Great Buy";
+  if (amount > 16) {
+    return "FULL BUY";
   }
   if (amount > 9) {
-    return "Semi Buy";
+    return "SEMI BUY";
   }
-  if (amount > 5) {
-    return "Low Buy";
-  }
-  if (amount > 0) {
-    return "Eko";
+  if (amount > 2) {
+    return "EKO";
   }
   return "None";
 }
 
 function utilityColor(amount: number) {
-  if (amount === 20) {
+  if (amount > 16) {
     return "#22f222";
-  }
-  if (amount > 14) {
-    return "#32f218";
   }
   if (amount > 9) {
     return "#8ef218";
   }
-  if (amount > 5) {
-    return "#f29318";
-  }
-  if (amount > 0) {
+  if (amount > 2) {
     return "#f25618";
   }
   return "#f21822";
@@ -75,19 +63,6 @@ export function summarise(players: Player[], side: Side) {
   };
 }
 
-class GrenadeContainer extends React.PureComponent<{ grenade: string; amount: number }> {
-  render() {
-    return (
-      <div className="grenade_container">
-        <div className="grenade_image">
-          <Weapon weapon={this.props.grenade} active={false} isGrenade />
-        </div>
-        <div className="grenade_amount">x{this.props.amount}</div>
-      </div>
-    );
-  }
-}
-
 export default class SideBox extends React.Component<Props> {
     render() {
         const grenades = summarise(this.props.players, this.props.side);
@@ -96,14 +71,7 @@ export default class SideBox extends React.Component<Props> {
             <div className={`utilitybox ${this.props.side || ''} ${this.props.show ? "show" : "hide"}`}>
             <div className={`utilitybox ${this.props.side || ''} ${this.props.show ? "show" : "hide"}`}></div>
                 <div className="title_container">
-                    <div className="title">Utility -&nbsp;</div>
                     <div className="subtitle" style={{color: utilityColor(total)}}>{utilityState(total)}</div>
-                </div>
-                <div className="grenades_container">
-                    <GrenadeContainer grenade="smokegrenade" amount={grenades.smokes} />
-                    <GrenadeContainer grenade={this.props.side === 'CT' ? 'incgrenade' : 'molotov'} amount={grenades.inc} />
-                    <GrenadeContainer grenade="flashbang" amount={grenades.flashes} />
-                    <GrenadeContainer grenade="hegrenade" amount={grenades.hg} />
                 </div>
             </div>
         );

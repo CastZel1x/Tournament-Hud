@@ -40,7 +40,8 @@ export default class Bomb extends React.Component<any, { width: number; show: bo
     return (
       <div id={`bomb_container`}>
         <div className={`bomb_timer ${this.state.show ? "show" : "hide"}`} style={{ width: `${this.state.width}%` }}>
-        </div>
+          </div>
+        <div className={`bomb_timer_bg ${this.state.show ? "show" : "hide"}`}></div>
         <div className={`bomb_icon ${this.state.show ? "show" : "hide"}`}>
         <div className={`planted ${this.state.show ? "show" : "hide"}`}>PLANTED</div>
           <C4 fill="white" />

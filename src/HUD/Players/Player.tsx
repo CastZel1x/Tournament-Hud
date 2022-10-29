@@ -126,7 +126,10 @@ export default class PlayerBox extends React.Component<IProps, IState> {
         </div>
 
         <div className="spen_kad">
-          <div className={`freezetime_KAD ${!isFreezetime? 'hide' : ''}`}>
+        <div className={`spending ${this.props.isFreezetime && this.props.isFreezetime === true ? 'show' : 'hide'}`}>
+              <div className="value">-${moneySpent}</div>
+        </div>
+        <div className={`freezetime_KAD ${!isFreezetime? 'hide' : ''}`}>
           <div className="labels">
             <div className="stat-label">K</div>
             <div className="stat-label">A</div>
@@ -137,9 +140,6 @@ export default class PlayerBox extends React.Component<IProps, IState> {
             <div className="stat-value">{player.stats.assists}</div>
             <div className="stat-value">{player.stats.deaths}</div>
           </div>
-        </div>
-        <div className={`spending ${this.props.isFreezetime && this.props.isFreezetime === true ? 'show' : 'hide'}`}>
-                <div className="value">-${moneySpent}</div>
         </div>
         </div>
       </div>

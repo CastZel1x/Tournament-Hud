@@ -10,7 +10,6 @@ import RadarMaps from "./../Radar/RadarMaps";
 import SideBox from '../SideBoxes/SideBox';
 import { GSI, actions } from "./../../App";
 import MoneyBox from '../SideBoxes/Money';
-import UtilityLevel from '../SideBoxes/UtilityLevel';
 import Killfeed from "../Killfeed/Killfeed";
 import MapSeries from "../MapSeries/MapSeries";
 import Overview from "../Overview/Overview";
@@ -20,6 +19,7 @@ import Timeout from "../PauseTimeout/Timeout";
 import { ChangeColor } from "../../utils/ChangeColor";
 import TournamentName from "../TournamentName/Tournament";
 import PlayerCamera from "../Camera/Camera";
+import UtilityLevel from '../SideBoxes/UtilityLevel';
 
 interface Props {
   game: CSGO,
@@ -112,9 +112,8 @@ export default class Layout extends React.Component<Props, State> {
 
         <MapSeries teams={[left, right]} match={match} isFreezetime={isFreezetime} map={game.map} />
         <div className={"boxes left"}>
-          <UtilityLevel side={left.side} players={game.players} show={isFreezetime && !forceHide} />
-          <SideBox side="left" hide={forceHide} />
-          <MoneyBox
+        <UtilityLevel side={left.side} players={game.players} show={isFreezetime && !forceHide} />
+        <MoneyBox
             team={left.side}
             side="left"
             loss={Math.min(left.consecutive_round_losses * 500 + 1400, 3400)}
@@ -122,10 +121,10 @@ export default class Layout extends React.Component<Props, State> {
             money={leftPlayers.map(player => player.state.money).reduce((pre, now) => pre + now, 0)}
             show={isFreezetime && !forceHide} 
           />
+          <SideBox side="left" hide={forceHide} />
         </div>
         <div className={"boxes right"}>
-          <UtilityLevel side={right.side} players={game.players} show={isFreezetime && !forceHide} />
-          <SideBox side="right" hide={forceHide} />
+        <UtilityLevel side={right.side} players={game.players} show={isFreezetime && !forceHide} />
           <MoneyBox
             team={right.side}
             side="right"
@@ -134,6 +133,7 @@ export default class Layout extends React.Component<Props, State> {
             money={rightPlayers.map(player => player.state.money).reduce((pre, now) => pre + now, 0)}
             show={isFreezetime && !forceHide}
           />
+          <SideBox side="right" hide={forceHide} />
         </div> 
       </div>
       </div> 
