@@ -84,7 +84,7 @@
             }
 		}
 		.bomb_timer_bg {
-			width: 96%;
+			width: 100%;
 			right: 34px;
 			height: 20px;
             background-color: rgba(0, 0, 0, 0.7);
@@ -99,9 +99,9 @@
 			background-color: var(--main-panel-color);
 			position: absolute;
 			top: 99px;
-			width: 329px;
+			width: 343px;
 			height: 20px;
-			right: 41px;
+			right: 34px;
 			text-align: center;
 			border-bottom: 5px;
 		}
@@ -320,7 +320,9 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: 400px;
-		width: 350px;
+		width: 330px;
+		position: absolute;
+		top: 118px;
         .defuse_plant_bar {
             right: 0;
         }
