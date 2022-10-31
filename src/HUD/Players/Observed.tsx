@@ -33,12 +33,10 @@ export default class Observed extends React.Component<{ player: Player | null, v
 		const weapons = Object.values(player.weapons).map(weapon => ({ ...weapon, name: weapon.name.replace("weapon_", "") }));
 		const currentWeapon = weapons.filter(weapon => weapon.state === "active")[0];
 		const grenades = weapons.filter(weapon => weapon.type === "Grenade");
-		const countryName = country ? getCountry(country) : null;
 		return (
 			<div className={`observed ${player.team.side}`}>
 				<div className="main_row">
 					{<Avatar steamid={player.steamid} height={160} width={160} showCam={this.state.showCam} slot={player.observer_slot} />}
-					<TeamLogo team={player.team} height={40} width={40} />
 					<div className="grenade_container">
 						{grenades.map(grenade => <React.Fragment key={`${player.steamid}_${grenade.name}_${grenade.ammo_reserve || 1}`} >
 						<Weapon weapon={grenade.name} active={grenade.state === "active"} isGrenade />

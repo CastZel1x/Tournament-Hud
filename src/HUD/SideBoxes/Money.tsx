@@ -20,7 +20,6 @@ export default class Money extends React.PureComponent<Props> {
 	render() {
 		return (
 			<div className={`moneybox ${this.props.side} ${this.props.team} ${this.props.show ? "show" : "hide"}`}>
-                <div className='title_economy'>ECONOMY</div>
                 <div className="loss_container">
                     <LossBox side={this.props.team} active={(this.props.loss-1400)/500 >= 4} />
                     <LossBox side={this.props.team} active={(this.props.loss-1400)/500 >= 3} />

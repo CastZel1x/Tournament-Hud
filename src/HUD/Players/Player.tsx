@@ -49,7 +49,7 @@ export default class PlayerBox extends React.Component<IProps, IState> {
     const secondary = weapons.filter(weapon => weapon.type === "Pistol")[0] || null;
     const grenades = weapons.filter(weapon => weapon.type === "Grenade");
     const { stats } = player;
-		const ratio = stats.deaths === 0 ? stats.kills : stats.kills / stats.deaths /player.state.adr;
+		const ratio = stats.deaths === 0 ? stats.kills : stats.kills / stats.deaths / player.state.adr;
     var moneySpent = Math.abs(this.state.startRoundMoney - player.state.money);
     return (
       <div className={`player ${player.state.health === 0 ? "dead" : ""} ${this.props.isObserved ? 'active' : ''}`}>

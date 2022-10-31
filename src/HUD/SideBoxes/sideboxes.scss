@@ -1,7 +1,6 @@
 .boxes {
 	position: fixed;
 	bottom: 387px;
-	font-family: Prototype;
 }
 .boxes.left {
 	left: 35px;
@@ -38,15 +37,6 @@
 	opacity: 0;
 }
 
-.title_economy {
-	position: absolute;
-	color: white;
-	text-shadow: 1px 12px 34px black, 0 0 1em whitesmoke, 0 0 0.2em black;
-	background-color: var(--white-half);
-	text-align: center;
-	width: 310px;
-	bottom: 160px;
-}
 .sidebox {
 	width: 310px;
 	height: 70px;
@@ -60,7 +50,7 @@
 	.title_container {
 		color: var(--white-full);
 		height: 60px;
-		width: 100%;
+		width: 150px;
 		font-size: 20px;
 		display: flex;
 		flex-direction: column;
@@ -77,12 +67,27 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		position: absolute;
+		margin-left: 7px;
+		margin-right: 7px;
 		img {
-			max-width: 310px;
+			max-width: 70px;
 			max-height: 70px;
+			zoom: 115%;
 		}
 	}
 }
+.title_economy {
+	position: absolute;
+	color: white;
+	text-shadow: 1px 12px 34px black, 0 0 1em whitesmoke, 0 0 0.2em black;
+	background-color: rgba(191, 191, 191, 0.4);
+	text-align: center;
+	width: 310px;
+	height: 20px;
+	bottom: 120%;
+}
+
 .utilitybox {
 	height: 20px;
 	display: flex;
@@ -187,7 +192,8 @@
 		>div {
 			flex-direction: row-reverse;
 			text-align: right;
-			padding-right: 10px;
+			right: 110px;
+			position: relative;
 		}
 	}
 }
@@ -196,7 +202,8 @@
 		>div {
 			flex-direction: row;
 			text-align: left;
-			padding-left: 10px;
+			left: 110px;
+			position: relative;
 		}
 	}
 }

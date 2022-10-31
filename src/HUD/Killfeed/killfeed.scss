@@ -32,7 +32,7 @@
     .single_kill {
         display: flex;
         flex-direction: row;
-        background-color: rgba(0,0,0,0.64);
+        background-color: var(--main-panel-color);
         margin-bottom:5px;
         color:white;
         height: 38px;

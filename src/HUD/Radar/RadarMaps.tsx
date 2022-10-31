@@ -64,12 +64,13 @@ class MapsBar extends React.PureComponent<Props> {
     }
 }
 
-
 class MapEntry extends React.PureComponent<{ veto: Veto, map: Map, team: Team| null }> {
     render() {
-        const { veto, map, team } = this.props;
+        const { veto, map } = this.props;
         return <div className="veto_entry">
             <div className={`map_name ${map.name.includes(veto.mapName) ? 'active' : ''}`}>{veto.mapName.replace("de_", "")}</div>  
         </div>
     }
 }
+
+

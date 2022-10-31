@@ -39,7 +39,7 @@
 		position: relative;
 		width: 126px;
 		height: 79px;
-		bottom: 1px;
+		bottom: 2px;
 		background-color: var(--main-panel-color);
         &.no-bo {
             height: 87px;
@@ -61,6 +61,7 @@
             display: none;
         }
 	}
+
 	#bomb_container {
 		display: flex;
 		flex-direction: column;
@@ -164,6 +165,7 @@
             .logo {
 				position: relative;
 				justify-content: center;
+				border-radius: 12px 0 0 12px ;
             }
         }
         &.right {
@@ -178,21 +180,21 @@
 	.team-name {
 		display: flex;
 		width: 360px;
-		height: 79px;
+		height: 39px;
 		align-items: center;
 		justify-content: center;
 		font-weight: 600;
-		font-size: 36px;
-		top: 3px;
+		font-size: 30px;
 		position: relative;
 		background-color: var(--main-panel-color);
+		color: var(--white-full);
 	}
 	.score {
 		display: flex;
 		flex-direction: row;
 		width: 100px;
 		height: 79px;
-		bottom: 1px;
+		bottom: 2px;
 		position: relative;
 		align-items: center;
 		justify-content: center;
@@ -311,8 +313,10 @@
         background-repeat: no-repeat;
         background-size: 80px;
 		width: 350px;
+		z-index: 1;
         .defuse_plant_bar {
             left: 0;
+			background-color: var(--color-bomb);
         }
     }
     &.defusing {
@@ -320,11 +324,13 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: 400px;
-		width: 330px;
+		width: 340px;
 		position: absolute;
 		top: 118px;
+		z-index: 1;
         .defuse_plant_bar {
             right: 0;
+			background-color: var(--color-new-ct);
         }
     }
     &.hide {
@@ -347,6 +353,9 @@
 	}
 	.T {
 		color: var(--color-new-t);
+	}
+	.W {
+		color: var(--white-full);
 	}
 }
 
