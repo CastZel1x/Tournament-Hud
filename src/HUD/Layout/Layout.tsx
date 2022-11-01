@@ -2,7 +2,6 @@ import React from "react";
 import TeamBox from "./../Players/TeamBox";
 import MatchBar from "../MatchBar/MatchBar";
 import SeriesBox from "../MatchBar/SeriesBox";
-import BO from "../Radar/bo";
 import Observed from "./../Players/Observed";
 import { CSGO, Team } from "csgogsi-socket";
 import { Match } from "../../api/interfaces";
@@ -20,6 +19,8 @@ import { ChangeColor } from "../../utils/ChangeColor";
 import TournamentName from "../TournamentName/Tournament";
 import PlayerCamera from "../Camera/Camera";
 import UtilityLevel from '../SideBoxes/UtilityLevel';
+import UtilityPlanted from '../Timers/UtilityPlanted';
+
 
 interface Props {
   game: CSGO,
@@ -98,7 +99,6 @@ export default class Layout extends React.Component<Props, State> {
         <Pause  phase={game.phase_countdowns}/>
         <Timeout map={game.map} phase={game.phase_countdowns} />
         <SeriesBox map={game.map} phase={game.phase_countdowns} match={match} />
-        <BO map={game.map} phase={game.phase_countdowns} match={match} />
 
         <Tournament />
 
@@ -140,3 +140,7 @@ export default class Layout extends React.Component<Props, State> {
     );
   }
 } 
+
+
+/*<UtilityPlanted side={left.side} players={game.players} show={isFreezetime && !forceHide} bomb={game.bomb} />
+        <UtilityPlanted side={right.side} players={game.players} show={isFreezetime && !forceHide} bomb={game.bomb} />*/

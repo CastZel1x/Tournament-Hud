@@ -50,9 +50,11 @@ class MapsBar extends React.PureComponent<Props> {
     render() {
         const { match, map } = this.props;
         if (!match || !match.vetos.length) return '';
+        const bo = (match && Number(match.matchType.substr(-1))) || 0;
         const picks = match.vetos.filter(veto => veto.type !== "ban" && veto.mapName);
         if (picks.length > 3) {
             const current = picks.find(veto => map.name.includes(veto.mapName));
+            const bo = (match && Number(match.matchType.substr(-1))) || 0;
             if (!current) return null;
             return <div id="maps_container">
             {<MapEntry veto={current} map={map} team={current.type === "decider" ? null : map.team_ct.id === current.teamId ? map.team_ct : map.team_t} />}
@@ -61,6 +63,7 @@ class MapsBar extends React.PureComponent<Props> {
         </div>
         }
         return <div id="maps_container">
+            <div id="bestof">{ bo ? `BEST OF ${bo}` : '' }</div>
             {match.vetos.filter(veto => veto.type !== "ban").filter(veto => veto.teamId || veto.type === "decider").map(veto => <MapEntry key={veto.mapName} veto={veto} map={this.props.map} team={veto.type === "decider" ? null : map.team_ct.id === veto.teamId ? map.team_ct : map.team_t} />)}
         </div>
     }

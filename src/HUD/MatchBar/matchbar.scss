@@ -165,9 +165,10 @@
             .logo {
 				position: relative;
 				justify-content: center;
+				background-image: url(../../assets/bgteamleft.png);
             }
 			.team-name {
-				border-radius: 8px 0 0 8px;
+				border-radius: 12px 0 0 12px;
 			}
         }
         &.right {
@@ -176,9 +177,10 @@
             .logo {
 				position: relative;
 				justify-content: center;
+				background-image: url(../../assets/bgteamright.png);
             }
 			.team-name {
-				border-radius: 0 8px 8px 0;
+				border-radius: 0 12px 12px 0;
 			}
 	  }
 	}
@@ -422,16 +424,16 @@
 
 
 #matchbar .team.left.T .team-name {
-	border-left: solid 15px var(--color-new-t);
+	border-left: solid 25px var(--color-new-t);
 }
 #matchbar .team.right.T .team-name {
-	border-right: solid 15px var(--color-new-t);
+	border-right: solid 25px var(--color-new-t);
 }
 
 
 #matchbar .team.left.CT .team-name {
-	border-left: solid 15px var(--color-new-ct);
+	border-left: solid 25px var(--color-new-ct);
 }
 #matchbar .team.right.CT .team-name {
-	border-right: solid 15px var(--color-new-ct);
+	border-right: solid 25px var(--color-new-ct);
 }

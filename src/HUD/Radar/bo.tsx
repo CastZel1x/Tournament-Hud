@@ -13,9 +13,7 @@ export default class BO extends React.Component<Props> {
     const { match } = this.props;
     const bo = (match && Number(match.matchType.substr(-1))) || 0;
     return (
-        <div id="series_container">
-          <div id="series_text">{ bo ? `BEST OF ${bo}` : '' }</div>
-        </div>
+        <div id="bestof">{ bo ? `BEST OF ${bo}` : '' }</div>
     );
   }
 }
