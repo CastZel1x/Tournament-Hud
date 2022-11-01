@@ -1,6 +1,6 @@
 .boxes {
 	position: fixed;
-	bottom: 387px;
+	bottom: 35.8%;
 }
 .boxes.left {
 	left: 35px;
@@ -41,6 +41,7 @@
 	width: 310px;
 	height: 70px;
 	display: flex;
+	display: none;
 	flex-direction: row;
 	opacity: 1;
 	transition: all 0.75s;
@@ -73,7 +74,6 @@
 		img {
 			max-width: 70px;
 			max-height: 70px;
-			zoom: 115%;
 		}
 	}
 }

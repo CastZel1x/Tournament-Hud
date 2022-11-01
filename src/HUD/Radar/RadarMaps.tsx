@@ -56,6 +56,8 @@ class MapsBar extends React.PureComponent<Props> {
             if (!current) return null;
             return <div id="maps_container">
             {<MapEntry veto={current} map={map} team={current.type === "decider" ? null : map.team_ct.id === current.teamId ? map.team_ct : map.team_t} />}
+            <div>
+            </div>
         </div>
         }
         return <div id="maps_container">
@@ -72,5 +74,3 @@ class MapEntry extends React.PureComponent<{ veto: Veto, map: Map, team: Team| n
         </div>
     }
 }
-
-

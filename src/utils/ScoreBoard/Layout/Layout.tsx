@@ -4,7 +4,6 @@ import MatchBar from "../MatchBar/MatchBar";
 import { CSGO, Team } from "csgogsi-socket";
 import { Match } from "../../../api/interfaces";
 import { GSI, actions } from "../../../App";
-import TournamentName from "../TournamentName/Tournament";
 
 interface Props {
   game: CSGO,
@@ -69,8 +68,6 @@ export default class ScoreBoard extends React.Component<Props, State> {
 
         <TeamBox team={left} players={leftPlayers} side="left" current={game.player} isFreezetime={isFreezetime} />
         <TeamBox team={right} players={rightPlayers} side="right" current={game.player} isFreezetime={isFreezetime} />
-
-        <TournamentName /> 
       </div>
     );
   }

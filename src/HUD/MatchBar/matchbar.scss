@@ -38,7 +38,7 @@
 		flex-direction: column;
 		position: relative;
 		width: 126px;
-		height: 79px;
+		height: 80px;
 		bottom: 2px;
 		background-color: var(--main-panel-color);
         &.no-bo {
@@ -149,7 +149,7 @@
 			display: flex;
 			flex-direction: row;
 			width: 135px;
-			height: 79px;
+			height: 80px;
 			top: 3px;
 			align-items: center;
 			overflow: hidden;
@@ -165,8 +165,10 @@
             .logo {
 				position: relative;
 				justify-content: center;
-				border-radius: 12px 0 0 12px ;
             }
+			.team-name {
+				border-radius: 8px 0 0 8px;
+			}
         }
         &.right {
             justify-content: center;
@@ -175,7 +177,10 @@
 				position: relative;
 				justify-content: center;
             }
-        }
+			.team-name {
+				border-radius: 0 8px 8px 0;
+			}
+	  }
 	}
 	.team-name {
 		display: flex;
@@ -193,7 +198,7 @@
 		display: flex;
 		flex-direction: row;
 		width: 100px;
-		height: 79px;
+		height: 80px;
 		bottom: 2px;
 		position: relative;
 		align-items: center;
@@ -201,6 +206,7 @@
 		font-weight: 600;
 		font-size: 46px;
 		background-color: var(--main-panel-color);
+		color: var(--white-full);
 	}
 }
 .win_text {
@@ -343,7 +349,7 @@
 	flex-direction: row;
 	position: fixed;
 	justify-content: center;
-	top: 44px;
+	top: 40px;
 	width: 275px;
 	height: 100px;
 	left: 50%;
@@ -389,14 +395,13 @@
 .series_wins.right {
 	.wins_box_container {
 		flex-direction: row-reverse;
-		justify-content: left;
 	}
 }
 .wins_box {
 	width: 28px;
 	height: 8px;
-	margin-left: 3px;
-	margin-right: 3px;
+	margin-left: 2px;
+	margin-right: 2px;
 	box-sizing: border-box;
 }
 .wins_box.CT {
@@ -412,3 +417,21 @@
 	background-color: var(--color-new-t);
 }
 
+
+
+
+
+#matchbar .team.left.T .team-name {
+	border-left: solid 15px var(--color-new-t);
+}
+#matchbar .team.right.T .team-name {
+	border-right: solid 15px var(--color-new-t);
+}
+
+
+#matchbar .team.left.CT .team-name {
+	border-left: solid 15px var(--color-new-ct);
+}
+#matchbar .team.right.CT .team-name {
+	border-right: solid 15px var(--color-new-ct);
+}

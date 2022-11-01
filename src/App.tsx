@@ -3,7 +3,7 @@ import Layout from './HUD/Layout/Layout';
 import api, { port, isDev } from './api/api';
 import { loadAvatarURL } from './api/avatars';
 import ActionManager, { ConfigManager } from './api/actionManager';
-//import ScoreBoard from './src/HUD/Layout/Layout';
+import ScoreBoard from './utils/ScoreBoard/Layout/Layout';
 
 import { CSGO, PlayerExtension, GSISocket, CSGORaw } from "csgogsi-socket";
 import { Match } from './api/interfaces';
@@ -208,14 +208,13 @@ class App extends React.Component<any, { match: Match | null, game: CSGO | null,
 		if (!this.state.game) return null;		
 		return (
 		<>
-			<Layout game={this.state.game} match={this.state.match} />
+		<Layout game={this.state.game} match={this.state.match} />
 		</>
 		);
 
 	}
 
 }
+
+//		<ScoreBoard game={this.state.game} match={this.state.match}/>
 export default App;
-
-
-//<ScoreBoard game={this.state.game} match={this.state.match}/>
