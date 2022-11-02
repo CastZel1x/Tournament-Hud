@@ -46,7 +46,7 @@
             .row_center {
                 .weapon {
                     position: absolute;
-                    left: 145px;
+                    left: 185px;
                 }
             }
             .row_top {
@@ -55,7 +55,7 @@
                 left: 10px;
                 }
                 .secondary_weapon {
-                    left: 115px;
+                    left: 112px;
                     bottom: 200px;
                     position: relative;
                 }
@@ -101,7 +101,7 @@
                 }
                 .row_center {
                     .weapon {
-                        left: 20px;
+                        left: 60px;
                         transform: scaleX(-1);
                     }
                 }
@@ -111,7 +111,7 @@
                         left: 170px;
                     }
                     .secondary_weapon {
-                        left: 100px;
+                        left: 90px;
                         bottom: 200px;
                         position: relative;
                         .weapon {
@@ -139,11 +139,12 @@
             .player_data {
                 width: 42.5%;
                 transition: width 0.21s;
-                /*.hp_bar_bg2 {
+                .hp_bar_bg2 {
                     width: 217px;
-                }*/
+                }
                 .avatar {
                     filter: grayscale(100%);
+                    z-index: 1;
                 }
                 .row {
                     .hp_background_2 {
@@ -154,12 +155,14 @@
                         overflow: hidden;
                     }
                     .username {
-                        color: #b2b2b2;
+                       color: #b2b2b2 !important;
                     }
                     .armor_and_utility {
                         width: 0px;
                         overflow: hidden;
                     }
+                }
+                .row_top {
                     .money {
                         color: #466722;
                     }
@@ -224,6 +227,7 @@
                 .hp_bar {
                     height:25px;
                     position:absolute;
+                    z-index: 1;
                     &.low {
                         background-color: red;
                     }
@@ -321,8 +325,8 @@
                 .row_center {
                     .container_weapon {
                         max-height: 24px;
-                        width: auto;
-                        max-width: 100px;
+                        //width: auto;
+                        //max-width: 100px;
                         height: 30px;
                         top: 2.5px;
                         position: relative;
@@ -330,14 +334,14 @@
                         // display: flex;
                         // flex: 1;
                         // top: 12px;
-                        // svg {
-                        //     max-height: 27px;
-                        //     margin-left: -39px;
-                        //     margin-right: -39px;
-                        //     max-width: 100px;
-                        //     width: auto;
-                        //     height: 50px;
-                        // }
+                        svg {
+                            max-height: 22px;
+                             margin-left: -39px;
+                             margin-right: -39px;
+                             max-width: 80px;
+                             width: auto;
+                             height: 50px;
+                        }
                     }
                     .weapon {
                         max-height: 24px;
@@ -360,12 +364,12 @@
                         font-size: 16px;
                         font-weight: 700;
                         align-items: center;
-                        bottom: 66px;
+                        bottom: 71px;
                         letter-spacing: 1px;
                         transition: opacity 0.75s;
                         img {
                             zoom: 100%;
-                            margin-bottom: 60px;
+                            margin-bottom: 70px;
                         }
                     }
                 .row_top {
@@ -373,7 +377,7 @@
                         display: flex;
                         align-items: center;
                         transition: opacity 0.75s;
-                        bottom: 155px;
+                        bottom: 165px;
                         position: relative;
                         svg {
                             max-height: 17px;
@@ -388,7 +392,7 @@
                         align-items: center;
                         justify-content: flex-start;
                         position: relative;
-                        bottom: 113px;
+                        bottom: 121px;
                         margin-right: 100px;
                     }    
                 }
@@ -402,14 +406,13 @@
                 display: flex;
                 align-items: flex-end;
                 justify-content: center;
+                z-index: 10;
             }
                 img {
-                    border-radius: 0px;
-                    zoom: 200%;
+                    zoom: 235%;
                     height: 61px;
                     position: relative;
-                    z-index: 1;
-                    top: 30px;
+                    top: 35px;
                 }
             }
         }
@@ -466,10 +469,11 @@
 .teambox .player .player_data .player_stats .hp_bar_bg {
     background-color:red;
     transition: width 1s 2s;
+    z-index: 1;
 }
 
 .hp_bar_bg2 {
-    background-color: rgba(0,0,0, 0.35);
+    background-color: rgba(0,0,0, 0.55);
     position: absolute;
     width: 310px;
     height: 25px;
@@ -561,8 +565,7 @@
 
 .teambox.right .player .statt {
     position: relative;
-    left: 0px;
-    flex-direction: row-reverse;
+    left: 155px;
     img {
         margin-right: 6px;
         margin-left: 8px;
@@ -637,8 +640,9 @@
 
 
 .dead-adr {
-    color: rgb(184, 181, 181);
-    bottom: 130px;
+    color: var(--white-full);
+    font-weight: 500;
+    bottom: 161px;
 }
 
 
@@ -648,11 +652,14 @@
              .dead-adr {
                 display: flex;
                 position: relative;
-                left: 80px;
+                left: 90px;
                 .stat-value {
                     position: relative;
                     left: 3px;
                 }
+             }
+             .hp_bar_bg2 {
+                background: linear-gradient(to right,rgb(137, 136, 136) 5%,rgba(15, 42, 49, 0.7) 34%);
              }
              .row {
                 .roundkills-container{
@@ -668,7 +675,7 @@
         .dead-adr {
             display: flex;
             position: relative;
-            right: 80px;
+            right: 90px;
             flex-direction: row-reverse;
             .stat-value {
                 position: relative;
@@ -678,6 +685,14 @@
          .money {
             position: relative;
             margin-left: -92px;
+         }
+         .row_center {
+            .statt {
+                margin-left: -92px;
+            }
+         }
+         .hp_bar_bg2 {
+            background: linear-gradient(to left,rgb(137, 136, 136) 5%,rgba(15, 42, 49, 0.7) 34%);
          }
          .row {
             .roundkills-container {

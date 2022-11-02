@@ -37,13 +37,6 @@ export default class Observed extends React.Component<{ player: Player | null, v
 			<div className={`observed ${player.team.side}`}>
 				<div className="main_row">
 					{<Avatar steamid={player.steamid} height={160} width={160} showCam={this.state.showCam} slot={player.observer_slot} />}
-					<div className="grenade_container">
-						{grenades.map(grenade => <React.Fragment key={`${player.steamid}_${grenade.name}_${grenade.ammo_reserve || 1}`} >
-						<Weapon weapon={grenade.name} active={grenade.state === "active"} isGrenade />
-							{
-								grenade.ammo_reserve === 2 ? <Weapon weapon={grenade.name} active={grenade.state === "active"} isGrenade /> : null}
-						</React.Fragment>)}
-					</div>
 					<div className="username_container">
 						<div className="username">{player.name}</div>
 					</div>
@@ -64,6 +57,13 @@ export default class Observed extends React.Component<{ player: Player | null, v
 					{player.state.round_kills > 0 ? <img className="round_kills" src= {roundkill} 
              				 width="21px" height="18px" alt="filter applied" /> : null}  
 					{player.state.round_kills ? <div className="roundkills-num">{player.state.round_kills}</div> : null}
+					</div>
+					<div className="grenade_container">
+						{grenades.map(grenade => <React.Fragment key={`${player.steamid}_${grenade.name}_${grenade.ammo_reserve || 1}`} >
+						<Weapon weapon={grenade.name} active={grenade.state === "active"} isGrenade />
+							{
+								grenade.ammo_reserve === 2 ? <Weapon weapon={grenade.name} active={grenade.state === "active"} isGrenade /> : null}
+						</React.Fragment>)}
 					</div>
 					<div className="ammo">
 						<div className="ammo_icon_container">

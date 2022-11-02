@@ -1,5 +1,4 @@
 import React from "react";
-import Weapon from "./../Weapon/Weapon";
 import { Player, WeaponRaw, Side } from "csgogsi-socket";
 
 
@@ -21,7 +20,7 @@ function utilityState(amount: number) {
   if (amount > 2) {
     return "EKO";
   }
-  return "None";
+  return "NO UTILITY";
 }
 
 function utilityColor(amount: number) {

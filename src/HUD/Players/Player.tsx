@@ -58,7 +58,7 @@ export default class PlayerBox extends React.Component<IProps, IState> {
          <div className="obs_ps">  <div className="num">{player.observer_slot}</div>   </div>
           <div className="player_stats">
           { player.state.health > 0 ? <div className={`hp_bar hp_bar_bg`} style={{ width: `${player.state.health}%` }}></div> : null}
-          { player.state.health > 0 ? <div className="hp_bar_bg2">ㅤ</div> : null }
+          <div className="hp_bar_bg2">ㅤ</div>
           <div className={`hp_bar ${player.state.health <= 20 ? 'low':''}`} style={{ width: `${player.state.health}%` }}></div>
 
 

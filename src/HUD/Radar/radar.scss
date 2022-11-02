@@ -37,17 +37,22 @@
     height: 30px;
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     color: #fff;
-	position: relative;
+    background-color: var(--sub-panel-color);
 	bottom: 340px;
-	background-color: var(--sub-panel-color);
+	position: relative;
+	.bestof {
+		display: flex;
+		justify-content: center;
+	}
 }
 .veto_entry {
 	display: flex;
 	justify-content: center;
 	letter-spacing: .1em;
-	left: 123px;
 	position: relative;
+	font-family: Titillium;
 	>div {
 		display: flex;
 		justify-content: center;
@@ -55,27 +60,40 @@
 		color: whitesmoke;
 		text-transform: uppercase;
 		font-size: 13pt;
-		margin-right: 35px;
 	}
 	.map_name.active {
 		color: 	white;
-		font-weight: 600;
+		font-weight: 800;
 	}
 	.map_name:not(.active) {
-		color: rgb(162, 158, 158);
+		color: rgb(159, 159, 159);
+	}
+	.map_name {
+		font-size: 12px;
+		font-weight: 700;
+		letter-spacing: .1em;
 	}
 }
 
 
-#bestof {
+/*.bestof {
 width: 100%;
-position: absolute;
+position: relative;
 right: 120px;
 font-size: 18px;
-top: 5px;
+top: 1px;
 height: 30px;
 display: flex;
 flex-direction: row;
 justify-content: space-evenly;
 color: #fff;
+font-family: Titillium;
+}*/
+
+.bestof {
+	width: 121px;
+    font-size: 16px;
+    font-weight: 700;
+    align-items: center;
+	font-family: Titillium;
 }

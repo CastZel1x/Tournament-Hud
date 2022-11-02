@@ -12,14 +12,13 @@ import MoneyBox from '../SideBoxes/Money';
 import Killfeed from "../Killfeed/Killfeed";
 import MapSeries from "../MapSeries/MapSeries";
 import Overview from "../Overview/Overview";
-import Tournament from "../Tournament/Tournament";
 import Pause from "../PauseTimeout/Pause";
 import Timeout from "../PauseTimeout/Timeout";
 import { ChangeColor } from "../../utils/ChangeColor";
 import TournamentName from "../TournamentName/Tournament";
 import PlayerCamera from "../Camera/Camera";
 import UtilityLevel from '../SideBoxes/UtilityLevel';
-import UtilityPlanted from '../Timers/UtilityPlanted';
+import Grenades from '../Timers/Grenades';
 
 
 interface Props {
@@ -100,8 +99,6 @@ export default class Layout extends React.Component<Props, State> {
         <Timeout map={game.map} phase={game.phase_countdowns} />
         <SeriesBox map={game.map} phase={game.phase_countdowns} match={match} />
 
-        <Tournament />
-
  
         <Observed player={game.player} veto={this.getVeto()} round={game.map.round+1}/>
 
@@ -122,6 +119,7 @@ export default class Layout extends React.Component<Props, State> {
             show={isFreezetime && !forceHide} 
           />
           <SideBox side="left" hide={forceHide} />
+          <Grenades side={left.side} players={game.players} />
         </div>
         <div className={"boxes right"}>
         <UtilityLevel side={right.side} players={game.players} show={isFreezetime && !forceHide} />
@@ -134,6 +132,7 @@ export default class Layout extends React.Component<Props, State> {
             show={isFreezetime && !forceHide}
           />
           <SideBox side="right" hide={forceHide} />
+          <Grenades side={right.side} players={game.players} />
         </div> 
       </div>
       </div> 
@@ -141,6 +140,3 @@ export default class Layout extends React.Component<Props, State> {
   }
 } 
 
-
-/*<UtilityPlanted side={left.side} players={game.players} show={isFreezetime && !forceHide} bomb={game.bomb} />
-        <UtilityPlanted side={right.side} players={game.players} show={isFreezetime && !forceHide} bomb={game.bomb} />*/

@@ -1,6 +1,6 @@
 {
   "name": "iesf_hud",
-  "version": "2.5",
+  "version": "2.5.0",
   "homepage": "./",
   "private": true,
   "dependencies": {
