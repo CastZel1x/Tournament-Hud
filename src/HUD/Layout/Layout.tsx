@@ -18,7 +18,6 @@ import { ChangeColor } from "../../utils/ChangeColor";
 import TournamentName from "../TournamentName/Tournament";
 import PlayerCamera from "../Camera/Camera";
 import UtilityLevel from '../SideBoxes/UtilityLevel';
-import Grenades from '../Timers/Grenades';
 
 
 interface Props {
@@ -119,7 +118,6 @@ export default class Layout extends React.Component<Props, State> {
             show={isFreezetime && !forceHide} 
           />
           <SideBox side="left" hide={forceHide} />
-          <Grenades side={left.side} players={game.players} />
         </div>
         <div className={"boxes right"}>
         <UtilityLevel side={right.side} players={game.players} show={isFreezetime && !forceHide} />
@@ -132,7 +130,6 @@ export default class Layout extends React.Component<Props, State> {
             show={isFreezetime && !forceHide}
           />
           <SideBox side="right" hide={forceHide} />
-          <Grenades side={right.side} players={game.players} />
         </div> 
       </div>
       </div> 

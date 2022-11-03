@@ -1,13 +1,14 @@
 import React from 'react';
-
-import {configs, actions} from './../../App';
 import './tournamentname.scss';
 
-export default class Tournament extends React.Component<any, {  content: string, show: boolean }> {
+import {configs, actions} from './../../App';
+
+export default class Tournament extends React.Component<any, { tournamentname: string, tournamentinfo: string, show: boolean }> {
 	constructor(props: any) {
 		super(props);
 		this.state = {
-            content:'Content',
+            tournamentname:'tournamentname',
+            tournamentinfo:'tournamentinfo',
             show: false
 		}
 	}
@@ -18,8 +19,8 @@ export default class Tournament extends React.Component<any, {  content: string,
             const tournament = data.tournament;
             if(!tournament) return;
 
-            if(tournament.content){
-                this.setState({content:tournament.content})
+            if(tournament.tournamentname && tournament.tournamentinfo){
+                this.setState({tournamentname:tournament.tournamentname, tournamentinfo:tournament.tournamentinfo})
             }
         });
         actions.on("tournamentState", (state: any) => {
@@ -33,7 +34,8 @@ export default class Tournament extends React.Component<any, {  content: string,
 	render() {
 		return (
 			<div className={`tournament_container ${this.state.show ? 'show': 'hide'}`}>
-                <div className="content">{this.state.content}</div>
+                <div className="tournamentname">{this.state.tournamentname}</div>
+                <div className="tournamentinfo">{this.state.tournamentinfo}</div>
             </div>
 		);
 	}

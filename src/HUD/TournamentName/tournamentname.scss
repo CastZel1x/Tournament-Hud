@@ -2,17 +2,17 @@
     position: absolute;
     left: 322px;
     color: white;
-    width: 440px;
-    top: 836px;
+    width: 220px;
+    top: 816px;
     opacity:1;
     transition: opacity 1s;
-    font-size: 14pt;
+    font-size: 12.5pt;
     font-family: "bignoodletitling";
 }
 
-.tournament_container .content {
+.tournament_container .tournamentname {
     padding-bottom:15px;
-    bottom: 820px;
+    bottom: 795px;
     left: 417.5px;
     height: 10px;
     position: relative;
@@ -20,6 +20,19 @@
     color: white;
     text-align: center;
 }
+
+.tournament_container .tournamentinfo {
+    padding-bottom:15px;
+    bottom: 820px;
+    left: 637.5px;
+    height: 10px;
+    position: relative;
+	background-color: var(--main-panel-color);
+    color: white;
+    text-align: center;
+}
+
+
 
 .tournament_container.hide {
     opacity:0;

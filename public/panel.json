@@ -88,8 +88,13 @@
         "inputs": [
             {
                 "type": "text",
-                "name": "content",
+                "name": "tournamentname",
                 "label": "Tournament Name"
+            },
+            {
+                "type": "text",
+                "name": "tournamentinfo",
+                "label": "Tournament Info"
             },
             {
                 "type": "action",
