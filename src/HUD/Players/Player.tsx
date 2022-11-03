@@ -49,13 +49,12 @@ export default class PlayerBox extends React.Component<IProps, IState> {
     const secondary = weapons.filter(weapon => weapon.type === "Pistol")[0] || null;
     const grenades = weapons.filter(weapon => weapon.type === "Grenade");
     const { stats } = player;
-		const ratio = stats.deaths === 0 ? stats.kills : stats.kills / stats.deaths / player.state.adr;
     var moneySpent = Math.abs(this.state.startRoundMoney - player.state.money);
     return (
       <div className={`player ${player.state.health === 0 ? "dead" : ""} ${this.props.isObserved ? 'active' : ''}`}>
         <div className="player_data">
-          <Avatar steamid={player.steamid} height={57} width={57} showSkull={false} showCam={false} sidePlayer={true} />
-         <div className="obs_ps">  <div className="num">{player.observer_slot}</div>   </div>
+        <Avatar steamid={player.steamid} height={57} width={57} showSkull={false} showCam={false} sidePlayer={true} />
+         <div className="obs_ps"><div className="num">{player.observer_slot}</div></div>
           <div className="player_stats">
           { player.state.health > 0 ? <div className={`hp_bar hp_bar_bg`} style={{ width: `${player.state.health}%` }}></div> : null}
           <div className="hp_bar_bg2">ㅤ</div>

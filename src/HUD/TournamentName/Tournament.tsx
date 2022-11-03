@@ -3,11 +3,10 @@ import React from 'react';
 import {configs, actions} from './../../App';
 import './tournamentname.scss';
 
-export default class Tournament extends React.Component<any, { title: string, content: string, show: boolean }> {
+export default class Tournament extends React.Component<any, {  content: string, show: boolean }> {
 	constructor(props: any) {
 		super(props);
 		this.state = {
-            title:'Title',
             content:'Content',
             show: false
 		}

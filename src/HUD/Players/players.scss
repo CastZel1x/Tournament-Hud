@@ -111,7 +111,7 @@
                         left: 170px;
                     }
                     .secondary_weapon {
-                        left: 90px;
+                        left: 87px;
                         bottom: 200px;
                         position: relative;
                         .weapon {
@@ -364,12 +364,12 @@
                         font-size: 16px;
                         font-weight: 700;
                         align-items: center;
-                        bottom: 71px;
+                        bottom: 57px;
                         letter-spacing: 1px;
                         transition: opacity 0.75s;
                         img {
                             zoom: 100%;
-                            margin-bottom: 70px;
+                            margin-bottom: 40px;
                         }
                     }
                 .row_top {
@@ -377,10 +377,10 @@
                         display: flex;
                         align-items: center;
                         transition: opacity 0.75s;
-                        bottom: 165px;
+                        bottom: 135px;
                         position: relative;
                         svg {
-                            max-height: 17px;
+                            max-height: 14px;
                             height: 30px;
                         }
                     }
@@ -392,7 +392,7 @@
                         align-items: center;
                         justify-content: flex-start;
                         position: relative;
-                        bottom: 121px;
+                        bottom: 92px;
                         margin-right: 100px;
                     }    
                 }
@@ -404,19 +404,21 @@
                 overflow: hidden;
                 margin-top: 12px;
                 display: flex;
-                align-items: flex-end;
+                //align-items: flex-end;
                 justify-content: center;
                 z-index: 10;
             }
                 img {
-                    zoom: 235%;
+                    zoom: 285%;
                     height: 61px;
                     position: relative;
-                    top: 35px;
+                    top: 20px;
                 }
             }
         }
     }
+
+
 
 .players_alive {
     display: flex;
@@ -642,7 +644,7 @@
 .dead-adr {
     color: var(--white-full);
     font-weight: 500;
-    bottom: 161px;
+    bottom: 132px;
 }
 
 
@@ -803,9 +805,6 @@
     justify-content: center;
 }
 .teambox .player .spending {
-    .label {
-        color: greenyellow; 
-    }
     .value {
         color: red;
     }

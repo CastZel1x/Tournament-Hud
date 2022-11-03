@@ -289,16 +289,16 @@
     opacity: 1;
     width: 440px;
     height: 32px;
-    top: 78px;
+    top: 90px;
     align-items: center;
     color: #fff;
     justify-content: center;
     font-weight: 700;
-    letter-spacing: .2em;
-    font-size: 12px;
+    letter-spacing: .1em;
+    font-size: 14px;
     background-color: rgba(0,0,0,.65);
     .defuse_plant_bar {
-		height: 49px;
+		height: 32px;
 		background-color: #828181;
 		position: absolute;
 		width: 0%;
@@ -307,19 +307,14 @@
 		z-index: 1;
 		display: flex;
 		text-transform: uppercase;
-		align-items: flex-end;
+		align-items: center;
 		svg {
-			position: absolute;
-			top: 5px;
-			right: 250px;
+			margin-right: 4px;
+			height: 22px;
 		}
     }
     &.planting {
-        //background-image: url(../../assets/PlantDefuse/Plant.gif);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 80px;
-		width: 350px;
+		width: 440px;
 		z-index: 1;
         .defuse_plant_bar {
             left: 0;
@@ -327,17 +322,13 @@
         }
     }
     &.defusing {
-        //background-image: url(../../assets/PlantDefuse/Defuse.gif);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: 400px;
-		width: 340px;
+		width: 440px;
 		position: absolute;
-		top: 118px;
+		top: 130px;
 		z-index: 1;
         .defuse_plant_bar {
             right: 0;
-			background-color: var(--color-new-ct);
+			background-color: var(--color-defuse);
         }
     }
     &.hide {
