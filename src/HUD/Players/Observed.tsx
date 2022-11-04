@@ -7,6 +7,9 @@ import { ArmorHelmet, ArmorFull, HealthFull, Bullets } from './../../assets/Icon
 import { Veto } from "../../api/interfaces";
 import { actions } from "../../App";
 import roundkill from "../.././assets/roundkill.png";
+import { apiUrl } from './../../api/api';
+import { getCountry } from "./../countries";
+
 
 
 
@@ -30,11 +33,14 @@ export default class Observed extends React.Component<{ player: Player | null, v
 		const weapons = Object.values(player.weapons).map(weapon => ({ ...weapon, name: weapon.name.replace("weapon_", "") }));
 		const currentWeapon = weapons.filter(weapon => weapon.state === "active")[0];
 		const grenades = weapons.filter(weapon => weapon.type === "Grenade");
+		const country = player.country || player.team.country;
+		const countryName = country ? getCountry(country) : null;
 		return (
 			<div className={`observed ${player.team.side}`}>
 				<div className="main_row">
 					{<Avatar steamid={player.steamid} height={160} width={160} showCam={this.state.showCam} slot={player.observer_slot} />}
 					<div className="username_container">
+					<div className="flag">{countryName ? <img src={`${apiUrl}files/img/flags/${countryName.replace(/ /g, "-")}.png`} alt={countryName} /> : ''}</div>
 						<div className="username">{player.name}</div>
 					</div>
 				</div>

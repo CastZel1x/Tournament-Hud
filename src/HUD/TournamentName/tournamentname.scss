@@ -16,18 +16,19 @@
     left: 417.5px;
     height: 10px;
     position: relative;
-	background-color: var(--main-panel-color);
     color: white;
     text-align: center;
+    background-color: var(--main-panel-color);
 }
 
 .tournament_container .tournamentinfo {
     padding-bottom:15px;
     bottom: 820px;
     left: 637.5px;
-    height: 10px;
+    height: 6px;
     position: relative;
-	background-color: var(--main-panel-color);
+	//background-color: var(--main-panel-color);
+    background-image: url(../../assets/bgTournamentName.png);
     color: white;
     text-align: center;
 }
@@ -35,5 +36,5 @@
 
 
 .tournament_container.hide {
-    opacity:0;
+    opacity: 0;
 }

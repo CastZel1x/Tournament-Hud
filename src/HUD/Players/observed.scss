@@ -192,6 +192,18 @@
             margin-left: 58px;
             font-size: 30px;
             margin-bottom: 4px;
+            .flag {
+                height: 43px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                img {
+                    height: 32px;
+                    position: absolute;
+                    margin-right: 130px;
+                }
+            }
         }
         .weapon.grenade {
             height: 28px;

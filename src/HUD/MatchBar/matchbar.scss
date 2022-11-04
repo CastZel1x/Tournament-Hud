@@ -138,7 +138,8 @@
         }
 	}
 	.matchbar-bg {
-		background-color: var(--main-panel-color);
+		//background-color: var(--main-panel-color);
+		background-image: url(../../assets/bgMatchbar.png);
 		width: 440px;
 		height: 90px;
 		position: absolute;

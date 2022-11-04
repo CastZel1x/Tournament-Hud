@@ -50,39 +50,6 @@
         ]
     },
     {
-        "label": "Themes",
-        "name":"color_scheme",
-        "inputs": [
-            {
-                "type": "select",
-                "name": "select_variant",
-                "label": "Select HUD Theme",
-                "values": [
-                    {
-                        "name": "CSGO1",
-                        "label": "CSGO#1"
-                    },
-                    {
-                        "name": "CSGO2",
-                        "label": "CSGO#2"
-                    },
-                    {
-                        "name": "CSGO3",
-                        "label": "CSGO#3"
-                    },
-                    {
-                        "name": "clc",
-                        "label": "Classic"
-                    },
-                    {
-                        "name": "iesf",
-                        "label": "IESF World Esports Championship 2022"
-                    }
-                ]
-            }
-        ]
-    },
-    {
         "label": "Tournament Name",
         "name":"tournament",
         "inputs": [

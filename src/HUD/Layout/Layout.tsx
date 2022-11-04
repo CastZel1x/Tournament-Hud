@@ -14,7 +14,6 @@ import MapSeries from "../MapSeries/MapSeries";
 import Overview from "../Overview/Overview";
 import Pause from "../PauseTimeout/Pause";
 import Timeout from "../PauseTimeout/Timeout";
-import { ChangeColor } from "../../utils/ChangeColor";
 import TournamentName from "../TournamentName/Tournament";
 import PlayerCamera from "../Camera/Camera";
 import UtilityLevel from '../SideBoxes/UtilityLevel';
@@ -56,7 +55,6 @@ export default class Layout extends React.Component<Props, State> {
         this.setState({ forceHide: true });
       }
     });
-    ChangeColor();
   }
 
   getVeto = () => {
@@ -80,7 +78,6 @@ export default class Layout extends React.Component<Props, State> {
     const { forceHide } = this.state;
 
     return (
-      <div id="theme">
       <div className="layout">
         <div className={`players_alive ${isFreezetime ? 'hide':''}`}>
         <div className="title_container">Players alive</div>
@@ -132,7 +129,6 @@ export default class Layout extends React.Component<Props, State> {
           <SideBox side="right" hide={forceHide} />
         </div> 
       </div>
-      </div> 
     );
   }
 } 
