@@ -81,7 +81,7 @@ export default class Layout extends React.Component<Props, State> {
     return (
       <div className="layout">
         <div className={`players_alive ${isFreezetime ? 'hide':''}`}>
-        <div className="title_container">Players alive</div>
+          <div className="title_container">Players alive</div>
           <div className="counter_container">
             <div className={`team_counter ${left.side}`}>{leftPlayers.filter(player => player.state.health > 0).length}</div>
             <div className={`vs_counter`}>VS</div>
@@ -111,8 +111,10 @@ export default class Layout extends React.Component<Props, State> {
 
         <TeamBox team={left} players={leftPlayers} side="left" current={game.player} isFreezetime={isFreezetime} />
         <TeamBox team={right} players={rightPlayers} side="right" current={game.player} isFreezetime={isFreezetime} />
-
-        <TournamentName />
+        {
+          !(isFreezetime && !forceHide) &&
+          <TournamentName />
+        }
 
         <MapSeries teams={[left, right]} match={match} isFreezetime={isFreezetime} map={game.map} />
         <div className={"boxes left"}>
