@@ -440,3 +440,98 @@ transition: top 0.5s;
 #matchbar .team.right .team-name {
 	justify-content: flex-start;
 }
+
+#round-history {
+	display: flex;
+	flex-direction: row;
+	position: fixed;
+	justify-content: center;
+	align-items: center;
+	width: 900px;
+	height: 70px;
+	top: 42px;
+	left: 50%;
+	transform: translateX(-50%);
+	font-family: "bignoodletitling";
+	.team-name-history {
+		color: var(--white-full);
+		font-size: 30px;
+		flex: 1;
+		display: flex;
+		justify-content: center;
+		font-weight: 600;
+		text-shadow: 0 0 20px rgb(0 0 0 / 70%);
+
+	}
+	.round-history-bg {
+		background-image: url(../../assets/bgMatchbar.png);
+		width: 500px;
+		height: 120px;
+		display: flex;
+		flex-direction: column;
+		background-repeat: round;
+
+		.grid-1 {
+			flex: 3;
+			display: flex;
+			.column-1 {
+				// background-color: green;
+				flex: 0.5;
+			}
+			.column-2 {
+				flex: 0.5;
+				display: grid;
+				justify-content: center;
+				align-items: center;
+				font-weight: 500;
+				font-size: 23px;
+				color: #fff;
+			}
+			.column-3 {
+				flex: 5;
+				display: grid;
+				align-items: center;
+				font-weight: 500;
+				font-size: 23px;
+				color: #fff;
+				.container-round {
+					display: flex;
+					.rounds {
+						flex: 1;
+						display: grid;
+						justify-content: center;
+						align-items: center;
+						.round {
+							width: 15px;
+							height: 15px;
+							border-radius: 100%;
+							background-color: rgb(116, 113, 113);
+							&.win {
+								&.CT {
+									background-color: var(--color-new-ct);
+								}
+								&.T {
+									background-color: var(--color-new-t);
+								}
+							}
+							&.playing {
+								background-color: #fff;
+							}
+						}
+					}
+				}
+			}
+		}
+		.grid-2 {
+			flex: 1;
+			border-top: 1px solid #fff;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-weight: 800;
+			font-size: 17px;
+			color: #fff;
+		}
+	}
+}
+

@@ -8,8 +8,9 @@
     font-family: bignoodletitling;
     &.CT {
         .player .hp_bar {
-            //background: linear-gradient(#1717f8,#9d9da4);
-            background-color: var(--color-new-ct);           
+            // background: linear-gradient(#009244,#9d9da4);
+            background-image: linear-gradient(to right, var(--color-new-ct), #D04712);
+            // background-color: var(--color-new-ct);           
         }
     }
     &.T {
@@ -695,7 +696,7 @@
             }
          }
          .hp_bar_bg2 {
-            background: linear-gradient(to left,rgb(137, 136, 136) 5%,rgba(15, 42, 49, 0.7) 34%);
+            background: linear-gradient(to left,rgb(137, 136, 136) 5%,rgba(49, 15, 15, 0.7) 34%);
          }
          .row {
             .roundkills-container {

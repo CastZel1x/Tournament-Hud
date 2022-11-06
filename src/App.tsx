@@ -203,6 +203,8 @@ class App extends React.Component<any, { match: Match | null, game: CSGO | null,
 			});
 		}
 	}
+
+
 	render() {
 		if (!this.state.game) return null;		
 		return (
