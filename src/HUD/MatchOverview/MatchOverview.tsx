@@ -1,6 +1,7 @@
 import React from 'react';
 import * as I from '../../api/interfaces';
 import TeamLogo from '../MatchBar/TeamLogo';
+import "./matchoverview.scss"
 
 interface IProps {
     match: I.Match,
@@ -21,14 +22,14 @@ export default class MatchOverview extends React.Component<IProps> {
                     Upcoming match
                 </div>
                 <div className="match-overview-teams">
-                    <div className="match-overview-team">
+                    <div className="match-overview-team1">
                         <div className="match-overview-team-logo">
                             <TeamLogo team={left} height={50} />
                         </div>
                         <div className="match-overview-team-name">{left.name}</div>
                     </div>
                     <div className="match-overview-vs">vs</div>
-                    <div className="match-overview-team">
+                    <div className="match-overview-team2">
                         <div className="match-overview-team-logo">
                             <TeamLogo team={right} height={50} />
                         </div>

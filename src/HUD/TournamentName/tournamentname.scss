@@ -18,7 +18,8 @@
     position: relative;
     color: white;
     text-align: center;
-    background-color: var(--main-panel-color);
+    background-image: url(../../assets/bgTournamentName.png);
+    // background-color: var(--main-panel-color);
 }
 
 .tournament_container .tournamentinfo {
@@ -28,7 +29,7 @@
     height: 6px;
     position: relative;
 	//background-color: var(--main-panel-color);
-    background-image: url(../../assets/bgTournamentName.png);
+    background-image: url(../../assets/bgTournamentInfo.png);
     color: white;
     text-align: center;
 }

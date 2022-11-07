@@ -215,6 +215,7 @@
 	transform: translateX(-50%);
 	top: 160px;  // 78px;
 	background-color: var(--sub-panel-color);
+	background-image: url(../../assets/bgWinIndicator.png);
 	width: 0;
 	height: 360px;
 	opacity: 0;
@@ -307,10 +308,10 @@
 		}
     }
     &.planting {
-		background-image: url(../../assets/PlantDefuse/Plant.gif);
+		background-image: url(../../assets/PlantDefuse/Bom3D.gif);
 		background-position: center;
 		background-repeat: no-repeat;
-		background-size: 400px;
+		background-size: 200px;
         .defuse_plant_bar {
             left: 0;
         }
@@ -464,7 +465,7 @@ transition: top 0.5s;
 
 	}
 	.round-history-bg {
-		background-image: url(../../assets/bgMatchbar.png);
+		background-image: url(../../assets/bgRoundHistory.png);
 		width: 500px;
 		height: 120px;
 		display: flex;
