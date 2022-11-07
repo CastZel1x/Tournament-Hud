@@ -61,6 +61,13 @@
 			font-weight: 600;
 			font-size: 18px;
 		}
+		.subtitle {
+			flex: 1;
+			display: flex;
+			align-items: center;
+			font-weight: 600;
+			font-size: 13px;
+		}
 	}
 	.image_container {
 		width: 70px;
@@ -80,7 +87,8 @@
 	position: absolute;
 	color: white;
 	text-shadow: 1px 12px 34px black, 0 0 1em whitesmoke, 0 0 0.2em black;
-	background-color: rgba(191, 191, 191, 0.4);
+	// background-color: rgba(191, 191, 191, 0.4);
+	background-color: var(--main-panel-color);
 	text-align: center;
 	width: 310px;
 	height: 20px;

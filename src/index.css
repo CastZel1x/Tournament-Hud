@@ -62,8 +62,8 @@ code {
   --color-moneys: #3abb66;
   --color-t: #c19511;
   --color-ct: #5788a8;
-  --color-new-t:  #be1e2d;
-  --color-new-ct: rgb(0, 38, 253);;
+  --color-new-t:  rgb(190, 30, 45);
+  --color-new-ct: rgb(0, 38, 253); /*41, 94, 247,1*/
   --color-bomb: #f22222;
   --color-defuse: #2222f2;
   --player-overview: rgba(0,0,0, 0.3);

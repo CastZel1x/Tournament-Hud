@@ -189,9 +189,12 @@
             align-items: center;
             justify-content: center;
             //argin-left: -50px;
-            margin-left: 58px;
+
             font-size: 30px;
             margin-bottom: 4px;
+            .username {
+                margin-left: 60px;
+            }
             .flag {
                 height: 43px;
                 display: flex;
@@ -201,7 +204,7 @@
                 img {
                     height: 32px;
                     position: absolute;
-                    margin-right: 130px;
+                    margin-right: 120px;
                 }
             }
         }

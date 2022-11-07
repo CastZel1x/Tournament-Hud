@@ -1,0 +1,17 @@
+.match-overview-title {
+    background-color: var(--main-panel-color);
+    border-radius: 12px 12px 0px 0px;
+}
+.match-overview-vs {
+    background-image: url(../../assets/bgMapoverview.png);
+}
+.match-overview-team1 {
+    background-color: var(--main-panel-color);
+    opacity: 80%;
+    border-radius: 0px 0px 0px 12px;
+}
+.match-overview-team2 {
+    background-color: var(--main-panel-color);
+    opacity: 80%;
+    border-radius: 0px 0px 12px 0px;
+}

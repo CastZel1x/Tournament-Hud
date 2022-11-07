@@ -248,7 +248,8 @@ export const countries: any = {
     'YE' : 'Yemen',
     'ZM' : 'Zambia',
     'ZW' : 'Zimbabwe',
-    'XK' : 'Kosovo'
+    'XK' : 'Kosovo',
+    'WL' : 'Wales'
 };
 
 export const getCountry = (iso: string) => {
