@@ -7,9 +7,9 @@ export default class Tournament extends React.Component<any, { tournamentname: s
 	constructor(props: any) {
 		super(props);
 		this.state = {
-            tournamentname:'tournamentname',
-            tournamentinfo:'tournamentinfo',
-            show: false
+            tournamentname:'IESF World Championship 2022',
+            tournamentinfo:'Day 1 - Group Stage',
+            show: true
 		}
 	}
 

@@ -114,7 +114,7 @@
                         left: 170px;
                     }
                     .secondary_weapon {
-                        left: 87px;
+                        left: 95px;
                         bottom: 200px;
                         position: relative;
                         .weapon {
@@ -216,7 +216,8 @@
         }
         
         .player_data {
-            background-color: var(--sub-panel-color);
+            background-color: rgb(8, 8, 8);
+            
             width: 310px;
             display: flex;
             flex-direction: row;
