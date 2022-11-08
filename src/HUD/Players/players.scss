@@ -89,7 +89,7 @@
                     .username {
                         flex-direction: row-reverse;
                         position: relative;
-                        right: 7px;
+                        right: 10px;
                     }
                     .grenades {
                         position: absolute;
@@ -114,7 +114,7 @@
                         left: 170px;
                     }
                     .secondary_weapon {
-                        left: 95px;
+                        left: 100px;
                         bottom: 200px;
                         position: relative;
                         .weapon {
@@ -627,14 +627,14 @@
    &.teambox.CT.right .player {
     &.active {
          .player_data {
-              box-shadow: inset 60px 0px 50px, linear-gradient(to right, var(--color-new-ct), #0AB4F3);
+              box-shadow: inset 60px 0px 50px var(--color-new-ct);
          }
     }
 }
     &.teambox.CT.left .player {
     &.active {
        .player_data {
-           box-shadow: inset -60px 0px 50px, linear-gradient(to right, var(--color-new-ct), #0AB4F3);
+           box-shadow: inset -60px 0px 50px var(--color-new-ct);
         }
    }
     }

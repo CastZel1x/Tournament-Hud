@@ -32,7 +32,7 @@
     .single_kill {
         display: flex;
         flex-direction: row;
-        background-color: var(--main-panel-color);
+        background-color: #0a0a0a;
         margin-bottom:5px;
         color:white;
         height: 38px;
@@ -61,6 +61,7 @@
         }
 
         .CT {
+            font-weight: 400px;
             color: var(--color-new-ct);
         }
 
@@ -80,7 +81,7 @@
 
         .plus {
             margin-left: 0;
-            font-weight: 600;
+            font-weight: bold;
             margin-right: 8px;
         }
 
