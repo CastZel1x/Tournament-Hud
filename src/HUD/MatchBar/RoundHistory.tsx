@@ -54,7 +54,7 @@ export default class RoundHistory extends React.Component<IProps, IState> {
                                                 ))
                                             }
                                             <div className="rounds">
-                                                <div key={index} className={`round playing`}/>
+                                                <div className={`round playing`}/>
                                             </div>
                                         </div>
                                     ))
