@@ -476,8 +476,10 @@ transition: top 0.5s;
 			flex: 3;
 			display: flex;
 			.column-1 {
-				// background-color: green;
 				flex: 0.5;
+				display: grid;
+				justify-content: center;
+				align-items: center;
 			}
 			.column-2 {
 				flex: 0.5;

@@ -1,6 +1,7 @@
 import React from "react";
 import * as I from "csgogsi-socket";
 import "./matchbar.scss";
+import TeamLogo from './TeamLogo';
 
 interface IProps {
     map: I.Map;
@@ -30,14 +31,18 @@ export default class RoundHistory extends React.Component<IProps, IState> {
                 map?.rounds?.shift()
             }
         }
+
+        
         return (
             <>
                 <div id="round-history">
                     <div className={`team-name-history`}>{left.name}</div>
                     <div className="round-history-bg">
                         <div className="grid-1">
-                            <div className="column-1"></div>
-                            {/* <div className="column-1"></div> */}
+                            <div className="column-1">
+                                <TeamLogo team={left} width={25} height={25}/>
+                                <TeamLogo team={right} width={25} height={25}/>
+                            </div>
                             <div className="column-2">
                                 <div>{left.score}</div>
                                 <div>{right.score}</div>
