@@ -155,7 +155,7 @@
 		display: flex;
 		flex-direction: column;
 		flex: 1;
-		color: var(--color-moneys);
+		color: #fff;
 		.title {
 			height: 25px;
 			display: flex;
@@ -222,14 +222,16 @@
 .moneybox.CT {
 	.money_container {
 		.title {
-			color: var(--color-new-ct);
+			// color: var(--color-new-ct);
+			color: #fff;
 		}
 	}
 }
 .moneybox.T {
 	.money_container {
 		.title {
-			color: var(--color-new-t);
+			// color: var(--color-new-t);
+			color: #fff;
 		}
 	}
 }

@@ -71,7 +71,7 @@ export default class SideBox extends React.Component<Props> {
             <div className={`utilitybox ${this.props.side || ''} ${this.props.show ? "show" : "hide"}`}></div>
                 <div className="title_container">
                     <div className='title_economy'>ECONOMY</div>
-                    <div className="subtitle" style={{color: utilityColor(total)}}>{utilityState(total)}</div>
+                    <div className="subtitle" style={{color: "#fff"}}>{utilityState(total)}</div>
                 </div>
             </div>
         );
