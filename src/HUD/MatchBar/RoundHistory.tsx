@@ -67,7 +67,7 @@ export default class RoundHistory extends React.Component<IProps, IState> {
                             </div>
                         </div>
                         <div className="grid-2">
-                            <label>ROUND HISTORY - 2ND HALF</label>
+                            <label>ROUND HISTORY</label>
                         </div>
                     </div>
                     <div className={`team-name-history`}>{right.name}</div>
