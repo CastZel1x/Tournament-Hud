@@ -161,7 +161,7 @@ export default class TeamBox extends React.Component<IProps, IState> {
     const { map } = this.props;
     const round = map.round + 1;
     if (round <= 30) {
-      return `Round ${round}`;
+      return `ROUND ${round}`;
     }
     const additionalRounds = round - 30;
     const OT = Math.ceil(additionalRounds/6);

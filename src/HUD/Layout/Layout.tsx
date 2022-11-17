@@ -29,7 +29,8 @@ interface Props {
 interface State {
   winner: Team | null,
   showWin: boolean,
-  forceHide: boolean
+  forceHide: boolean,
+  historyRound: boolean,
 }
 
 export default class Layout extends React.Component<Props, State> {
@@ -38,7 +39,8 @@ export default class Layout extends React.Component<Props, State> {
     this.state = {
       winner: null,
       showWin: false,
-      forceHide: false
+      forceHide: false,
+      historyRound : false
     }
   }
 
@@ -69,6 +71,8 @@ export default class Layout extends React.Component<Props, State> {
     return veto;
   }
 
+  
+
   render() {
     const { game, match } = this.props;
     const left = game.map.team_ct.orientation === "left" ? game.map.team_ct : game.map.team_t;
@@ -78,6 +82,7 @@ export default class Layout extends React.Component<Props, State> {
     const rightPlayers = game.players.filter(player => player.team.side === right.side);
     const isFreezetime = (game.round && game.round.phase === "freezetime") || game.phase_countdowns.phase === "freezetime";
     const { forceHide } = this.state;
+    
 
     return (
       <div className="layout">

@@ -53,20 +53,19 @@ code {
 }
 
 :root {
-	--main-panel-color: rgb(21, 116, 166);
-  --sub-panel-color: rgba(15, 42, 49, 0.7);
-  --white-dull: rgba(10, 5, 5, 0.25);
+	--main-panel-color: #1574a6;
+  --sub-panel-color: rgba(21, 22, 22, 0.7);
+  --white-dull: rgba(10, 5, 5, 0.726);
   --white-full: rgba(250, 250, 250, 1);
   --white-half: rgba(250, 250, 250, 0.5);
   --color-gray: rgba(191, 191, 191, 1.0);
   --color-moneys: #3abb66;
-  --color-t: #c19511;
+  --color-t: #fcba03;
   --color-ct: #5788a8;
-  --color-new-t:  rgb(190, 30, 45);
-  --color-new-ct: rgb(0, 38, 253); /*41, 94, 247,1*/
+  --color-new-t:  #fcba03;
+  --color-new-ct: #1649f2; /*41, 94, 247,1*/
   --color-bomb: #f22222;
   --color-defuse: #2222f2;
   --player-overview: rgba(0,0,0, 0.3);
-  --main-color-transparant: rgba(15, 42, 49, 0.8);
-  --kill-feed-color: rgba(21, 115, 166, 0.723);
+  --main-color-transparant: rgba(15, 42, 49, 0.8)
 } 

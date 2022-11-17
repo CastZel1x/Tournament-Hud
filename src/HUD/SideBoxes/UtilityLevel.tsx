@@ -18,7 +18,7 @@ function utilityState(amount: number) {
     return "SEMI BUY";
   }
   if (amount > 2) {
-    return "EKO";
+    return "ECO";
   }
   return "NO UTILITY";
 }
