@@ -9,14 +9,14 @@
     &.CT {
         .player .hp_bar {
             // background: linear-gradient(#009244,#9d9da4);
-            background-image: linear-gradient(to right, var(--color-new-ct), #0AB4F3);
-            // background-color: var(--color-new-ct);           
+            // background-image: linear-gradient(to right, var(--color-new-ct), #0AB4F3);
+            background-color: var(--color-new-ct);           
         }
     }
     &.T {
         .player .hp_bar {
-            // background-color: var(--color-new-t);
-            background-image: linear-gradient(to left, var(--color-new-t), #d1cccd);   
+            background-color: var(--color-new-t);
+            // background-image: linear-gradient(to left, var(--color-new-t), #d1cccd);   
         }
     }
     &.hide {

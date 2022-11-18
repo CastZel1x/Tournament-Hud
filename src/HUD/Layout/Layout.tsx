@@ -84,11 +84,6 @@ export default class Layout extends React.Component<Props, State> {
     const { forceHide } = this.state;
     const round = game.map.rounds
 
-
-    console.log("sukses", round);
-    
-    
-
     return (
       <div className="layout">
         <div className={`players_alive ${isFreezetime ? 'hide':''}`}>

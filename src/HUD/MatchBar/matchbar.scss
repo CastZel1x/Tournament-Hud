@@ -216,6 +216,7 @@
 	top: 160px;  // 78px;
 	background-color: var(--sub-panel-color);
 	background-image: url(../../assets/bgWinIndicator.png);
+	background-repeat: round;
 	width: 0;
 	height: 360px;
 	opacity: 0;
