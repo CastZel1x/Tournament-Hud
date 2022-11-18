@@ -18,6 +18,7 @@ import Timeout from "../PauseTimeout/Timeout";
 import TournamentName from "../TournamentName/Tournament";
 import PlayerCamera from "../Camera/Camera";
 import UtilityLevel from '../SideBoxes/UtilityLevel';
+import Utility from '../SideBoxes/Utility'
 import "./layout.scss"
 
 
@@ -30,7 +31,6 @@ interface State {
   winner: Team | null,
   showWin: boolean,
   forceHide: boolean,
-  historyRound: boolean,
 }
 
 export default class Layout extends React.Component<Props, State> {
@@ -40,17 +40,18 @@ export default class Layout extends React.Component<Props, State> {
       winner: null,
       showWin: false,
       forceHide: false,
-      historyRound : false
     }
   }
 
   componentDidMount() {
     GSI.on('roundEnd', score => {
-      this.setState({ winner: score.winner, showWin: true }, () => {
-        setTimeout(() => {
-          this.setState({ showWin: false })
-        }, 4000)
-      });
+      setTimeout(() => {        
+        this.setState({ winner: score.winner, showWin: true }, () => {
+          setTimeout(() => {
+            this.setState({ showWin: false })
+          }, 4000)
+        });
+      }, 18000);
     });
     actions.on("boxesState", (state: string) => {
       if (state === "show") {
@@ -81,8 +82,10 @@ export default class Layout extends React.Component<Props, State> {
     const leftPlayers = game.players.filter(player => player.team.side === left.side);
     const rightPlayers = game.players.filter(player => player.team.side === right.side);
     const isFreezetime = (game.round && game.round.phase === "freezetime") || game.phase_countdowns.phase === "freezetime";
-    const { forceHide } = this.state;
+    const isOvertime = (game.round && game.round.phase === "over") || game.phase_countdowns.phase === "over";
+    const { forceHide, showWin } = this.state;
     const round = game.map.rounds
+
 
     return (
       <div className="layout">
@@ -125,8 +128,9 @@ export default class Layout extends React.Component<Props, State> {
 
         <MapSeries teams={[left, right]} match={match} isFreezetime={isFreezetime} map={game.map} />
         <div className={"boxes left"}>
-        <UtilityLevel side={left.side} players={game.players} show={isFreezetime && !forceHide} />
-        <MoneyBox
+          <Utility side={left.side} players={game.players} show={showWin && !forceHide} />
+          <UtilityLevel side={left.side} players={game.players} show={isFreezetime && !forceHide} />
+          <MoneyBox
             team={left.side}
             side="left"
             loss={Math.min(left.consecutive_round_losses * 500 + 1400, 3400)}
@@ -137,7 +141,8 @@ export default class Layout extends React.Component<Props, State> {
           <SideBox side="left" hide={forceHide} />
         </div>
         <div className={"boxes right"}>
-        <UtilityLevel side={right.side} players={game.players} show={isFreezetime && !forceHide} />
+          <Utility side={right.side} players={game.players} show={showWin && !forceHide} />
+          <UtilityLevel side={right.side} players={game.players} show={isFreezetime && !forceHide} />
           <MoneyBox
             team={right.side}
             side="right"
