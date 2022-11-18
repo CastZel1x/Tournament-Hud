@@ -1,4 +1,5 @@
 import React from "react";
+import Weapon from "./../Weapon/Weapon";
 import { Player, WeaponRaw, Side } from "csgogsi-socket";
 
 
@@ -18,7 +19,7 @@ function utilityState(amount: number) {
     return "SEMI BUY";
   }
   if (amount > 2) {
-    return "ECO";
+    return "EKO";
   }
   return "NO UTILITY";
 }
@@ -62,16 +63,44 @@ export function summarise(players: Player[], side: Side) {
   };
 }
 
+class GrenadeContainer extends React.PureComponent<{ grenade: string; amount: number }> {
+  render() {
+    return (
+      <div className="grenade_container">
+        <div className="grenade_image">
+          <Weapon weapon={this.props.grenade} active={false} isGrenade />
+        </div>
+        <div className="grenade_amount">x{this.props.amount}</div>
+      </div>
+    );
+  }
+}
+
 export default class SideBox extends React.Component<Props> {
     render() {
         const grenades = summarise(this.props.players, this.props.side);
         const total = Object.values(grenades).reduce((a, b) => a+b, 0);
         return (
-            <div className={`utilitybox ${this.props.side || ''} ${this.props.show ? "show" : "hide"}`}>
-              <div className={`utilitybox ${this.props.side || ''} ${this.props.show ? "show" : "hide"}`}></div>
+            <div className={`utilityboxUtility ${this.props.side || ''} ${this.props.show ? "show" : "hide"}`}>
+              <div className={`utilityboxUtility ${this.props.side || ''} ${this.props.show ? "show" : "hide"}`}></div>
               <div className="title_container">
-                  <div className='title_economy'>ECONOMY</div>
-                  {/* <div className="subtitle" style={{color: utilityColor(total)}}>{utilityState(total)}</div> */}
+                  <div className='title_economy'>Utillity</div>
+              </div>
+              <div className="container_row">
+                {
+                    this.props.side == "T" &&
+                    <div className="subtitle" style={{color: utilityColor(total)}}>{utilityState(total)}</div>
+                }
+                <div className="grenades_container">
+                    <GrenadeContainer grenade="smokegrenade" amount={grenades.smokes} />
+                    <GrenadeContainer grenade={this.props.side === 'CT' ? 'incgrenade' : 'molotov'} amount={grenades.inc} />
+                    <GrenadeContainer grenade="flashbang" amount={grenades.flashes} />
+                    <GrenadeContainer grenade="hegrenade" amount={grenades.hg} />
+                </div>
+                {
+                    this.props.side == "CT" &&
+                    <div className="subtitle" style={{color: utilityColor(total)}}>{utilityState(total)}</div>
+                }
               </div>
             </div>
         );
