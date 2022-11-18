@@ -57,8 +57,9 @@ class App extends React.Component<IProps> {
         }}>
         <div className="background-fire" style={{ transform: `rotate(${-90 + player.position[2]}deg)`, opacity: isShooting(player.lastShoot) ? 1 : 0 }} ><div className="bg"/></div>
         <div className="background" style={{ transform: `rotate(${45 + player.position[2]}deg)` }}></div>
+        <div className="label">{player.label}</div>
         {/* <div className="label"><img src={avatarData.url} height={100} width={100} alt={'Avatar'} /></div> */}
-        <div className="label"><Avatar steamid={player.steamid} height={57} width={57} showSkull={false} isAlive={player.isAlive} /></div>
+        {/* <div className="label"><Avatar steamid={player.steamid} height={57} width={57} showSkull={false} isAlive={player.isAlive} /></div> */}
       </div>
     )
   }
