@@ -534,8 +534,7 @@ transition: top 0.5s;
 			color: #fff;
 			background-color: #295878;
 			.number_round {
-				width: 24px;
-				margin: 0 2px;
+				flex: 1;
 				display: grid;
 				justify-content: center;
 			}

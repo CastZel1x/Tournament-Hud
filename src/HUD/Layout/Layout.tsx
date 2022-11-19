@@ -112,15 +112,19 @@ export default class Layout extends React.Component<Props, State> {
         {
           !(isFreezetime && !forceHide && round.length > 15) &&
           <SeriesBox map={game.map} phase={game.phase_countdowns} match={match} />
-        } 
+        }
+
+ 
         <Observed player={game.player} veto={this.getVeto()} round={game.map.round+1}/>
 
         <TeamBox team={left} players={leftPlayers} side="left" current={game.player} isFreezetime={isFreezetime} />
         <TeamBox team={right} players={rightPlayers} side="right" current={game.player} isFreezetime={isFreezetime} />
+
         {
           !(isFreezetime && !forceHide && round.length > 15) &&
           <TournamentName />
         }
+
         <MapSeries teams={[left, right]} match={match} isFreezetime={isFreezetime} map={game.map} />
         <div className={"boxes left"}>
           <Utility side={left.side} players={game.players} show={showWin && !forceHide} />
