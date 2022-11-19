@@ -9,7 +9,7 @@ interface IProps {
 
 interface IState {
     capacity: any,
-    round: Object
+    round: any
 }
 
 export default class RoundHistory extends React.Component<IProps, IState> {
@@ -17,10 +17,7 @@ export default class RoundHistory extends React.Component<IProps, IState> {
         super(props);
         this.state = {
             capacity : 15,
-            round: {
-                round_pertama: 1,
-                round_kedua: 15,
-            }
+            round: [0, 4, 9, 14, 15, 19, 24, 29]
         }
       }
 
@@ -111,7 +108,7 @@ export default class RoundHistory extends React.Component<IProps, IState> {
                                     map?.rounds?.map((items : any, index : any) => (
                                         <div className="number_round" key={index}>
                                             {
-                                                (index == 0 || index == 14 || index == 4 || index == 9) &&
+                                                round.includes(index) &&
                                                 <label key={index}>{items?.round}</label>
                                             }
                                         </div>
