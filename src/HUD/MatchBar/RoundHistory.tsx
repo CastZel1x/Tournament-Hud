@@ -62,10 +62,10 @@ export default class RoundHistory extends React.Component<IProps, IState> {
                     <div className="round-history-bg">
                         <div className="grid-1">
                             <div className="column-1">
-                                <div style={{ marginTop: 5 }}>
+                                <div style={{ marginTop: 8 }}>
                                     <TeamLogo team={left} width={20} height={20}/>
                                 </div>
-                                <div style={{ marginTop: 5 }}>
+                                <div style={{ marginTop: 8 }}>
                                     <TeamLogo team={right} width={20} height={20}/>
                                 </div>
                             </div>
