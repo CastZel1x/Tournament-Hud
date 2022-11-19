@@ -35,12 +35,33 @@ export default class RoundHistory extends React.Component<IProps, IState> {
         //     }
         // })
         const lengthRound = map?.rounds.length
-        let result = lengthRound - capacity
         if (lengthRound > capacity) {
+            for (let i = 0; i < lengthRound; i++) {
+                if (i < 16) {
+                    map?.rounds?.shift()
+                }
+            }
+            let result = lengthRound - capacity
+            result = result * -1
             for (let i = 0; i < result; i++) {
-                map?.rounds?.shift()
+                if (i === 0) {            
+                    map?.rounds.push({
+                        "team": {},
+                        "round": lengthRound + 1,
+                        "side": "playing",
+                        "outcome": ""
+                    })
+                } else {
+                    map?.rounds.push({
+                        "team": {},
+                        "round": lengthRound + i + 1,
+                        "side": "",
+                        "outcome": ""
+                    })
+                }
             }
         } else {
+            let result = lengthRound - capacity
             result = result * -1
             for (let i = 0; i < result; i++) {
                 if (i === 0) {            
