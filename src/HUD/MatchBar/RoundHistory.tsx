@@ -4,35 +4,66 @@ import "./matchbar.scss";
 import TeamLogo from './TeamLogo';
 
 interface IProps {
-    map: I.Map;
+    map: any;
 }
 
 interface IState {
-    capacity: any
+    capacity: any,
+    round: Object
 }
 
 export default class RoundHistory extends React.Component<IProps, IState> {
     constructor(props: IProps){
         super(props);
         this.state = {
-            capacity : 15
+            capacity : 15,
+            round: {
+                round_pertama: 1,
+                round_kedua: 15,
+            }
         }
       }
 
     render() {
-        const { capacity } = this.state
+        const { capacity, round } = this.state
         const { map } = this.props;
         const left = map.team_ct.orientation === "left" ? map.team_ct : map.team_t;
         const right = map.team_ct.orientation === "left" ? map.team_t : map.team_ct;
+        // map?.rounds.filter((items : any, index : number) => {
+        //     if (items.round < 16) {
+        //         return items
+        //     }
+        //     if (items.round > 16) {
+        //         return items
+        //     }
+        // })
         const lengthRound = map?.rounds.length
+        let result = lengthRound - capacity
         if (lengthRound > capacity) {
-            let result = lengthRound - capacity
             for (let i = 0; i < result; i++) {
                 map?.rounds?.shift()
             }
+        } else {
+            result = result * -1
+            for (let i = 0; i < result; i++) {
+                if (i === 0) {            
+                    map?.rounds.push({
+                        "team": {},
+                        "round": lengthRound + 1,
+                        "side": "playing",
+                        "outcome": ""
+                    })
+                } else {
+                    map?.rounds.push({
+                        "team": {},
+                        "round": lengthRound + i + 1,
+                        "side": "",
+                        "outcome": ""
+                    })
+                }
+            }
         }
 
-        
         return (
             <>
                 <div id="round-history">
@@ -40,8 +71,8 @@ export default class RoundHistory extends React.Component<IProps, IState> {
                     <div className="round-history-bg">
                         <div className="grid-1">
                             <div className="column-1">
-                                <TeamLogo team={left} width={25} height={25}/>
-                                <TeamLogo team={right} width={25} height={25}/>
+                                <TeamLogo team={left} width={20} height={20}/>
+                                <TeamLogo team={right} width={20} height={20}/>
                             </div>
                             <div className="column-2">
                                 <div>{left.score}</div>
@@ -52,21 +83,43 @@ export default class RoundHistory extends React.Component<IProps, IState> {
                                     ['CT', 'T'].map((team, index) => (               
                                         <div key={index} className="container-round">
                                             {
-                                                map?.rounds?.map((round, index) => (
-                                                    <div className="rounds">
-                                                        <div key={index} className={`round ${round.side == team ? `win ${round.side}` : "" }`}/>
-                                                    </div>
-                                                ))
+                                                map?.rounds?.map((round : any, index : any) => {
+                                                    if (round.side == "playing") {
+                                                        return (
+                                                            <div key={index} className="rounds">
+                                                                <div className={`round playing`}/>
+                                                            </div>
+                                                        )
+                                                    } else {
+                                                        return (
+                                                            <div className="rounds" key={index}>
+                                                                <div className={`round ${round.side == team ? `win ${round.side}` : "" }`}/>
+                                                            </div>
+                                                        )
+                                                    }
+                                                })
                                             }
-                                            <div className="rounds">
-                                                <div className={`round playing`}/>
-                                            </div>
                                         </div>
                                     ))
                                 }
                             </div>
                         </div>
                         <div className="grid-2">
+                            <div style={{ flex: 1 }}/>
+                            <div style={{ flex: 5, display: 'flex' }}>
+                                {
+                                    map?.rounds?.map((items : any, index : any) => (
+                                        <div className="number_round" key={index}>
+                                            {
+                                                (index == 0 || index == 14 || index == 4 || index == 9) &&
+                                                <label key={index}>{items?.round}</label>
+                                            }
+                                        </div>
+                                    ))
+                                }
+                            </div>
+                        </div>
+                        <div className="grid-3">
                             <label>ROUND HISTORY</label>
                         </div>
                     </div>
