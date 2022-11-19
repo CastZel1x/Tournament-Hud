@@ -454,7 +454,7 @@ transition: top 0.5s;
 	top: 42px;
 	left: 50%;
 	transform: translateX(-50%);
-	font-family: "bignoodletitling";
+	// font-family: "bignoodletitling";
 	.team-name-history {
 		color: var(--white-full);
 		font-size: 30px;
@@ -468,7 +468,7 @@ transition: top 0.5s;
 	.round-history-bg {
 		background-image: url(../../assets/bgRoundHistory.png);
 		width: 500px;
-		height: 85px;
+		height: 120px;
 		display: flex;
 		flex-direction: column;
 		background-repeat: round;
@@ -488,7 +488,7 @@ transition: top 0.5s;
 				justify-content: center;
 				align-items: center;
 				font-weight: 500;
-				font-size: 23px;
+				font-size: 17px;
 				color: #fff;
 			}
 			.column-3 {
@@ -528,12 +528,26 @@ transition: top 0.5s;
 		}
 		.grid-2 {
 			flex: 1;
+			display: flex;
+			font-weight: 800;
+			font-size: 15px;
+			color: #fff;
+			background-color: #295878;
+			.number_round {
+				width: 24px;
+				margin: 0 2px;
+				display: grid;
+				justify-content: center;
+			}
+		}
+		.grid-3 {
+			flex: 1;
 			border-top: 1px solid #fff;
 			display: flex;
 			justify-content: center;
 			align-items: center;
 			font-weight: 800;
-			font-size: 17px;
+			font-size: 13px;
 			color: #fff;
 		}
 	}

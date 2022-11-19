@@ -28,7 +28,6 @@ interface Props {
 }
 
 interface State {
-  winner: Team | null,
   showWin: boolean,
   forceHide: boolean,
 }
@@ -37,21 +36,21 @@ export default class Layout extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      winner: null,
       showWin: false,
       forceHide: false,
     }
   }
 
   componentDidMount() {
-    GSI.on('roundEnd', score => {
+    GSI.on('freezetimeStart', () => {
       setTimeout(() => {        
-        this.setState({ winner: score.winner, showWin: true }, () => {
+        this.setState({ showWin: true }, () => {
           setTimeout(() => {
             this.setState({ showWin: false })
           }, 4000)
         });
-      }, 18000);
+      }, 10000);
+
     });
     actions.on("boxesState", (state: string) => {
       if (state === "show") {
@@ -100,31 +99,31 @@ export default class Layout extends React.Component<Props, State> {
         <Killfeed />
         <Overview match={match} map={game.map} players={game.players || []} />
         <RadarMaps match={match} map={game.map} game={game} />
-        {
+        {/* {
           !(isFreezetime && !forceHide && round.length > 15) && 
           <MatchBar map={game.map} phase={game.phase_countdowns} bomb={game.bomb} match={match} />
-        }
+        } */}
         {
-          (isFreezetime && !forceHide && round.length > 15) &&
+          // (isFreezetime && !forceHide && round.length > 15) &&
           <RoundHistory map={game.map}/>
         }
         <Pause  phase={game.phase_countdowns}/>
         <Timeout map={game.map} phase={game.phase_countdowns} />
-        {
+        {/* {
           !(isFreezetime && !forceHide && round.length > 15) &&
           <SeriesBox map={game.map} phase={game.phase_countdowns} match={match} />
-        }
+        } */}
 
  
         <Observed player={game.player} veto={this.getVeto()} round={game.map.round+1}/>
 
         <TeamBox team={left} players={leftPlayers} side="left" current={game.player} isFreezetime={isFreezetime} />
         <TeamBox team={right} players={rightPlayers} side="right" current={game.player} isFreezetime={isFreezetime} />
-
+{/* 
         {
           !(isFreezetime && !forceHide && round.length > 15) &&
           <TournamentName />
-        }
+        } */}
 
         <MapSeries teams={[left, right]} match={match} isFreezetime={isFreezetime} map={game.map} />
         <div className={"boxes left"}>
