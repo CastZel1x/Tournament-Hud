@@ -49,7 +49,7 @@ export default class Layout extends React.Component<Props, State> {
             this.setState({ showWin: false })
           }, 4000)
         });
-      }, 10000);
+      }, 20000);
 
     });
     actions.on("boxesState", (state: string) => {
