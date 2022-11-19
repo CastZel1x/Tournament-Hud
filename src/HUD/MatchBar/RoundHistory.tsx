@@ -26,61 +26,34 @@ export default class RoundHistory extends React.Component<IProps, IState> {
         const { map } = this.props;
         const left = map.team_ct.orientation === "left" ? map.team_ct : map.team_t;
         const right = map.team_ct.orientation === "left" ? map.team_t : map.team_ct;
-        // map?.rounds.filter((items : any, index : number) => {
-        //     if (items.round < 16) {
-        //         return items
-        //     }
-        //     if (items.round > 16) {
-        //         return items
-        //     }
-        // })
-        const lengthRound = map?.rounds.length
-        if (lengthRound > capacity) {
-            for (let i = 0; i < lengthRound; i++) {
-                if (i < 16) {
-                    map?.rounds?.shift()
-                }
-            }
-            let result = lengthRound - capacity
-            result = result * -1
-            for (let i = 0; i < result; i++) {
-                if (i === 0) {            
-                    map?.rounds.push({
-                        "team": {},
-                        "round": lengthRound + 1,
-                        "side": "playing",
-                        "outcome": ""
-                    })
-                } else {
-                    map?.rounds.push({
-                        "team": {},
-                        "round": lengthRound + i + 1,
-                        "side": "",
-                        "outcome": ""
-                    })
-                }
-            }
-        } else {
-            let result = lengthRound - capacity
-            result = result * -1
-            for (let i = 0; i < result; i++) {
-                if (i === 0) {            
-                    map?.rounds.push({
-                        "team": {},
-                        "round": lengthRound + 1,
-                        "side": "playing",
-                        "outcome": ""
-                    })
-                } else {
-                    map?.rounds.push({
-                        "team": {},
-                        "round": lengthRound + i + 1,
-                        "side": "",
-                        "outcome": ""
-                    })
-                }
-            }
+        const lengthRound = map?.rounds.length    
+        if (lengthRound > 15) {
+            map.rounds.splice(0, 15);
         }
+        let result = map.rounds.length - capacity
+        if (result < 0) {
+            result = result * -1
+            for (let i = 0; i < result; i++) {
+                if (i === 0) {            
+                    map?.rounds.push({
+                        "team": {},
+                        "round": lengthRound + 1,
+                        "side": "playing",
+                        "outcome": ""
+                    })
+                } else {
+                    map?.rounds.push({
+                        "team": {},
+                        "round": lengthRound + i + 1,
+                        "side": "",
+                        "outcome": ""
+                    })
+                }
+            }
+            
+        }
+
+        
 
         return (
             <>
