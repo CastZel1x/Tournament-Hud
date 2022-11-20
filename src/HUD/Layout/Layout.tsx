@@ -19,7 +19,7 @@ import TournamentName from "../TournamentName/Tournament";
 import PlayerCamera from "../Camera/Camera";
 import UtilityLevel from '../SideBoxes/UtilityLevel';
 import Utility from '../SideBoxes/Utility'
-import "./layout.scss"
+// import "./layout.scss"
 
 
 interface Props {
