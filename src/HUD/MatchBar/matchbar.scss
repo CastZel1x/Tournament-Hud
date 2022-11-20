@@ -38,7 +38,7 @@
 		flex-direction: column;
 		position: relative;
 		width: 126px;
-		height: 80px;
+		height: 50px;
 	}
 	#round_timer_text {
 		display: flex;
@@ -96,10 +96,10 @@
 			position: absolute;
 			top: 110px;
 			width: 440px;
-			height: 20px;
+			height: 30px;
 			right: 80px;
 			text-align: center;
-			border-bottom: 5px;
+			// border-bottom: 5px;
 			font-size: 18px;
 		}
 		.bomb_icon {
@@ -126,7 +126,7 @@
 		height: 7px;
 		text-align: justify;
 		position: relative;
-		top: 18px;
+		top: 15px;
 		align-items: center;
 		justify-content: center;
 		font-size: 20px;
@@ -199,7 +199,7 @@
 		display: flex;
 		flex-direction: row;
 		width: 100px;
-		top: 15px;
+		top: 10px;
 		position: relative;
 		align-items: center;
 		justify-content: center;

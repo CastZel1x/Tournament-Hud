@@ -428,7 +428,7 @@
 .players_alive {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 150px;
     background-color: var(--main-color-transparant);
     position: fixed;
     right: 25px;
@@ -438,18 +438,23 @@
     font-family: bignoodletitling;
     .counter_container {
         display: flex;
-        height: 60px;
+        height: 35px;
         > div {
             flex: 1;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size:47px;
+            font-size:30px;
             color: white;
             background-color: var(--main-panel-color);
         }
         .CT {
             color: var(--color-new-ct);
+        }
+        .vs_counter {
+            background-image: url(../../assets/bgPlayerAlive.png);
+            opacity: 100%;
+            // height: 35px;
         }
         .T {
             color: var(--color-new-t);
@@ -460,7 +465,7 @@
         text-transform: uppercase;
         text-align: center;
         height:20px;
-        font-size:18px;
+        font-size:15px;
         display: flex;
         align-items: center;
         justify-content: center;
