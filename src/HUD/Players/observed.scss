@@ -51,13 +51,11 @@
             align-items: center;
             width: 140px;
             margin-left: -118px;
-            background-color: tomato;
             justify-content: flex-start;
             svg {
                 max-height:25px;
                 max-width:27px;
-                background-color: black;
-                margin-left: 8px;
+                margin-left: 8px;   
             }
         }
         .ammo {
@@ -137,7 +135,7 @@
         .roundkills-container {
             right: 167px;
             position: relative;
-            bottom: 10px;
+            bottom: 15px;
             .round_kills {
                 position: absolute;
                 height: 40px;
