@@ -85,8 +85,15 @@ export default class Layout extends React.Component<Props, State> {
     const isOvertime = (game.round && game.round.phase === "over") || game.phase_countdowns.phase === "over";
     const { forceHide, showWin } = this.state;
     const round = game.map.rounds
-
-
+    let dataUtiliy = false
+    console.log(dataUtiliy,"data utility 1")
+      if (game.phase_countdowns.phase == "freezetime" && game.phase_countdowns.phase_ends_in == "0.1")  {
+        dataUtiliy = true
+      }
+      else {
+        dataUtiliy = false
+      }
+      console.log(dataUtiliy, "data utility 2")
     return (
       <div className="layout">
         <div className={`players_alive ${isFreezetime ? 'hide':''}`}>
@@ -135,7 +142,7 @@ export default class Layout extends React.Component<Props, State> {
 
         <MapSeries teams={[left, right]} match={match} isFreezetime={isFreezetime} map={game.map} />
         <div className={"boxes left"}>
-          <Utility side={left.side} players={game.players} show={showWin && !forceHide} />
+          <Utility side={left.side} players={game.players} show={dataUtiliy && !forceHide} />
           <UtilityLevel side={left.side} players={game.players} show={isFreezetime && !forceHide} />
           <MoneyBox
             team={left.side}
@@ -148,7 +155,7 @@ export default class Layout extends React.Component<Props, State> {
           <SideBox side="left" hide={forceHide} />
         </div>
         <div className={"boxes right"}>
-          <Utility side={right.side} players={game.players} show={showWin && !forceHide} />
+          <Utility side={right.side} players={game.players} show={dataUtiliy && !forceHide} />
           <UtilityLevel side={right.side} players={game.players} show={isFreezetime && !forceHide} />
           <MoneyBox
             team={right.side}

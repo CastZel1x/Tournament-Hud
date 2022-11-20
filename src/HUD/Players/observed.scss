@@ -4,7 +4,7 @@
     bottom: 120px;
     margin-left: -310px;
     left: 50%;
-    height: 35px;
+    height: 40px;
     display: flex;
     flex-direction: column;
     color: white;
@@ -51,10 +51,12 @@
             align-items: center;
             width: 140px;
             margin-left: -118px;
+            background-color: tomato;
             justify-content: flex-start;
             svg {
                 max-height:25px;
                 max-width:27px;
+                background-color: black;
                 margin-left: 8px;
             }
         }
@@ -135,7 +137,7 @@
         .roundkills-container {
             right: 167px;
             position: relative;
-            bottom: 14px;
+            bottom: 10px;
             .round_kills {
                 position: absolute;
                 height: 40px;
