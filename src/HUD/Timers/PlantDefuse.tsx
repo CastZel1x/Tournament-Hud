@@ -20,7 +20,8 @@ export default class Bomb extends React.Component<IProps> {
   render() {
     const { timer } = this.props;
     return (
-      <div className={`defuse_plant_container ${timer && timer.type} ${timer && timer.active ? 'show' :'hide'}`}>
+      <div className={`defuse_plant_container  ${timer && timer.active ? 'show' :'hide'}`}>
+         <div className={`${timer && timer.type}`}/>
         {
           timer ?
           <div className={`defuse_plant_caption`}>

@@ -88,10 +88,10 @@ export default class RoundHistory extends React.Component<IProps, IState> {
                         <div className="grid-1">
                             <div className="column-1">
                                 <div style={{ marginTop: 8 }}>
-                                    <TeamLogo label={false} team={left} width={20} height={20}/>
+                                    <TeamLogo label={false} team={left} width={35} height={20}/>
                                 </div>
                                 <div style={{ marginTop: 8 }}>
-                                    <TeamLogo label={false} team={right} width={20} height={20}/>
+                                    <TeamLogo label={false} team={right} width={35} height={20}/>
                                 </div>
                             </div>
                             <div className="column-2">
@@ -113,15 +113,7 @@ export default class RoundHistory extends React.Component<IProps, IState> {
                                                     } else {
                                                         return (
                                                             <div className="rounds" key={index}>
-                                                                {/* {
-                                                                    (team == "CT" && round.side == team ) &&
-                                                                        <div>s</div>
-                                                                } */}
                                                                 <div className={`round ${round.side == team ? `win ${round.side}` : "" }`}/>
-                                                                {/* {
-                                                                    (team == "T" && round.side == team ) &&
-                                                                        <div>s</div>
-                                                                } */}
                                                             </div>
                                                         )
                                                     }

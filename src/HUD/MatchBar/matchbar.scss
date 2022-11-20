@@ -305,35 +305,45 @@
 	padding: 100px;
 	font-size: 30px;
 	text-align: center;
+	// position: relative;
 	.defuse_plant_bar {
 		height: 49px;
 		position: absolute;
 		width: 0%;
 	}
 	.defuse_plant_caption {
-		z-index: 1;
+		// z-index: 1;
 		display: flex;
 		text-transform: uppercase;
 		align-items: flex-end;
-		background-color: rgba(0, 0, 0, 0.4);
+		background-image: linear-gradient(to right, var(--main-panel-color), var(--sub-panel-color2));
+		border-radius: 10px;
+		padding: 10px;
+		margin-top: 170px;
 		svg {
 			margin-right: 13px;
 		}
     }
-    &.planting {
+    .planting {
 		background-image: url(../../assets/PlantDefuse/Bom3D.gif);
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: 200px;
+		width: 300px;
+		height: 200px;
+		position: absolute;
         .defuse_plant_bar {
             left: 0;
         }
     }
-	&.defusing {
+	.defusing {
 		background-image: url(../../assets/PlantDefuse/Defuse.gif);
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: 400px;
+		width: 300px;
+		height: 200px;
+		position: absolute;
         .defuse_plant_bar {
             right: 0;
         }
@@ -544,7 +554,16 @@ transition: top 0.5s;
 								}
 							}
 							&.playing {
-								background-color: #fff;
+								animation: blink 0.3s infinite;
+								@keyframes blink{
+									0%{
+										background-color: rgb(116, 113, 113);
+									}
+									100%{
+										background-color: white;
+									}
+								}
+
 							}
 						}
 					}
