@@ -29,30 +29,26 @@ interface Props {
 }
 
 interface State {
-  showWin: boolean,
+  showUtillity: boolean,
+  showEkonomi: boolean,
   forceHide: boolean,
+  validationEkonomi: boolean,
+  validationUtillity: boolean,
 }
 
 export default class Layout extends React.Component<Props, State> {
   constructor(props: Props) {
     super(props);
     this.state = {
-      showWin: false,
+      showUtillity: false,
       forceHide: false,
+      showEkonomi: false,
+      validationEkonomi: false,
+      validationUtillity: false,
     }
   }
 
   componentDidMount() {
-    GSI.on('freezetimeStart', () => {
-      setTimeout(() => {        
-        this.setState({ showWin: true }, () => {
-          setTimeout(() => {
-            this.setState({ showWin: false })
-          }, 4000)
-        });
-      }, 20000);
-
-    });
     actions.on("boxesState", (state: string) => {
       if (state === "show") {
         this.setState({ forceHide: false });
@@ -60,6 +56,41 @@ export default class Layout extends React.Component<Props, State> {
         this.setState({ forceHide: true });
       }
     });
+  }
+
+
+  componentDidUpdate() {
+    const { game, match } = this.props;
+    const { validationEkonomi, validationUtillity } = this.state;
+    if (game.phase_countdowns.phase == "freezetime")  {
+      if (Number(game.phase_countdowns.phase_ends_in) > 14 && !validationEkonomi) {
+        this.setState({showEkonomi : true})
+        this.setState({validationEkonomi: true})
+      }
+      if (Number(game.phase_countdowns.phase_ends_in) < 14 && validationEkonomi) {
+        this.setState({showEkonomi : false})
+        this.setState({validationEkonomi: false})
+        setTimeout(() => {
+          this.setState({ showUtillity: true }, () => {
+            setTimeout(() => {
+              this.setState({ showUtillity: false })
+            }, 5000)
+          });
+        }, 500)
+      }
+    }
+    if (game.phase_countdowns.phase == "bomb" && game?.bomb?.state == "planted" ) {
+      if (Number(game.phase_countdowns.phase_ends_in) > 40 && !validationUtillity) {
+        this.setState({validationUtillity: true})        
+        this.setState({showUtillity: true})        
+      } 
+      if (Number(game.phase_countdowns.phase_ends_in) < 40 && validationUtillity) {
+        this.setState({validationUtillity: false})
+        setTimeout(() => {
+          this.setState({ showUtillity: false })
+        }, 5000)
+      }
+    }
   }
 
   getVeto = () => {
@@ -83,17 +114,8 @@ export default class Layout extends React.Component<Props, State> {
     const rightPlayers = game.players.filter(player => player.team.side === right.side);
     const isFreezetime = (game.round && game.round.phase === "freezetime") || game.phase_countdowns.phase === "freezetime";
     const isOvertime = (game.round && game.round.phase === "over") || game.phase_countdowns.phase === "over";
-    const { forceHide, showWin } = this.state;
+    const { forceHide, showUtillity, showEkonomi } = this.state;
     const round = game.map.rounds
-    let dataUtiliy = false
-    console.log(dataUtiliy,"data utility 1")
-      if (game.phase_countdowns.phase == "freezetime" && game.phase_countdowns.phase_ends_in == "0.1")  {
-        dataUtiliy = true
-      }
-      else {
-        dataUtiliy = false
-      }
-      console.log(dataUtiliy, "data utility 2")
     return (
       <div className="layout">
         <div className={`players_alive ${isFreezetime ? 'hide':''}`}>
@@ -108,17 +130,17 @@ export default class Layout extends React.Component<Props, State> {
         <Overview match={match} map={game.map} players={game.players || []} />
         <RadarMaps match={match} map={game.map} game={game} />
         {
-          !(isFreezetime && !forceHide && round.length > 15) && 
+          !(isFreezetime && !forceHide && [15, 19].includes(round.length)) && 
           <MatchBar map={game.map} phase={game.phase_countdowns} bomb={game.bomb} match={match} />
         }
         {
-          (isFreezetime && !forceHide && round.length > 15) &&
+          (isFreezetime && !forceHide && [15, 19].includes(round.length)) &&
           <RoundHistory map={game.map}/>
         }
         <Pause  phase={game.phase_countdowns}/>
         <Timeout map={game.map} phase={game.phase_countdowns} />
         {
-          !(isFreezetime && !forceHide && round.length > 15) &&
+          !(isFreezetime && !forceHide && [15, 19].includes(round.length)) &&
           <SeriesBox map={game.map} phase={game.phase_countdowns} match={match} />
         }
 
@@ -129,12 +151,12 @@ export default class Layout extends React.Component<Props, State> {
         <TeamBox team={right} players={rightPlayers} side="right" current={game.player} isFreezetime={isFreezetime} />
 
         {
-          !(isFreezetime && !forceHide && round.length > 15) &&
+          !(isFreezetime && !forceHide && [15, 19].includes(round.length)) &&
           <TournamentName />
         }
 
         {
-          !(isFreezetime && !forceHide && round.length > 15) &&
+          !(isFreezetime && !forceHide && round.length == 15) &&
            <div className="logoMatchBar">
              <img src={LogoMatchbar} width={40} height={40}/>
            </div>
@@ -142,28 +164,28 @@ export default class Layout extends React.Component<Props, State> {
 
         <MapSeries teams={[left, right]} match={match} isFreezetime={isFreezetime} map={game.map} />
         <div className={"boxes left"}>
-          <Utility side={left.side} players={game.players} show={dataUtiliy && !forceHide} />
-          <UtilityLevel side={left.side} players={game.players} show={isFreezetime && !forceHide} />
+          <Utility side={left.side} players={game.players} show={showUtillity && !forceHide} />
+          <UtilityLevel side={left.side} players={game.players} show={showEkonomi && !forceHide} />
           <MoneyBox
             team={left.side}
             side="left"
             loss={Math.min(left.consecutive_round_losses * 500 + 1400, 3400)}
             equipment={leftPlayers.map(player => player.state.equip_value).reduce((pre, now) => pre + now, 0)}
             money={leftPlayers.map(player => player.state.money).reduce((pre, now) => pre + now, 0)}
-            show={isFreezetime && !forceHide} 
+            show={showEkonomi && !forceHide} 
           />
           <SideBox side="left" hide={forceHide} />
         </div>
         <div className={"boxes right"}>
-          <Utility side={right.side} players={game.players} show={dataUtiliy && !forceHide} />
-          <UtilityLevel side={right.side} players={game.players} show={isFreezetime && !forceHide} />
+          <Utility side={right.side} players={game.players} show={showUtillity && !forceHide} />
+          <UtilityLevel side={right.side} players={game.players} show={showEkonomi && !forceHide} />
           <MoneyBox
             team={right.side}
             side="right"
             loss={Math.min(right.consecutive_round_losses * 500 + 1400, 3400)}
             equipment={rightPlayers.map(player => player.state.equip_value).reduce((pre, now) => pre + now, 0)}
             money={rightPlayers.map(player => player.state.money).reduce((pre, now) => pre + now, 0)}
-            show={isFreezetime && !forceHide}
+            show={showEkonomi && !forceHide}
           />
           <SideBox side="right" hide={forceHide} />
         </div> 
