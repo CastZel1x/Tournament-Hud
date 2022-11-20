@@ -1,17 +1,26 @@
 .match-overview-title {
-    background-color: var(--main-panel-color);
-    border-radius: 12px 12px 0px 0px;
+    // background-color: var(--main-panel-color);
+    color: black;
+    background-image: linear-gradient(to right, #40bbdd, #67daf8); 
+    // border-radius: 12px 12px 0px 0px;
 }
 .match-overview-vs {
-    background-image: url(../../assets/bgMapoverview.png);
+    // background-image: url(../../assets/bgMapoverview.png);
+    background-color: var(--sub-panel-color2);
+    background-image: url(../../assets/UpcomingMatch.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 85%;
 }
 .match-overview-team1 {
-    background-color: var(--main-panel-color);
-    opacity: 80%;
-    border-radius: 0px 0px 0px 12px;
+    // background-image: url(../../assets/bg.png);
+    // border-radius: 0px 0px 0px 12px;
+    background-color: var(--sub-panel-color2);
+    opacity: 100%;
 }
 .match-overview-team2 {
-    background-color: var(--main-panel-color);
-    opacity: 80%;
-    border-radius: 0px 0px 12px 0px;
+    // background-color: var(--main-panel-color);
+    // border-radius: 0px 0px 12px 0px;
+    background-color: var(--sub-panel-color2);
+    opacity: 100%;
 }

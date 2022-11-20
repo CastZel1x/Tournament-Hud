@@ -6,7 +6,7 @@
     top: 816px;
     opacity:1;
     transition: opacity 1s;
-    font-size: 10.5pt;
+    font-size: 11.5pt;
     // font-family: "bignoodletitling";
 }
 
@@ -16,21 +16,21 @@
     left: 417.5px;
     height: 10px;
     position: relative;
-    color: white;
+    color: black;
     text-align: center;
-    background-image: url(../../assets/bgTournamentName.png);
-    // background-color: var(--main-panel-color);
+    // background-image: url(../../assets/bgTournamentName.png);
+    background-color: var(--main-panel-color);
 }
 
 .tournament_container .tournamentinfo {
     padding-bottom:15px;
     bottom: 820px;
     left: 637.5px;
-    height: 6px;
+    height: 10px;
     position: relative;
-	//background-color: var(--main-panel-color);
-    background-image: url(../../assets/bgTournamentInfo.png);
-    color: white;
+	background-color: var(--main-panel-color);
+    // background-image: url(../../assets/bgTournamentInfo.png);
+    color: black;
     text-align: center;
 }
 

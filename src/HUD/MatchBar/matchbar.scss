@@ -45,8 +45,8 @@
 		width: 100%;
 		height: 55px;
 		justify-content: center;
-		font-size: 20px;
-		top: 12px;
+		font-size: 35px;
+		top: 5px;
 		position: relative;
 		font-weight: bold;
 		z-index: 1;
@@ -123,13 +123,13 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		height: 7px;
+		height: 40px;
 		text-align: justify;
 		position: relative;
 		top: 15px;
 		align-items: center;
 		justify-content: center;
-		font-size: 20px;
+		font-size: 15px;
 		font-weight: bold;
 		z-index: 1;
         color: var(--white-full);
@@ -138,8 +138,9 @@
         }
 	}
 	.matchbar-bg {
-		//background-color: var(--main-panel-color);
+		background-color: var(--sub-panel-color2);
 		background-image: url(../../assets/bgMatchbar.png);
+		background-position: center;
 		width: 440px;
 		height: 90px;
 		position: absolute;
@@ -170,15 +171,18 @@
             .logo {
 				position: relative;
 				justify-content: center;
-				margin-left: 15px;
+				margin-left:15px;
+				left: 15px;
             }
         }
         &.right {
             flex-direction: row;
 			justify-content: center;
             .logo {
-				justify-content: flex-start;
-				margin-left: 15px;
+				position: relative;
+				justify-content: center;
+				margin-left:15px;
+				right: 30px;
             }
 	  }
 	}
@@ -204,7 +208,7 @@
 		align-items: center;
 		justify-content: center;
 		font-weight: 600;
-		font-size: 40px;
+		font-size: 45px;
 		color: var(--white-full);
 	}
 }
@@ -539,6 +543,7 @@ transition: top 0.5s;
 				justify-content: center;
 			}
 		}
+		
 		.grid-3 {
 			flex: 1;
 			border-top: 1px solid #fff;
