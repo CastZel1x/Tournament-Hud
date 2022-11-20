@@ -18,7 +18,7 @@ function utilityState(amount: number) {
   if (amount > 9) {
     return "SEMI BUY";
   }
-  if (amount > 2) {
+  if (amount > 0) {
     return "ECO";
   }
   return "NO UTILITY";
@@ -29,9 +29,9 @@ function utilityColor(amount: number) {
     return "#22f222";
   }
   if (amount > 9) {
-    return "#8ef218";
+    return "#8ef218"; 
   }
-  if (amount > 2) {
+  if (amount > 0) {
     return "#f25618";
   }
   return "#f21822";
@@ -84,7 +84,7 @@ export default class SideBox extends React.Component<Props> {
             <div className={`utilityboxUtility ${this.props.side || ''} ${this.props.show ? "show" : "hide"}`}>
               <div className={`utilityboxUtility ${this.props.side || ''} ${this.props.show ? "show" : "hide"}`}></div>
               <div className="title_container">
-                  <div className='title_economy'>Utillity</div>
+                  <div className='title_economy'>UTILITY</div>
               </div>
               <div className="container_row">
                 {
