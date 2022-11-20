@@ -193,17 +193,18 @@
             font-size: 30px;
             margin-bottom: 4px;
             .username {
-                margin-left: 60px;
+                margin-left: 10px;
             }
             .flag {
                 height: 43px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                position: absolute;
+                margin-left: 10px;
+                // position: absolute;
                 img {
                     height: 32px;
-                    position: absolute;
+                    // position: absolute;
                     right: 10px;
                 }
             }

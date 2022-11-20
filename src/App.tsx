@@ -206,8 +206,7 @@ class App extends React.Component<any, { match: Match | null, game: CSGO | null,
 
 
 	render() {
-		if (!this.state.game) return null;
-		console.log(this.state.game)			
+		if (!this.state.game) return null;		
 		return (
 		<>
 		<Layout game={this.state.game} match={this.state.match} />

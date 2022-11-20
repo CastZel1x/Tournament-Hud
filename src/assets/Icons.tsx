@@ -26,9 +26,15 @@ import { ReactComponent as Wallbang } from './../assets/images/wallbang.svg';
 import LogoCT  from './../assets/images/logo_CT_default.png';
 import LogoT  from './../assets/images/logo_T_default.png';
 import { ReactComponent as SmallBomb }  from "./../assets/images/bomb.svg";
+import Elimination from "./iconElims.png"
+import Boms from "./iconBombElims.png"
+import Defus from "./iconDefuse.png"
 
 
 export {
+    Elimination,
+    Boms,
+    Defus,
     SmallBomb,
     ArmorFull,
     ArmorHalf,

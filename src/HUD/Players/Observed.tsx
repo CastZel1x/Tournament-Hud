@@ -40,7 +40,7 @@ export default class Observed extends React.Component<{ player: Player | null, v
 				<div className="main_row">
 					{<Avatar steamid={player.steamid} height={160} width={160} showCam={this.state.showCam} slot={player.observer_slot} />}
 					<div className="username_container">
-					<div className="flag">{countryName ? <img src={`${apiUrl}files/img/flags/${countryName.replace(/ /g, "-")}.png`} alt={countryName} /> : ''}</div>
+						<div className="flag">{countryName ? <img src={`${apiUrl}files/img/flags/${countryName.replace(/ /g, "-")}.png`} alt={countryName} /> : ''}</div>
 						<div className="username">{player.name}</div>
 					</div>
 				</div>

@@ -24,14 +24,14 @@ export default class MatchOverview extends React.Component<IProps> {
                 <div className="match-overview-teams">
                     <div className="match-overview-team1">
                         <div className="match-overview-team-logo">
-                            <TeamLogo team={left} height={50} />
+                            <TeamLogo label={false} team={left} height={50} />
                         </div>
                         <div className="match-overview-team-name">{left.name}</div>
                     </div>
                     <div className="match-overview-vs">vs</div>
                     <div className="match-overview-team2">
                         <div className="match-overview-team-logo">
-                            <TeamLogo team={right} height={50} />
+                            <TeamLogo label={false} team={right} height={50} />
                         </div>
                         <div className="match-overview-team-name">{right.name}</div>
                     </div>

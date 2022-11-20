@@ -2,6 +2,7 @@ import React from "react";
 import * as I from "csgogsi-socket";
 import "./matchbar.scss";
 import TeamLogo from './TeamLogo';
+import { Elimination, Boms, Defus} from "../../assets/Icons"
 
 interface IProps {
     map: any;
@@ -53,20 +54,44 @@ export default class RoundHistory extends React.Component<IProps, IState> {
             
         }
 
-        
-
         return (
             <>
                 <div id="round-history">
-                    {/* <div className={`team-name-history`}>{left.name}</div> */}
                     <div className="round-history-bg">
+                        <div className="grid-0">
+                            <div style={{ flex: 1 }}/>
+                            <div style={{ flex: 5, display: 'flex' }}>
+                                {
+                                    map?.rounds?.map((items : any, index : any) => {
+                                        let icons = Defus
+                                        if (items?.outcome === "ct_win_elimination") {
+                                            icons = Elimination
+                                        } 
+                                        if (items?.outcome === "t_win_bomb") {
+                                            icons = Boms
+                                        } 
+                                        // if (items?.outcome === "ct_win_defus") {
+                                        //     icons = Defus
+                                        // } 
+
+                                        return (
+                                             <div className="icons-wins" key={index}>
+                                                 {
+                                                     items?.side == "CT" && <img src={icons} width={20} height={20}/>
+                                                 }
+                                             </div>
+                                        )
+                                    })
+                                }
+                            </div>
+                        </div>
                         <div className="grid-1">
                             <div className="column-1">
                                 <div style={{ marginTop: 8 }}>
-                                    <TeamLogo team={left} width={20} height={20}/>
+                                    <TeamLogo label={false} team={left} width={20} height={20}/>
                                 </div>
                                 <div style={{ marginTop: 8 }}>
-                                    <TeamLogo team={right} width={20} height={20}/>
+                                    <TeamLogo label={false} team={right} width={20} height={20}/>
                                 </div>
                             </div>
                             <div className="column-2">
@@ -88,7 +113,15 @@ export default class RoundHistory extends React.Component<IProps, IState> {
                                                     } else {
                                                         return (
                                                             <div className="rounds" key={index}>
+                                                                {/* {
+                                                                    (team == "CT" && round.side == team ) &&
+                                                                        <div>s</div>
+                                                                } */}
                                                                 <div className={`round ${round.side == team ? `win ${round.side}` : "" }`}/>
+                                                                {/* {
+                                                                    (team == "T" && round.side == team ) &&
+                                                                        <div>s</div>
+                                                                } */}
                                                             </div>
                                                         )
                                                     }
@@ -96,6 +129,33 @@ export default class RoundHistory extends React.Component<IProps, IState> {
                                             }
                                         </div>
                                     ))
+                                }
+                            </div>
+                        </div>
+                        <div className="grid-0">
+                            <div style={{ flex: 1 }}/>
+                            <div style={{ flex: 5, display: 'flex' }}>
+                                {
+                                    map?.rounds?.map((items : any, index : any) => {
+                                        let icons = Defus
+                                        if (items?.outcome === "ct_win_elimination") {
+                                            icons = Elimination
+                                        } 
+                                        if (items?.outcome === "t_win_bomb") {
+                                            icons = Boms
+                                        } 
+                                        // if (items?.outcome === "ct_win_defus") {
+                                        //     icons = Defus
+                                        // } 
+
+                                        return (
+                                             <div className="icons-wins" key={index}>
+                                                 {
+                                                     items?.side == "T" && <img src={icons} width={20} height={20}/>
+                                                 }
+                                             </div>
+                                        )
+                                    })
                                 }
                             </div>
                         </div>
@@ -118,7 +178,6 @@ export default class RoundHistory extends React.Component<IProps, IState> {
                             <label>ROUND HISTORY</label>
                         </div>
                     </div>
-                    {/* <div className={`team-name-history`}>{right.name}</div> */}
                 </div>
             </>
         )

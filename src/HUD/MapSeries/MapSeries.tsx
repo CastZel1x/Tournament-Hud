@@ -28,10 +28,10 @@ class VetoEntry extends React.Component<IVetoProps> {
                 {veto.mapName.replace("de_","")}
             </div>
             <div className="veto_picker">
-                <TeamLogo team={teams.filter(team => team.id === veto.teamId)[0]} />
+                <TeamLogo label={false} team={teams.filter(team => team.id === veto.teamId)[0]} />
             </div>
             <div className="veto_winner">
-                <TeamLogo team={teams.filter(team => team.id === veto.winner)[0]} />
+                <TeamLogo label={false} team={teams.filter(team => team.id === veto.winner)[0]} />
             </div>
             <div className="veto_score">
                 {Object.values((veto.score || ['-','-'])).sort().join(":")}

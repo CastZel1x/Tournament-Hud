@@ -3,9 +3,9 @@ import { Team } from 'csgogsi-socket';
 import * as I from '../../api/interfaces';
 import { apiUrl } from './../../api/api';
 
-export default class TeamLogo extends React.Component<{ team?: Team | I.Team | null, height?: number, width?: number}> {
+export default class TeamLogo extends React.Component<{ team?: Team | I.Team | null, height?: number, width?: number, label: Boolean}> {
   render(){
-    const { team } = this.props;
+    const { team, label } = this.props;
     if(!team) return null;
     let id = '';
     const { logo } = team;
@@ -17,6 +17,10 @@ export default class TeamLogo extends React.Component<{ team?: Team | I.Team | n
     return (
       <div className={`logo`}>
           { logo && id ? <img src={`${apiUrl}api/teams/logo/${id}`} width={this.props.width} height={this.props.height} alt={'Team logo'} /> : ''}
+          {
+            label &&
+            <div style={{ color: '#fff'}}>{team.country}</div>
+          }
       </div>
     );
   }

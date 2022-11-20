@@ -16,6 +16,14 @@
 		height: 0;
 	}
 }
+
+.logoMatchBar {
+	position: absolute;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	top: 5px;
+}
 #matchbar {
 	display: flex;
 	flex-direction: row;
@@ -152,12 +160,12 @@
 		width: 426px;
 		display: flex;
 		align-items: center;
-		margin-top: 20px;
+		margin-top: 25px;
 		.logo {
 			display: flex;
-			flex-direction: row;
+			flex-direction: column;
 			width: 90px;
-			height: 70px;
+			height: 60px;
 			align-items: center;
 			overflow: hidden;
 			img {
@@ -455,7 +463,7 @@ transition: top 0.5s;
 	align-items: center;
 	width: 900px;
 	height: 70px;
-	top: 42px;
+	top: 60px;
 	left: 50%;
 	transform: translateX(-50%);
 	// font-family: "bignoodletitling";
@@ -472,11 +480,24 @@ transition: top 0.5s;
 	.round-history-bg {
 		background-image: url(../../assets/bgRoundHistory.png);
 		width: 500px;
-		height: 120px;
+		// height: 120px;
 		display: flex;
 		flex-direction: column;
 		background-repeat: round;
 
+
+		.grid-0 {
+			flex: 1;
+			display: flex;
+			font-weight: 800;
+			font-size: 15px;
+			color: #fff;
+			.icons-wins {
+				flex: 1;
+				display: grid;
+				justify-content: center;
+			}
+		}
 		.grid-1 {
 			flex: 3;
 			display: flex;
