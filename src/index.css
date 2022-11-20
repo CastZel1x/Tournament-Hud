@@ -64,7 +64,7 @@ code {
   --color-t: #fcba03;
   --color-ct: #5788a8;
   --color-new-t:  #fcba03;
-  --color-new-ct: #1649f2; /*41, 94, 247,1*/
+  --color-new-ct: #0084ff; /*41, 94, 247,1*/
   --color-bomb: #f22222;
   --color-defuse: #2222f2;
   --player-overview: rgba(0,0,0, 0.3);
