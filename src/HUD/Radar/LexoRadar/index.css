@@ -187,7 +187,7 @@ html, body, .map-container {
     font-weight: 600;
     border-radius: 50%;
     -webkit-font-smoothing: subpixel-antialiased;
-    font-size: 27px;
+    font-size: 45px;
 }
 .map .bomb .background {
     background-image: url('./grenades/bomb.png');
