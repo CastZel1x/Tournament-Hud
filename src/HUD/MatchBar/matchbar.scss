@@ -251,9 +251,9 @@
 		}
 	}
 	.teamName {
-		color: #fff !important;
+		color: white !important;
 		font-size: 40px;
-		top: 100px;
+		top: 70px;
 		position: relative;
 	}
   
@@ -417,13 +417,13 @@ transition: top 0.5s;
     box-sizing: border-box;
 }
 .wins_box.CT {
-	background-color: rgba(100, 97, 97, 0.8);
+	background-color: white;
 }
 .wins_box.CT.win {
 	background-color: var(--color-new-ct);
 }
 .wins_box.T {
-	background-color: rgba(100, 97, 97, 0.8);
+	background-color: white;
 }
 .wins_box.T.win {
 	background-color: var(--color-new-t);

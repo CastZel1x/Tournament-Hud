@@ -5,10 +5,14 @@
 .boxes.left {
 	left: 35px;
 	background-image: url(../../assets/displaysettingsleft.png);
+	// background-repeat: no-repeat;
+	background-color: 80%;
 }
 .boxes.right {
 	right: 35px;
 	background-image: url(../../assets/displaysettingsright.png);
+	// background-repeat: no-repeat;
+	background-color: 80%;
 }
 .boxes.hide {
 	.utilitybox {
@@ -90,7 +94,7 @@
 }
 .title_economy {
 	position: absolute;
-	color: white;
+	color: black;
 	// text-shadow: 1px 12px 34px black, 0 0 1em whitesmoke, 0 0 0.2em black;
 	// background-color: rgba(191, 191, 191, 0.4);
 	background-color: var(--main-panel-color);
@@ -101,6 +105,7 @@
 }
 
 .utilityboxUtility {
+	// width : 310px;
 	height: 50px;
 	display: flex;
 	flex-direction: column;
