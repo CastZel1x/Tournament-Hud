@@ -63,16 +63,25 @@ export default class RoundHistory extends React.Component<IProps, IState> {
                             <div style={{ flex: 5, display: 'flex' }}>
                                 {
                                     map?.rounds?.map((items : any, index : any) => {
-                                        let icons = Defus
+                                        let icons = ""
                                         if (items?.outcome === "ct_win_elimination") {
                                             icons = Elimination
+                                        } 
+                                        if (items?.outcome === "t_win_elimination") {
+                                            icons = Elimination
+                                        } 
+                                        if (items?.outcome === "ct_win_bomb") {
+                                            icons = Boms
                                         } 
                                         if (items?.outcome === "t_win_bomb") {
                                             icons = Boms
                                         } 
-                                        // if (items?.outcome === "ct_win_defus") {
-                                        //     icons = Defus
-                                        // } 
+                                        if (items?.outcome === "ct_win_defus") {
+                                            icons = Boms
+                                        } 
+                                        if (items?.outcome === "t_win_defus") {
+                                            icons = Boms
+                                        } 
 
                                         return (
                                              <div className="icons-wins" key={index}>
