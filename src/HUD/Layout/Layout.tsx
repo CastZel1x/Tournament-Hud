@@ -34,6 +34,7 @@ interface State {
   forceHide: boolean,
   validationEkonomi: boolean,
   validationUtillity: boolean,
+  showRound: any
 }
 
 export default class Layout extends React.Component<Props, State> {
@@ -45,6 +46,8 @@ export default class Layout extends React.Component<Props, State> {
       showEkonomi: false,
       validationEkonomi: false,
       validationUtillity: false,
+      showRound: [15, 19]
+      
     }
   }
 
@@ -114,7 +117,7 @@ export default class Layout extends React.Component<Props, State> {
     const rightPlayers = game.players.filter(player => player.team.side === right.side);
     const isFreezetime = (game.round && game.round.phase === "freezetime") || game.phase_countdowns.phase === "freezetime";
     const isOvertime = (game.round && game.round.phase === "over") || game.phase_countdowns.phase === "over";
-    const { forceHide, showUtillity, showEkonomi } = this.state;
+    const { forceHide, showUtillity, showEkonomi, showRound } = this.state;
     const round = game.map.rounds
     return (
       <div className="layout">
@@ -130,17 +133,17 @@ export default class Layout extends React.Component<Props, State> {
         <Overview match={match} map={game.map} players={game.players || []} />
         <RadarMaps match={match} map={game.map} game={game} />
         {
-          !(isFreezetime && !forceHide && [15, 19].includes(round.length)) && 
+          !(isFreezetime && !forceHide && showRound.includes(round.length)) && 
           <MatchBar map={game.map} phase={game.phase_countdowns} bomb={game.bomb} match={match} />
         }
         {
-          (isFreezetime && !forceHide && [15, 19].includes(round.length)) &&
+          (isFreezetime && !forceHide && showRound.includes(round.length)) &&
           <RoundHistory map={game.map}/>
         }
         <Pause  phase={game.phase_countdowns}/>
         <Timeout map={game.map} phase={game.phase_countdowns} />
         {
-          !(isFreezetime && !forceHide && [15, 19].includes(round.length)) &&
+          !(isFreezetime && !forceHide && showRound.includes(round.length)) &&
           <SeriesBox map={game.map} phase={game.phase_countdowns} match={match} />
         }
 
@@ -151,7 +154,7 @@ export default class Layout extends React.Component<Props, State> {
         <TeamBox team={right} players={rightPlayers} side="right" current={game.player} isFreezetime={isFreezetime} />
 
         {
-          !(isFreezetime && !forceHide && [15, 19].includes(round.length)) &&
+          !(isFreezetime && !forceHide && showRound.includes(round.length)) &&
           <TournamentName />
         }
 
