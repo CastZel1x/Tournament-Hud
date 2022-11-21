@@ -46,7 +46,7 @@ export default class Layout extends React.Component<Props, State> {
       showEkonomi: false,
       validationEkonomi: false,
       validationUtillity: false,
-      showRound: [15, 19]
+      showRound: [15, 29]
       
     }
   }
@@ -83,11 +83,11 @@ export default class Layout extends React.Component<Props, State> {
       }
     }
     if (game.phase_countdowns.phase == "bomb" && game?.bomb?.state == "planted" ) {
-      if (Number(game.phase_countdowns.phase_ends_in) > 40 && !validationUtillity) {
+      if (Number(game.phase_countdowns.phase_ends_in) > 39 && !validationUtillity) {
         this.setState({validationUtillity: true})        
         this.setState({showUtillity: true})        
       } 
-      if (Number(game.phase_countdowns.phase_ends_in) < 40 && validationUtillity) {
+      if (Number(game.phase_countdowns.phase_ends_in) < 39 && validationUtillity) {
         this.setState({validationUtillity: false})
         setTimeout(() => {
           this.setState({ showUtillity: false })
