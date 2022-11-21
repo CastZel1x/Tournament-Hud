@@ -140,8 +140,8 @@ export default class Layout extends React.Component<Props, State> {
           (isFreezetime && !forceHide && showRound.includes(round.length)) &&
           <RoundHistory map={game.map}/>
         }
-        <Pause  phase={game.phase_countdowns}/>
-        <Timeout map={game.map} phase={game.phase_countdowns} />
+        <Pause isFreezetime={isFreezetime}  phase={game.phase_countdowns}/>
+        <Timeout isFreezetime={isFreezetime} map={game.map} phase={game.phase_countdowns} />
         {
           !(isFreezetime && !forceHide && showRound.includes(round.length)) &&
           <SeriesBox map={game.map} phase={game.phase_countdowns} match={match} />
