@@ -21,7 +21,8 @@
 	position: absolute;
 	width: 100%;
 	display: flex;
-	justify-content: center;
+	left: 15px;
+	// justify-content: center;
 	top: 5px;
 }
 #matchbar {
@@ -31,7 +32,7 @@
 	justify-content: center;
 	width: 748px;
 	height: 70px;
-	top: 46px;
+	top: 20px;
 	left: 50%;
 	transform: translateX(-50%);
 	background-color: rgb(0,0,0, 0.5);
@@ -80,7 +81,7 @@
 		.bomb_timer {
 			width: 95%;
 			right: 45px;
-			height: 19px;
+			height: 8px;
             background-color: var(--color-bomb);
 			top: 71px;
 			z-index: 1;
@@ -93,9 +94,9 @@
 		.bomb_timer_bg {
 			width: 100%;
 			right: 80.5px;
-			height: 20px;
-            background-color: rgba(0, 0, 0, 0.7);
-			top: 71px;
+			height: 8px;
+            // background-color: rgba(0, 0, 0, 0.7);
+			top: 61px;
 			position: relative;
             &.hide {
                 display: none;
@@ -105,13 +106,13 @@
 			color: white;
 			background-color: var(--main-panel-color);
 			position: absolute;
-			top: 90px;
+			top: 79px;
 			width: 440px;
-			height: 30px;
+			// height: 20px;
 			right: 22px;
 			text-align: center;
 			// border-bottom: 5px;
-			font-size: 18px;
+			font-size: 20px;
 		}
 		.bomb_icon {
 			position: absolute;
@@ -175,11 +176,11 @@
 			align-items: center;
 			overflow: hidden;
 			&.CT {
-				border-radius: 10px 0px 0px 10px;
+				border-radius: 5px 0px 0px 5px;
 				background-color: var(--color-new-ct);
 			}
 			&.T {
-				border-radius: 0px 10px 10px 0px;
+				border-radius: 0px 5px 5px 0px;
 				background-color: var(--color-new-t);
 			}
 			img {
@@ -373,7 +374,7 @@
     flex-direction: row;
     position: fixed;
     justify-content: center;
-    top: 100px;
+    top: 75px;
     width: 300px;
     height: 8px;
     left: 50%;
