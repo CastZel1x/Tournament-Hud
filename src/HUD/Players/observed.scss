@@ -9,7 +9,9 @@
     flex-direction: column;
     color: white;
     background-color: var(--sub-panel-color);
-    font-family: "bignoodletitling";
+    font-family: "Inter";
+    font-style: normal;
+    border-radius: 4px 4px 4px 4px;
 
     .main_row, .stats_row {
         flex: 1;
@@ -17,11 +19,11 @@
         align-items: center;
         flex-direction: row;
         position: relative;
-        height: 43px;
+        height: 40px;
     }
 
     .stats_row {
-        height: 28px;
+        height: 30px;
 
         .stats_cell {
             height: 100%;
@@ -35,6 +37,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                font-family: "Inter";
                 font-size: 10px;
                 color: #b2b2b2;
             }
@@ -68,11 +71,13 @@
             .ammo_counter {
                 flex: 1;
                 display: flex;
-                font-size: 22px;
-                font-weight: 600;
+                font-family: "Inter";
+                font-size: 20px;
+                font-style: normal;
                 position: relative;
                 left: 4px;
                 top: 1px;
+                // font-weight: 600;
                 > div {
                     width: 32px;
                     display: flex;
@@ -112,8 +117,10 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-weight: 600;
-                font-size: 24px;
+                // font-weight: 600;
+                font-family: "Inter";
+                font-style: normal;
+                font-size: 20px;
                 height: 100%;
                 padding-top: -1px;
             }
@@ -146,10 +153,11 @@
             }
             .roundkills-num {
                 position: absolute;
-                padding-left: 13px;
-                font-size: 18px;
+                padding-left: 11px;
+                font-family: "Inter";
+                font-size: 16px;
                 color: white;
-                padding-top: 6px;
+                padding-top: 5px;
             }
         }
         .statistics {
@@ -161,15 +169,18 @@
             justify-content: flex-end;
             .stat {
                 display: flex;
-                font-weight: 600;
-                font-size: 18px;
+                font-family: "Inter";
+                font-style: normal;
+                font-size: 20px;
                 margin-right: 24px;
+                // font-weight: 600;
             }
         }
     }
 
     .main_row {
-        font-weight: 600;
+        font-style: normal;
+        // font-weight: 600;
         .logo {
             height: 43px;
             display: flex;
@@ -188,10 +199,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            //argin-left: -50px;
-
-            font-size: 30px;
+            font-family: "Inter";
+            font-style: normal;
+            font-size: 20px;
             margin-bottom: 4px;
+            //argin-left: -50px;
             .username {
                 margin-left: 10px;
             }
@@ -211,7 +223,7 @@
         }
         .weapon.grenade {
             height: 28px;
-            /*filter: invert(1);*/
+            // filter: invert(0);
 
             &:last-child {
                 margin-right: 5px;

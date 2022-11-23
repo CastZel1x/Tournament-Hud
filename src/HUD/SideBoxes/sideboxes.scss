@@ -4,15 +4,17 @@
 }
 .boxes.left {
 	left: 35px;
-	background-image: url(../../assets/displaysettingsleft.png);
-	// background-repeat: no-repeat;
+	background-color: var(--sub-panel-color);
 	background-color: 80%;
+	// background-image: url(../../assets/displaysettingsleft.png);
+	// background-repeat: no-repeat;
 }
 .boxes.right {
 	right: 35px;
-	background-image: url(../../assets/displaysettingsright.png);
-	// background-repeat: no-repeat;
+	background-color: var(--sub-panel-color);
 	background-color: 80%;
+	// background-image: url(../../assets/displaysettingsright.png);
+	// background-repeat: no-repeat;
 }
 .boxes.hide {
 	.utilitybox {
