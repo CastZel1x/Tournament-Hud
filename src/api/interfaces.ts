@@ -95,6 +95,7 @@ export interface Match {
   };
   matchType: "bo1" | "bo2" | "bo3" | "bo5";
   vetos: Veto[];
+  isFreezetime: boolean
 }
 
 export type Weapon =

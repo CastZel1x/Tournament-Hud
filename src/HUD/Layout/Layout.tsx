@@ -131,7 +131,7 @@ export default class Layout extends React.Component<Props, State> {
         </div>
         <Killfeed />
         <Overview match={match} map={game.map} players={game.players || []} />
-        <RadarMaps match={match} map={game.map} game={game} />
+        <RadarMaps isFreezetime={isFreezetime} match={match} map={game.map} game={game} />
         {
           !(isFreezetime && !forceHide && showRound.includes(round.length)) && 
           <MatchBar map={game.map} phase={game.phase_countdowns} bomb={game.bomb} match={match} />
@@ -153,10 +153,10 @@ export default class Layout extends React.Component<Props, State> {
         <TeamBox team={left} players={leftPlayers} side="left" current={game.player} isFreezetime={isFreezetime} />
         <TeamBox team={right} players={rightPlayers} side="right" current={game.player} isFreezetime={isFreezetime} />
 
-        {
+        {/* {
           !(isFreezetime && !forceHide && showRound.includes(round.length)) &&
           <TournamentName />
-        }
+        } */}
 
         {
           !(isFreezetime && !forceHide && round.length == 15) &&

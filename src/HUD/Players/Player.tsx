@@ -93,11 +93,9 @@ export default class PlayerBox extends React.Component<IProps, IState> {
               </div>
               <div className={`statt ${this.props.isFreezetime && this.props.isFreezetime === true ? 'hide' : 'show'}`}>
 
-              <img className="kill" src= {kill} width="18px" height="18px" alt="filter applied" />  
+              <img className="kill" src= {kill} width="12px" height="12px" alt="filter applied" />  
                 <Statistic label={""} value={stats.kills} />
-
-
-                <img className="dead" src= {dead} width="16px" height="17px" alt="filter applied" />  
+                <img className="dead" src= {dead} width="9px" height="9px" alt="filter applied" />  
                 <Statistic label={""} value={stats.deaths} />
               </div>
             </div>

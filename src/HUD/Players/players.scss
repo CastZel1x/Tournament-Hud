@@ -5,7 +5,8 @@
     flex-direction: column;
     opacity: 1;
     transition: opacity 0.75s;
-    font-family: bignoodletitling;
+    font-family: Inter;
+    font-style: normal;
     &.CT {
         .player .hp_bar {
             // background: linear-gradient(#009244,#9d9da4);
@@ -34,7 +35,8 @@
                     left: 150px;
                 }
                 .username {
-                    left: 10px;
+                    left: -30px;
+                    // background-color: tomato;
                     position: relative;
                 }
                 .grenades {
@@ -56,6 +58,7 @@
                 .money {
                 position: relative;
                 left: 10px;
+                // background-color: tomato;
                 }
                 .secondary_weapon {
                     left: 115px;
@@ -89,7 +92,8 @@
                     .username {
                         flex-direction: row-reverse;
                         position: relative;
-                        right: 7px;
+                        // background-color: tomato;
+                        right: -20px;
                     }
                     .grenades {
                         position: absolute;
@@ -281,14 +285,14 @@
                         align-items: center;
                         z-index: 1;
                         color: white;
-                        font-weight: 600;
+                        font-weight: 400;
                         max-width: calc(100% - 49px);
                         justify-content: space-between;
                         overflow: hidden;
-                        font-size: 18px;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                        letter-spacing: 1px;
+                        font-size: 15px;
+                        // text-overflow: ellipsis;
+                        // white-space: nowrap;
+                        // letter-spacing: 1px;
                     }
                     .roundkills-container {
                         position: absolute;
@@ -323,8 +327,9 @@
                         justify-content: center;
                         z-index: 1;
                         color: white;
-                        font-weight: 600;
-                        font-size:18px;
+                        font-style: normal;
+                        // font-weight: 600;
+                        font-size:15px;
                     }
                 }
                 .row_center {
@@ -366,12 +371,14 @@
                     .statt {
                         display: flex;
                         color: #fff;
-                        font-size: 16px;
-                        font-weight: 700;
+                        font-size: 12px;
+                        // font-weight: 700;
+                        font-style: normal;
                         align-items: center;
-                        bottom: 57px;
-                        letter-spacing: 1px;
+                        bottom: 35px;
+                        // letter-spacing: 1px;
                         transition: opacity 0.75s;
+                        z-index: 1;
                         img {
                             zoom: 100%;
                             margin-bottom: 40px;
@@ -392,13 +399,16 @@
                     .money {
                         width: 60px;
                         color: var(--color-moneys);
-                        font-weight: 600;
+                        // font-weight: 600;
+                        font-style: normal;
                         display: flex;
                         align-items: center;
                         justify-content: flex-start;
                         position: relative;
-                        bottom: 95px;
+                        bottom: 113px;
+                        font-size: 12px;
                         margin-right: 100px;
+                        z-index: 1;
                     }    
                 }
             }
@@ -414,8 +424,8 @@
                 z-index: 10;
             }
                 img {
-                    zoom: 285%;
-                    height: 61px;
+                    zoom: 275%;
+                    height: 60px;
                     position: relative;
                     top: 20px;
                 }
@@ -559,12 +569,12 @@
 
 .teambox .obs_ps {
     position: absolute;
-    bottom: 49px;
+    bottom: 55px;
     width: 16px;
     height: 16px;
     color: #fff;
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 500;
     z-index: 12;
     display: flex;
     align-items: center;
@@ -702,7 +712,8 @@
          }
          .row_center {
             .statt {
-                margin-left: -92px;
+                margin-left: -80px;
+
             }
          }
          .hp_bar_bg2 {
@@ -769,7 +780,7 @@
     height: 100%;
     opacity: 1;
     transition: opacity 0.75s;
-    font-family: Titillium;
+    font-family: Inter;
     font-size: 13px;
 }
 
@@ -803,7 +814,7 @@
     height: 100%;
     opacity: 1;
     transition: opacity 0.75s;
-    font-family: Titillium;
+    font-family: Inter;
     font-size: 13px;
 }
 .teambox .player .spending.hide {

@@ -18,7 +18,7 @@ export default class Timeout extends React.Component<IProps> {
             <div style={{ 
                 top: isFreezetime ? 171 : 120,
                 width: isFreezetime ? 500 : 440
-            }} id={`timeout`} className={`${time && time > 2 && phase && (phase.phase === "timeout_t" || phase.phase === "timeout_ct") ? 'show' : 'show'} ${phase && (phase.phase === "timeout_t" || phase.phase === "timeout_ct") ? phase.phase.substr(8): ''}`}>
+            }} id={`timeout`} className={`${time && time > 2 && phase && (phase.phase === "timeout_t" || phase.phase === "timeout_ct") ? 'show' : ''} ${phase && (phase.phase === "timeout_t" || phase.phase === "timeout_ct") ? phase.phase.substr(8): ''}`}>
                 { team.name } TIMEOUT
             </div>
         );
