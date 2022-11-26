@@ -49,7 +49,9 @@
 }
 .veto_entry {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	letter-spacing: .1em;
 	position: relative;
 	font-family: Titillium;
@@ -69,7 +71,7 @@
 		color: rgb(51, 50, 50);
 	}
 	.map_name {
-		font-size: 12px;
+		font-size: 8px;
 		font-weight: 700;
 		letter-spacing: .1em;
 	}

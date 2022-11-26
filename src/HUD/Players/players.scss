@@ -389,7 +389,7 @@
                         display: flex;
                         align-items: center;
                         transition: opacity 0.75s;
-                        bottom: 135px;
+                        bottom: 130px;
                         position: relative;
                         svg {
                             max-height: 14px;
@@ -664,9 +664,13 @@
 
 
 .dead-adr {
+    // background-color: tomato;
+    font-style: normal;
+    font-family: "Inter";
+    font-size: 12px;
     color: var(--white-full);
     font-weight: 500;
-    bottom: 132px;
+    bottom: 130px;
 }
 
 

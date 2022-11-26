@@ -159,7 +159,7 @@ export default class Layout extends React.Component<Props, State> {
         } */}
 
         {
-          !(isFreezetime && !forceHide && round.length == 15) &&
+          !(isFreezetime && !forceHide) &&
            <div className="logoMatchBar">
              <img src={LogoMatchbar} width={40} height={40}/>
            </div>
