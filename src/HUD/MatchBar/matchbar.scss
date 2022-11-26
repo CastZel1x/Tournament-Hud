@@ -151,7 +151,7 @@
 	}
 	.matchbar-bg {
 		background-color: var(--sub-panel-color2);
-		background-image: url(../../assets/bgMatchbar.png);
+		// background-image: url(../../assets/bgMatchbar.png);
 		background-position: center;
 		width: 320px;
 		// height: 70px;
@@ -241,12 +241,12 @@
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
-	top: 160px;  // 78px;
+	top: 100px;  // 78px;
 	background-color: var(--sub-panel-color);
 	background-image: url(../../assets/bgWinIndicator.png);
 	background-repeat: round;
 	width: 0;
-	height: 360px;
+	height: 180px;
 	opacity: 0;
 	font-size: 50px;
 	transition: width 0.4s ease-in-out;
@@ -261,29 +261,32 @@
 	padding: 0 30px;
 	.winnerLogo {
 		position: absolute;
-		top: 50px;
+		top: 40px;
+		left: 30px;
 		img {
-			height: 160px;
+			height: 100px;
 		}
 	}
 	.teamName {
 		color: white !important;
-		font-size: 40px;
-		top: 70px;
-		position: relative;
+		font-size: 35px;
+		top: 40px;
+		right: 50px;
+		position: absolute;
 	}
   
 	span {
 		&:nth-of-type(2) {
 		  font-weight: 650;
-		  font-size: 30px;
+		  font-size: 20px;
+		  left: 70px;
 		  //opacity: 0.6;
-		  top: 320px;
+		  top: 90px;
 		  position: absolute;
-		  border-top: solid 2px white;
+		//   border-top: solid 2px white;
 		  width: 440px;
 		  height: 40px;
-		  background-color: var(--main-panel-color);
+		//   background-color: var(--main-panel-color);
 		  color: var(--white-full);
 		}
 	  }
@@ -504,7 +507,8 @@ transition: top 0.5s;
 
 	}
 	.round-history-bg {
-		background-image: url(../../assets/bgRoundHistory.png);
+		background-color: var(--sub-panel-color);
+		// background-image: url(../../assets/bgRoundHistory.png);
 		width: 500px;
 		// height: 120px;
 		display: flex;
@@ -592,7 +596,7 @@ transition: top 0.5s;
 			font-weight: 800;
 			font-size: 15px;
 			color: #fff;
-			background-color: rgba(28, 54, 60, 0.8);
+			background-color: var(--sub-panel-color);
 			.number_round {
 				flex: 1;
 				display: grid;

@@ -171,7 +171,7 @@
                 }
                 .row_top {
                     .money {
-                        color: #466722;
+                        color: rgba(63, 220, 116, 1);
                         margin-bottom: 2px;
                     }
                 }
@@ -271,7 +271,7 @@
                         .armor_indicator, .bomb_indicator, .defuse_indicator {
                             svg {
                                 max-height: 16px;
-                                fill: white;
+                                fill: rgba(15, 18, 33, 1);
                             }
                         }
                         div {
@@ -284,7 +284,7 @@
                         display: flex;
                         align-items: center;
                         z-index: 1;
-                        color: white;
+                        color: rgba(15, 18, 33, 1);
                         font-weight: 400;
                         max-width: calc(100% - 49px);
                         justify-content: space-between;
@@ -326,7 +326,7 @@
                         align-items: center;
                         justify-content: center;
                         z-index: 1;
-                        color: white;
+                        color: rgba(15, 18, 33, 1);
                         font-style: normal;
                         // font-weight: 600;
                         font-size:15px;
@@ -461,10 +461,12 @@
             
         }
         .CT {
+            border-bottom: 100px;
+            border-color: var(--color-new-ct);
             color: var(--color-new-ct);
         }
         .vs_counter {
-            background-color: var(--sub-panel-color2);
+            background-color: var(--sub-panel-color2, 0.1);
             // height: 35px;
         }
         .T {
@@ -472,7 +474,7 @@
         }
     }
     .title_container {
-        color: black;
+        color: white;
         text-transform: uppercase;
         text-align: center;
         height:20px;
@@ -480,7 +482,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: var(--main-panel-color);
+        background-color: var(--sub-panel-color-color);
         
     }
     &.hide {
@@ -533,13 +535,13 @@
 
 .teambox.left .player .adr {
     position: absolute;
-    left: 150px;
+    left: 110px;
     .stat-label {
         position: absolute;
     }
     .stat-value {
         position: absolute;
-        left: 25px;
+        left: 40px;
     }
 } 
 .teambox.right .player .adr {
